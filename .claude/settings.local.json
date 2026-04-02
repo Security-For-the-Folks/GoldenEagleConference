@@ -8,7 +8,22 @@
       "Bash(powershell.exe -Command \"Get-ChildItem -Path ''C:\\\\'' -Recurse -Filter ''node.exe'' -ErrorAction SilentlyContinue -Depth 4 | Select-Object FullName -First 5\")",
       "Bash(powershell.exe -Command \"Get-ChildItem ''C:\\\\Users\\\\b2\\\\scoop\\\\shims'' -ErrorAction SilentlyContinue | Where-Object {$_Name -like ''node*'' -or $_Name -like ''npm*''} | Select Name; Test-Path ''C:\\\\Users\\\\b2\\\\.volta''; Test-Path ''C:\\\\Users\\\\b2\\\\.fnm''\")",
       "Bash(powershell.exe -Command \"Get-ChildItem -Path ''C:\\\\Users\\\\b2'' -Filter ''node.exe'' -Recurse -ErrorAction SilentlyContinue -Depth 5 | Select-Object FullName -First 3\")",
-      "Bash(powershell.exe -Command \"\\(Get-Item ''website/assets/Midwest_OT_Cybersecurity_Summit.mp4''\\).Length / 1MB\")"
+      "Bash(powershell.exe -Command \"\\(Get-Item ''website/assets/Midwest_OT_Cybersecurity_Summit.mp4''\\).Length / 1MB\")",
+      "WebFetch(domain:www.eventbrite.com)",
+      "WebFetch(domain:www.marquette.edu)",
+      "WebFetch(domain:xftf.org)",
+      "WebFetch(domain:www.malkansolutions.com)",
+      "WebFetch(domain:www.rockwellautomation.com)",
+      "WebFetch(domain:www.johnsoncontrols.com)",
+      "WebFetch(domain:www.exida.com)",
+      "WebFetch(domain:www.sprocketsecurity.com)",
+      "WebFetch(domain:www.irulast.com)",
+      "WebFetch(domain:www.isaca.org)",
+      "WebFetch(domain:www.icsvillage.com)",
+      "WebFetch(domain:www.mkebside.com)",
+      "WebFetch(domain:www.xftf.org)",
+      "WebFetch(domain:www.bsidesmke.org)",
+      "WebSearch"
     ]
   }
 }
