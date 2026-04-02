@@ -102,6 +102,10 @@ body.dark .agenda-table th,body.dark .agenda-table td{border-bottom-color:#2c456
       body.dark td{border-bottom-color:#2c4563;color:#d8e6f8}
       body.dark .btn-blue{background:#3b6fad;color:#f0f6ff}
       body.dark .logo{background:#0c2d53}
+      #cal-dropdown a:hover{background:#e9eff6}
+      body.dark #cal-dropdown{background:#1b2d44;border-color:#2c4563}
+      body.dark #cal-dropdown a{color:#d8e6f8;border-bottom-color:#2c4563}
+      body.dark #cal-dropdown a:hover{background:#253d58}
 
       @media (max-width:900px){h1{font-size:38px}.why-layout{grid-template-columns:1fr}.benefits,.topics,.pricing,.sgrid,.frow,.logos,.agenda-grid{grid-template-columns:1fr 1fr}}
       @media (max-width:640px){h1{font-size:32px}.benefits,.topics,.pricing,.sgrid,.frow,.logos,.agenda-grid{grid-template-columns:1fr}}
@@ -126,7 +130,16 @@ body.dark .agenda-table th,body.dark .agenda-table td{border-bottom-color:#2c456
         <h1>Midwest OT Cybersecurity Summit (MOCS)</h1>
         <p class="subtitle">Hosted at Marquette University, this summit is built for all career classes focused on manufacturing cybersecurity and Industrial Control Systems (ICS)—from students and career changers to plant engineers, SOC teams, OT defenders, and executive leaders.</p>
         <div class="meta"><span>🗓️ Friday, April 24th, 2026 • 11:00 AM - 5:30 PM</span><span>📍 Marquette University, Milwaukee</span></div>
-        <div class="actions"><a class="btn btn-blue" href="#sponsor">Sponsor the Summit</a><a class="btn btn-blue" href="agenda/index.html">Agenda</a><a class="btn btn-gold" href="#register">Registration &amp; Pricing</a></div>
+        <div class="actions"><a class="btn btn-blue" href="#sponsor">Sponsors</a><a class="btn btn-blue" href="agenda/index.html">Agenda</a><a class="btn btn-gold" href="#register">Registration &amp; Pricing</a>
+          <div style="position:relative;display:inline-block;">
+            <button id="cal-btn" class="btn btn-blue" type="button" style="gap:4px;">📅 Add to Calendar <span style="font-size:10px;">▼</span></button>
+            <div id="cal-dropdown" style="display:none;position:absolute;bottom:100%;left:0;margin-bottom:6px;background:#fff;border:1px solid var(--line);border-radius:8px;box-shadow:0 4px 16px rgba(0,0,0,.25);min-width:220px;z-index:100;overflow:hidden;">
+              <a id="cal-google" href="#" target="_blank" rel="noreferrer" style="display:block;padding:10px 14px;text-decoration:none;color:#23384e;font-size:13px;font-weight:600;border-bottom:1px solid #eee;">Google Calendar</a>
+              <a id="cal-outlook" href="#" target="_blank" rel="noreferrer" style="display:block;padding:10px 14px;text-decoration:none;color:#23384e;font-size:13px;font-weight:600;border-bottom:1px solid #eee;">Outlook Web</a>
+              <a id="cal-ics" href="#" download="MOCS-2026.ics" style="display:block;padding:10px 14px;text-decoration:none;color:#23384e;font-size:13px;font-weight:600;">Download .ics (Apple/Outlook)</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div></header>
 
@@ -149,33 +162,6 @@ body.dark .agenda-table th,body.dark .agenda-table td{border-bottom-color:#2c456
         </div>
       </section>
 
-      <section id="call-for-presenters" class="card">
-        <h2>Call for Presenters &amp; Labs</h2>
-        <p class="small" style="font-size:14px;color:#2f9a52;font-weight:700;">The call for speakers has ended. Thank you to everyone who submitted proposals! Accepted presenters will be announced on April 1st.</p>
-      </section>
-
-      <section id="sponsor" class="sponsor">
-        <h2 style="color:#fff;">Seeking Sponsorship</h2>
-        <p style="margin-top:0;color:#d5e7ff;">We are actively seeking sponsorship. Click a tier to prefill the form. Every sponsor receives a table.</p>
-        <div class="sgrid">
-          <article class="sbox" data-tier="Title Sponsor" data-price="$1,000"><h4 style="color:#ffd766;">🏆 Title Sponsor</h4><p><strong>$1,000</strong></p><ul><li>Sponsor table included</li><li>Threat assessment engagement</li><li>25 free tickets included — use sponsorship tickets to sponsor a student to attend, with your organization credited as the host, enabling sponsor-driven community engagement</li></ul></article>
-          <article class="sbox" data-tier="Supporting Sponsor" data-price="$500"><h4 style="color:#ffd766;">💡 Supporting Sponsor</h4><p><strong>$500</strong></p><ul><li>Sponsor table included</li><li>Brand visibility in summit materials</li><li>10 free tickets included — use sponsorship tickets to sponsor a student to attend, with your organization credited as the host, enabling sponsor-driven community engagement</li></ul></article>
-          <article class="sbox" data-tier="Community Sponsor" data-price="$250"><h4 style="color:#ffd766;">🤝 Community Sponsor</h4><p><strong>$250</strong></p><ul><li>Sponsor table included</li><li>5 free tickets included — use sponsorship tickets to sponsor a student to attend, with your organization credited as the host, enabling sponsor-driven community engagement</li></ul></article>
-        </div>
-        <form id="sponsor-form" class="form">
-          <div class="frow">
-            <div><label>Selected Tier</label><input id="tier" readonly value="-" /></div>
-            <div><label>Tier Price</label><input id="tierPrice" readonly value="-" /></div>
-            <div><label>Your Name</label><input id="name" required /></div>
-            <div><label>Organization</label><input id="org" required /></div>
-            <div><label>Email</label><input id="email" type="email" required /></div>
-            <div><label>Phone</label><input id="phone" /></div>
-          </div>
-          <div style="margin-top:8px;"><label>Message</label><textarea id="message" rows="4" placeholder="Tell us your sponsorship goals and preferred training topic."></textarea></div>
-          <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap;"><button class="btn btn-gold" type="submit">Submit Sponsorship Interest</button><span style="color:#355b8a;font-size:13px;">Opens an email draft to the conference organizing team.</span></div>
-        </form>
-      </section>
-
       <section id="agenda" class="card" style="max-height:140px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:28px;">
         <div>
           <h2 style="margin:0;font-size:28px;">Event Agenda</h2>
@@ -189,14 +175,33 @@ body.dark .agenda-table th,body.dark .agenda-table td{border-bottom-color:#2c456
 
       <section id="register" class="card">
         <h2>Registration & Pricing</h2>
-        <p class="small">Select a pricing tile first, then continue with the Eventbrite checkout window below. <strong>Students must be registered prior to the event; at-the-door prices will be student pricing.</strong></p>
+        <p class="small">Select a pricing tile first, then continue with the Eventbrite checkout window below. <strong>Student tickets are $0 when pre-registered! At-the-door pricing is $15.</strong></p>
         <div class="pricing">
           <article class="price" data-ticket="Sponsored Tickets" data-price="Contact Us" data-checkout="#contact"><h4>Sponsored Tickets</h4><p><strong>Contact us</strong></p><p>Custom sponsored ticket blocks for teams, students, or community partners.</p></article>
-          <article class="price" data-ticket="MU Students (with valid ID)" data-price="FREE" data-checkout="https://www.eventbrite.com/e/golden-eagle-cyber-defense-summit-2026-tickets-1985023781566"><h4>MU Students</h4><p><strong>FREE (with valid ID & pre-registration)</strong></p><p>Student-focused networking and pathways. ID to be presented. At-door pricing is $15.</p></article>
-          <article class="price" data-ticket="Student Admission (Early Bird)" data-price="2 for $15" data-checkout="https://www.eventbrite.com/e/golden-eagle-cyber-defense-summit-2026-tickets-1985023781566"><h4>Student Admission</h4><p><strong>2 tickets for $15</strong> <span style="font-size:12px;color:#607287;">(Early Bird — before April 17th)</span></p><p><strong>$15 each</strong> <span style="font-size:12px;color:#607287;">after April 17th</span></p><p>Student ID to be presented at check-in.</p></article>
+          <article class="price" data-ticket="MU Students (with valid ID)" data-price="$0" data-checkout="https://www.eventbrite.com/e/golden-eagle-cyber-defense-summit-2026-tickets-1985023781566"><h4>MU Students</h4><p><strong style="font-size:28px;color:#2f9a52;">$0</strong></p><p style="background:#e6f4ec;border-radius:6px;padding:4px 8px;font-size:11px;font-weight:700;color:#1a6b36;display:inline-block;margin:4px 0;">Sponsored through MU Cybersecurity Program — Pre-Registration Required</p><p>Student ID to be presented at check-in. At-door pricing is $15.</p></article>
+          <article class="price" data-ticket="Student Admission" data-price="$0" data-checkout="https://www.eventbrite.com/e/golden-eagle-cyber-defense-summit-2026-tickets-1985023781566"><h4>Student Admission</h4><p><strong style="font-size:28px;color:#2f9a52;">$0</strong></p><p style="background:#e6f4ec;border-radius:6px;padding:4px 8px;font-size:11px;font-weight:700;color:#1a6b36;display:inline-block;margin:4px 0;">Sponsored through NDMSI — Pre-Registration Required</p><p>Student ID to be presented at check-in. At-door pricing is $15.</p></article>
           <article class="price" data-ticket="Industry Professionals" data-price="$25 / $45" data-checkout="https://www.eventbrite.com/e/golden-eagle-cyber-defense-summit-2026-tickets-1985023781566"><h4>Industry Professionals</h4><p><strong>$25</strong> <span style="font-size:12px;color:#607287;">(Early Bird — before April 17th)</span></p><p><strong>$45</strong> <span style="font-size:12px;color:#607287;">after April 17th</span></p><p>For early, mid-career, and senior industry attendees.</p></article>
         </div>
-        <div class="selected"><p style="margin:0;color:#607287;font-size:12px;">Selected ticket</p><p id="selected-ticket-name" style="margin:2px 0 4px;font-weight:800;">MU Students (with valid ID) — FREE</p><p id="selected-ticket-note" style="margin:0;color:#36557c;font-size:13px;">Checkout window is ready for this ticket.</p><div style="margin-top:8px;"><a id="eventbrite-checkout-btn" class="btn btn-gold" href="https://www.eventbrite.com/e/golden-eagle-cyber-defense-summit-2026-tickets-1985023781566" target="_blank" rel="noreferrer">Continue to Eventbrite Checkout</a></div></div>
+        <div class="selected"><p style="margin:0;color:#607287;font-size:12px;">Selected ticket</p><p id="selected-ticket-name" style="margin:2px 0 4px;font-weight:800;">MU Students (with valid ID) — $0 (Sponsored through MU Cybersecurity Program)</p><p id="selected-ticket-note" style="margin:0;color:#36557c;font-size:13px;">Checkout window is ready for this ticket.</p><div style="margin-top:8px;"><a id="eventbrite-checkout-btn" class="btn btn-gold" href="https://www.eventbrite.com/e/golden-eagle-cyber-defense-summit-2026-tickets-1985023781566" target="_blank" rel="noreferrer">Continue to Eventbrite Checkout</a></div></div>
+      </section>
+
+      <section id="sponsor" class="sponsor">
+        <h2 style="color:#fff;">Sponsorships</h2>
+        <p style="margin-top:0;color:#d5e7ff;">We appreciate our OT Cybersecurity partners. Click a tier to prefill the form. Every sponsor receives a table.</p>
+        <div class="sgrid">
+          <article class="sbox" data-tier="Title Sponsor" data-price="$1,000"><h4 style="color:#ffd766;">🏆 Title Sponsor</h4><p><strong>$1,000</strong></p><ul><li>Sponsor table included</li><li>Threat assessment engagement</li><li>25 free tickets included — use sponsorship tickets to sponsor a student to attend, with your organization credited as the host, enabling sponsor-driven community engagement</li></ul></article>
+          <article class="sbox" data-tier="Supporting Sponsor" data-price="$500"><h4 style="color:#ffd766;">💡 Supporting Sponsor</h4><p><strong>$500</strong></p><ul><li>Sponsor table included</li><li>Brand visibility in summit materials</li><li>10 free tickets included — use sponsorship tickets to sponsor a student to attend, with your organization credited as the host, enabling sponsor-driven community engagement</li></ul></article>
+          <article class="sbox" data-tier="Community Sponsor" data-price="$250"><h4 style="color:#ffd766;">🤝 Community Sponsor</h4><p><strong>$250</strong></p><ul><li>Sponsor table included</li><li>5 free tickets included — use sponsorship tickets to sponsor a student to attend, with your organization credited as the host, enabling sponsor-driven community engagement</li></ul></article>
+        </div>
+        <form id="sponsor-form" class="form" style="margin-top:10px;">
+          <input id="tier" type="hidden" value="-" /><input id="tierPrice" type="hidden" value="-" />
+          <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:flex-end;">
+            <div style="flex:1;min-width:140px;"><label style="font-size:11px;">Name</label><input id="name" required style="width:100%;padding:6px 8px;border:1px solid rgba(255,255,255,.3);border-radius:6px;background:rgba(255,255,255,.1);color:#fff;font-size:13px;" placeholder="Your name" /></div>
+            <div style="flex:1;min-width:140px;"><label style="font-size:11px;">Organization</label><input id="org" required style="width:100%;padding:6px 8px;border:1px solid rgba(255,255,255,.3);border-radius:6px;background:rgba(255,255,255,.1);color:#fff;font-size:13px;" placeholder="Company" /></div>
+            <div style="flex:1;min-width:180px;"><label style="font-size:11px;">Email</label><input id="email" type="email" required style="width:100%;padding:6px 8px;border:1px solid rgba(255,255,255,.3);border-radius:6px;background:rgba(255,255,255,.1);color:#fff;font-size:13px;" placeholder="you@company.com" /></div>
+            <button class="btn btn-gold" type="submit" style="white-space:nowrap;">Submit Interest</button>
+          </div>
+        </form>
       </section>
 
       <!-- Floating Contact Bubble -->
@@ -232,11 +237,15 @@ body.dark .agenda-table th,body.dark .agenda-table td{border-bottom-color:#2c456
         <p><strong>Executive Sponsors</strong></p>
         <div class="logos" style="grid-template-columns:repeat(2,1fr);">
           <a href="https://www.marquette.edu/cyber-security/" target="_blank" rel="noreferrer" class="logo" style="background:#fff;flex-direction:column;gap:6px;text-decoration:none;"><img src="assets/MU Cyber logo.png" alt="Marquette University Center for Cyber Security logo" style="max-width:100%;max-height:56px" /></a>
-          <a href="https://securityforthefolks.org" target="_blank" rel="noreferrer" class="logo" style="background:#fff;flex-direction:column;gap:6px;text-decoration:none;"><img src="assets/sftf-logo.png" alt="Security For the Folks logo" style="max-width:100%;max-height:72px" /></a>
+          <a href="https://www.xftf.org" target="_blank" rel="noreferrer" class="logo" style="background:#fff;flex-direction:column;gap:6px;text-decoration:none;"><img src="assets/sftf-logo.png" alt="Security For the Folks logo" style="max-width:100%;max-height:72px" /></a>
         </div>
         <p style="margin-top:12px;"><strong>Title Sponsors</strong></p>
         <div class="logos" style="grid-template-columns:1fr;">
           <a href="https://www.malkansolutions.com" target="_blank" rel="noreferrer" class="logo" style="background:#fff;flex-direction:column;gap:6px;text-decoration:none;"><img src="assets/malkansolutions logo.png" alt="Malkan Solutions logo" style="max-width:100%;max-height:56px" /></a>
+        </div>
+        <p style="margin-top:12px;"><strong>Community Sponsors</strong></p>
+        <div class="logos" style="grid-template-columns:1fr;">
+          <a href="https://www.rockwellautomation.com" target="_blank" rel="noreferrer" class="logo" style="background:#fff;flex-direction:column;gap:6px;text-decoration:none;"><img src="assets/logos/rockwell-automation.png" alt="Rockwell Automation logo" style="max-width:100%;max-height:56px" /></a>
         </div>
       </section>
 
@@ -250,7 +259,7 @@ body.dark .agenda-table th,body.dark .agenda-table td{border-bottom-color:#2c456
           <a href="https://www.irulast.com" target="_blank" rel="noreferrer" class="logo" style="background:rgba(255,255,255,.55);flex-direction:column;gap:6px;text-decoration:none;"><img src="assets/logos/irulast.svg" alt="Irulast logo" style="max-width:100%;max-height:48px" /></a>
           <a href="https://www.isaca.org" target="_blank" rel="noreferrer" class="logo" style="background:rgba(255,255,255,.55);flex-direction:column;gap:6px;text-decoration:none;"><img src="assets/logos/isaca-mke.png" alt="ISACA Milwaukee Chapter logo" style="max-width:100%;max-height:48px" /></a>
           <a href="https://www.icsvillage.com" target="_blank" rel="noreferrer" class="logo" style="background:rgba(255,255,255,.55);flex-direction:column;gap:6px;text-decoration:none;"><img src="assets/logos/icsvillage.png" alt="ICS Village logo" style="max-width:100%;max-height:48px" /></a>
-          <a href="https://www.mkebside.com" target="_blank" rel="noreferrer" class="logo" style="background:rgba(255,255,255,.55);flex-direction:column;gap:6px;text-decoration:none;"><img src="assets/logos/bsides.png" alt="BSides MKE logo" style="max-width:100%;max-height:48px" /></a>
+          <a href="https://www.bsidesmke.org" target="_blank" rel="noreferrer" class="logo" style="background:rgba(255,255,255,.55);flex-direction:column;gap:6px;text-decoration:none;"><img src="assets/logos/bsides.png" alt="BSides MKE logo" style="max-width:100%;max-height:48px" /></a>
           <a href="https://www.malkansolutions.com" target="_blank" rel="noreferrer" class="logo" style="background:rgba(255,255,255,.55);flex-direction:column;gap:6px;text-decoration:none;"><img src="assets/malkansolutions logo.png" alt="Malkan Solutions logo" style="max-width:100%;max-height:48px" /></a>
         </div>
       </section>
@@ -290,13 +299,8 @@ body.dark .agenda-table th,body.dark .agenda-table td{border-bottom-color:#2c456
               displayPrice = '$45';
             }
           }
-          if (tile.dataset.ticket === 'Student Admission (Early Bird)') {
-            if (now < earlyBirdCutoff) {
-              displayPrice = '2 for $15';
-            } else {
-              displayName = 'Student Admission';
-              displayPrice = '$15';
-            }
+          if (tile.dataset.ticket === 'Student Admission') {
+            displayPrice = '$0 (Sponsored through NDMSI)';
           }
           nameEl.textContent = `${displayName} — ${displayPrice}`;
           if (tile.dataset.ticket === 'Sponsored Tickets') {
@@ -323,7 +327,7 @@ body.dark .agenda-table th,body.dark .agenda-table td{border-bottom-color:#2c456
       document.getElementById('sponsor-form').addEventListener('submit', (e) => {
         e.preventDefault();
         const subject = encodeURIComponent(`Sponsorship Interest: ${document.getElementById('tier').value} (${document.getElementById('tierPrice').value})`);
-        const body = encodeURIComponent(`Midwest OT Cybersecurity Summit (MOCS) - Sponsorship Interest\n\nSelected Tier: ${document.getElementById('tier').value}\nTier Price: ${document.getElementById('tierPrice').value}\n\nName: ${document.getElementById('name').value}\nOrganization: ${document.getElementById('org').value}\nEmail: ${document.getElementById('email').value}\nPhone: ${document.getElementById('phone').value}\n\nMessage:\n${document.getElementById('message').value}`);
+        const body = encodeURIComponent(`Midwest OT Cybersecurity Summit (MOCS) - Sponsorship Interest\n\nSelected Tier: ${document.getElementById('tier').value}\nTier Price: ${document.getElementById('tierPrice').value}\n\nName: ${document.getElementById('name').value}\nOrganization: ${document.getElementById('org').value}\nEmail: ${document.getElementById('email').value}`);
         window.location.href = `mailto:chirag.malkan@marquette.edu?cc=chirag@malkansolutions.com&subject=${subject}&body=${body}`;
       });
 
@@ -339,6 +343,47 @@ body.dark .agenda-table th,body.dark .agenda-table td{border-bottom-color:#2c456
         document.body.classList.toggle('dark');
         document.getElementById('dark-toggle').textContent = document.body.classList.contains('dark') ? '☀️ Light Mode' : '🌙 Dark Mode';
       });
+
+      // Calendar dropdown
+      (function(){
+        const title = 'Midwest OT Cybersecurity Summit (MOCS) 2026';
+        const desc = 'OT Cybersecurity conference hosted at Marquette University. Registration: https://www.eventbrite.com/e/golden-eagle-cyber-defense-summit-2026-tickets-1985023781566';
+        const location = 'Marquette University, Alumni Memorial Union, Milwaukee, WI';
+        const start = '20260424T160000Z'; // April 24 2026, 11:00 AM CDT = 16:00 UTC
+        const end = '20260424T223000Z';   // 5:30 PM CDT = 22:30 UTC
+
+        document.getElementById('cal-google').href =
+          'https://calendar.google.com/calendar/render?action=TEMPLATE' +
+          '&text=' + encodeURIComponent(title) +
+          '&dates=' + start + '/' + end +
+          '&details=' + encodeURIComponent(desc) +
+          '&location=' + encodeURIComponent(location);
+
+        document.getElementById('cal-outlook').href =
+          'https://outlook.live.com/calendar/0/action/compose?allday=false' +
+          '&subject=' + encodeURIComponent(title) +
+          '&startdt=2026-04-24T11:00:00-05:00' +
+          '&enddt=2026-04-24T17:30:00-05:00' +
+          '&body=' + encodeURIComponent(desc) +
+          '&location=' + encodeURIComponent(location);
+
+        var icsContent = [
+          'BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//MOCS//EN',
+          'BEGIN:VEVENT',
+          'DTSTART:'+start,'DTEND:'+end,
+          'SUMMARY:'+title,
+          'DESCRIPTION:'+desc.replace(/\n/g,'\\n'),
+          'LOCATION:'+location,
+          'END:VEVENT','END:VCALENDAR'
+        ].join('\r\n');
+        document.getElementById('cal-ics').href = 'data:text/calendar;charset=utf-8,' + encodeURIComponent(icsContent);
+
+        var btn = document.getElementById('cal-btn');
+        var dd = document.getElementById('cal-dropdown');
+        btn.addEventListener('click', function(e){ e.stopPropagation(); dd.style.display = dd.style.display === 'none' ? 'block' : 'none'; });
+        document.addEventListener('click', function(){ dd.style.display = 'none'; });
+        dd.addEventListener('click', function(){ dd.style.display = 'none'; });
+      })();
     </script>
   </body>
 </html>
