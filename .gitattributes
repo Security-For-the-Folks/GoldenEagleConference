@@ -1,0 +1,4 @@
+# Cloudflare parses _headers/_redirects line-by-line; keep them LF on every platform.
+website/_headers text eol=lf
+website/_redirects text eol=lf
+*.sh text eol=lf
