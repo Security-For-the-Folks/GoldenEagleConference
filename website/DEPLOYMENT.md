@@ -11,7 +11,47 @@ python3 -m http.server 4173
 
 Open `http://127.0.0.1:4173`.
 
-## Netlify deployment
+## Cloudflare Pages deployment (current target)
+
+Project `themocs` -> https://themocs.pages.dev
+
+```bash
+scripts/deploy-cloudflare.sh              # preview deployment
+scripts/deploy-cloudflare.sh --production # production branch
+```
+
+The script stages a clean copy of `website/` into `.cf-dist/` and uploads that,
+rather than uploading `website/` directly. Netlify published the folder
+wholesale, which put `package.json`, `vite.config.js` and `src/*.jsx` on the
+public site; staging drops build sources and tooling. It also aborts if any
+asset exceeds Cloudflare's 25 MiB per-file limit.
+
+`website/_headers` carries the security headers (CSP, HSTS, X-Frame-Options,
+nosniff, Referrer-Policy, Permissions-Policy, X-Robots-Tag) and the no-AI rules
+on the watermarked image folders. It is the Cloudflare equivalent of the
+`[[headers]]` blocks in `netlify.toml`.
+
+There is deliberately **no** `_redirects` file. Cloudflare documents that
+"Redirects are always followed, regardless of whether or not an asset matches
+the incoming request", so porting the Netlify `/* -> /index.html 200` rewrite
+would shadow every real asset. This is a multi-page static site, so Pages'
+directory-index serving handles routing on its own.
+
+Two behaviours differ from Netlify and are expected:
+
+- Netlify's Pretty URLs rewrote `href="agenda/index.html"` to `/agenda/` at the
+  edge. Cloudflare serves the markup as authored; Pages 308-redirects
+  `/agenda/index.html` to `/agenda/`, so links work with one extra hop.
+- With no `404.html` present, Pages serves `index.html` at status 200 for
+  unmatched paths. Netlify did the same via the SPA rewrite. Adding a
+  `404.html` would produce real 404s.
+
+DNS still points at Netlify. Register the custom domain in the Pages project
+**before** repointing DNS -- pointing a CNAME at Pages for a hostname the
+project does not yet claim serves a cert that does not match, and browsers show
+the site as insecure.
+
+## Netlify deployment (legacy, still live)
 
 A root `netlify.toml` is included and publishes the `website/` directory directly.
 
