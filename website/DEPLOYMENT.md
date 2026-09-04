@@ -42,9 +42,13 @@ Two behaviours differ from Netlify and are expected:
 - Netlify's Pretty URLs rewrote `href="agenda/index.html"` to `/agenda/` at the
   edge. Cloudflare serves the markup as authored; Pages 308-redirects
   `/agenda/index.html` to `/agenda/`, so links work with one extra hop.
-- With no `404.html` present, Pages serves `index.html` at status 200 for
-  unmatched paths. Netlify did the same via the SPA rewrite. Adding a
-  `404.html` would produce real 404s.
+- Netlify returned its homepage at status 200 for unmatched paths, via the SPA
+  rewrite. Cloudflare serves `website/404.html` with a real 404 instead. That
+  file is load-bearing: Cloudflare documents that "if your project does not
+  include a top-level `404.html` file, Pages assumes that you are deploying a
+  single-page application", and falls back to serving `/` at 200. Deleting it
+  silently reintroduces soft 404s. Pages also serves it at `/404` and
+  308-redirects `/404.html` there.
 
 DNS still points at Netlify. Register the custom domain in the Pages project
 **before** repointing DNS -- pointing a CNAME at Pages for a hostname the
