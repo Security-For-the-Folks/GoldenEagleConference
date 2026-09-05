@@ -184,7 +184,7 @@
         .reveal-badge{background:#ddd!important;color:#333!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
         .agenda-warning{background:#fff3cd!important;color:#856404!important;-webkit-print-color-adjust:exact;print-color-adjust:exact;padding:4px 8px!important;font-size:10px!important;margin:0 0 4px!important}
         .print-header{display:block!important;text-align:center;margin:0 0 4px!important;font-size:10px}
-        .print-header h1{font-size:13px;margin:0 0 2px;color:#000}
+        .print-header h2{font-size:13px;margin:0 0 2px;color:#000}
         .print-header p{margin:0;color:#555;font-size:9px}
       }
 
@@ -330,12 +330,17 @@
       body.dark .icon-toggle .icon-moon{display:none}
       body.dark .icon-toggle .icon-sun{display:inline-block}
       body.dark .icon-toggle{color:#ffd766;border-color:rgba(255,215,102,.3)}
+    
+      /* Accessibility: skip navigation for keyboard and screen-reader users */
+      .skip-link{position:absolute;left:-9999px;top:0;z-index:9999;background:#0d3260;color:#fff;padding:10px 18px;border-radius:0 0 8px 0;font-weight:700;text-decoration:none}
+      .skip-link:focus{left:0;outline:3px solid #f4c300;outline-offset:2px}
     </style>
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
     <header class="top"><div class="wrap wrap-top">
       <div class="topbar">
-        <a href="../index.html" class="brand" aria-label="MOCS 2027 — Midwest OT Cybersecurity Summit">
+        <a href="/" class="brand" aria-label="MOCS 2027 — Midwest OT Cybersecurity Summit">
           <span class="brand-logos">
             <img src="../assets/marquette-logo.png" alt="Marquette University" class="brand-logo" />
             <img src="../assets/sftf-logo.png" alt="Security For the Folks" class="brand-logo brand-logo-sftf" />
@@ -344,17 +349,17 @@
           <span class="brand-word">MOCS 2027</span>
         </a>
         <nav class="topnav" aria-label="Primary">
-          <a class="topnav-link" href="../index.html">Home</a>
-          <a class="topnav-link is-current" href="../agenda/index.html" aria-current="page">Agenda</a>
-          <a class="topnav-link" href="../day-of/index.html">Day-of</a>
-          <a class="topnav-link" href="../speaker-sponsor/index.html">Logistics</a>
-          <a class="topnav-link" href="../about/index.html">About</a>
+          <a class="topnav-link" href="/">Home</a>
+          <a class="topnav-link is-current" href="/agenda/" aria-current="page">Agenda</a>
+          <a class="topnav-link" href="/day-of/">Day-of</a>
+          <a class="topnav-link" href="/speaker-sponsor/">Logistics</a>
+          <a class="topnav-link" href="/about/">About</a>
           <span class="topnav-rule" aria-hidden="true"></span>
           <button id="dark-toggle" class="icon-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
             <svg class="icon-moon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
             <svg class="icon-sun" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
           </button>
-          <a class="btn-register-sm" href="../index.html#cfs">Submit a Talk
+          <a class="btn-register-sm" href="/#cfs">Submit a Talk
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </a>
         </nav>
@@ -367,11 +372,11 @@
     </div></header>
 
     <div class="print-header" style="display:none;">
-      <h1>Midwest OT Cybersecurity Summit (MOCS) 2027</h1>
+      <h2>Midwest OT Cybersecurity Summit (MOCS) 2027</h2>
       <p>DRAFT Agenda Template — As of April 26, 2026 · Speaker line-up TBD after CFS closes Mar 5, 2027</p>
     </div>
 
-    <main class="wrap">
+    <main class="wrap" id="main" tabindex="-1">
 
       <!-- CFS BANNER -->
       <div style="background:linear-gradient(180deg,#fffaea 0%,#fef0c0 100%);border:1px solid #f3d56a;border-radius:12px;padding:16px 20px;margin:18px 0 22px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;justify-content:space-between;">
@@ -379,7 +384,7 @@
           <p style="margin:0 0 4px;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#8a6500;">Draft template — 2027</p>
           <p style="margin:0;font-size:14px;color:#23384e;line-height:1.5;">Same proven structure as 2026 (3 rooms · 12 sessions · 10:00–17:30). <strong>Session topics, speakers, and titles are placeholders</strong> — confirmed after the Call for Speakers closes <strong>Mar 5, 2027</strong>.</p>
         </div>
-        <a class="btn btn-gold" style="text-decoration:none;padding:9px 16px;border-radius:9px;font-weight:800;flex-shrink:0;" href="../index.html#cfs">Submit a talk →</a>
+        <a class="btn btn-gold" style="text-decoration:none;padding:9px 16px;border-radius:9px;font-weight:800;flex-shrink:0;" href="/#cfs">Submit a talk →</a>
       </div>
 
       <section class="spn-section">
@@ -393,7 +398,7 @@
 
         <!-- Refined toolbar -->
         <div class="toolbar tk-toolbar">
-          <a class="tk-btn" href="../index.html">← Back</a>
+          <a class="tk-btn" href="/">← Back</a>
           <button id="btn-pdf" class="tk-btn" type="button">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             PDF
@@ -422,7 +427,7 @@
         </div>
 
         <!-- Refined Day-of callout -->
-        <a href="../day-of/index.html" class="agenda-dayof">
+        <a href="/day-of/" class="agenda-dayof">
           <span class="agenda-dayof-icon" aria-hidden="true">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
           </span>
@@ -441,19 +446,19 @@
           <tbody>
             <tr><td><strong>10:00 AM →</strong></td><td colspan="3"><strong>Registration &amp; Check-In opens</strong> · AMU 3rd Floor Lobby · Badges, welcome packets, sponsor tables</td></tr>
             <tr style="background:#f0f7ff;"><td><strong>11:00 AM – 11:30 AM</strong></td><td colspan="3"><strong>Lunch &amp; Networking</strong> · Box lunches provided for all registered attendees · AMU Ballroom</td></tr>
-            <tr><td><strong>11:30 AM – 12:30 PM</strong></td><td colspan="3"><strong>Opening Keynote</strong><br><em style="color:#3b6ba5;">Speaker TBD — selected from Call for Speakers · <a href="../index.html#cfs" style="color:#1f4f8f;font-weight:700;">apply →</a></em> · AMU Ballroom</td></tr>
+            <tr><td><strong>11:30 AM – 12:30 PM</strong></td><td colspan="3"><strong>Opening Keynote</strong><br><em style="color:#3b6ba5;">Speaker TBD — selected from Call for Speakers · <a href="/#cfs" style="color:#1f4f8f;font-weight:700;">apply →</a></em> · AMU Ballroom</td></tr>
             <tr class="break-row"><td colspan="4">── 10 min break ──</td></tr>
-            <tr><td><strong>12:40 PM – 1:10 PM</strong></td><td class="col-227"><strong>Plant Floor — Track A</strong><br><span style="color:#3b6ba5;font-size:13px;">PLCs · protocols · segmentation · field devices</span><br><em style="color:var(--muted);font-size:12px;">Speaker TBD — <a href="../index.html#cfs" style="color:#1f4f8f;">apply via CFP</a></em></td><td class="col-252"><strong>Network &amp; SOC — Track B</strong><br><span style="color:#3b6ba5;font-size:13px;">Detection · IR · threat hunting · OT visibility</span><br><em style="color:var(--muted);font-size:12px;">Speaker TBD — <a href="../index.html#cfs" style="color:#1f4f8f;">apply via CFP</a></em></td><td class="col-254"><strong>Hands-on / Workshop — Track C</strong><br><span style="color:#3b6ba5;font-size:13px;">30 min · interactive · small-group</span><br><em style="color:var(--muted);font-size:12px;">Speaker TBD — <a href="../index.html#cfs" style="color:#1f4f8f;">apply via CFP</a></em></td></tr>
+            <tr><td><strong>12:40 PM – 1:10 PM</strong></td><td class="col-227"><strong>Plant Floor — Track A</strong><br><span style="color:#3b6ba5;font-size:13px;">PLCs · protocols · segmentation · field devices</span><br><em style="color:var(--muted);font-size:12px;">Speaker TBD — <a href="/#cfs" style="color:#1f4f8f;">apply via CFP</a></em></td><td class="col-252"><strong>Network &amp; SOC — Track B</strong><br><span style="color:#3b6ba5;font-size:13px;">Detection · IR · threat hunting · OT visibility</span><br><em style="color:var(--muted);font-size:12px;">Speaker TBD — <a href="/#cfs" style="color:#1f4f8f;">apply via CFP</a></em></td><td class="col-254"><strong>Hands-on / Workshop — Track C</strong><br><span style="color:#3b6ba5;font-size:13px;">30 min · interactive · small-group</span><br><em style="color:var(--muted);font-size:12px;">Speaker TBD — <a href="/#cfs" style="color:#1f4f8f;">apply via CFP</a></em></td></tr>
             <tr class="break-row"><td colspan="4">── 10 min break ──</td></tr>
-            <tr><td><strong>1:20 PM – 1:50 PM</strong></td><td class="col-227"><strong>Plant Floor — Track A</strong><br><span style="color:#3b6ba5;font-size:13px;">Firewall hygiene · network segmentation · zone &amp; conduit design</span><br><em style="color:var(--muted);font-size:12px;">Speaker TBD — <a href="../index.html#cfs" style="color:#1f4f8f;">apply via CFP</a></em></td><td class="col-252"><strong>Network &amp; SOC — Track B</strong><br><span style="color:#3b6ba5;font-size:13px;">Identity · credentials · access in OT environments</span><br><em style="color:var(--muted);font-size:12px;">Speaker TBD — <a href="../index.html#cfs" style="color:#1f4f8f;">apply via CFP</a></em></td><td class="col-254" rowspan="3" style="vertical-align:top;"><strong>Hands-on Lab — Track C</strong><br><span style="color:#3b6ba5;font-size:13px;">SCADA / Modbus / PLC simulation · attacker &amp; defender perspectives</span><br><em style="color:var(--muted);font-size:12px;">Speaker TBD — <a href="../index.html#cfs" style="color:#1f4f8f;">apply via CFP</a></em><br><span style="font-size:11px;color:var(--muted);">1 hour · 1:20 PM – 2:20 PM</span><br><span style="display:inline-block;margin-top:6px;padding:3px 8px;background:rgba(199,54,46,.1);color:#c7362e;border:1px solid rgba(199,54,46,.3);border-radius:4px;font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;">⚠ Lab — bring laptop</span></td></tr>
+            <tr><td><strong>1:20 PM – 1:50 PM</strong></td><td class="col-227"><strong>Plant Floor — Track A</strong><br><span style="color:#3b6ba5;font-size:13px;">Firewall hygiene · network segmentation · zone &amp; conduit design</span><br><em style="color:var(--muted);font-size:12px;">Speaker TBD — <a href="/#cfs" style="color:#1f4f8f;">apply via CFP</a></em></td><td class="col-252"><strong>Network &amp; SOC — Track B</strong><br><span style="color:#3b6ba5;font-size:13px;">Identity · credentials · access in OT environments</span><br><em style="color:var(--muted);font-size:12px;">Speaker TBD — <a href="/#cfs" style="color:#1f4f8f;">apply via CFP</a></em></td><td class="col-254" rowspan="3" style="vertical-align:top;"><strong>Hands-on Lab — Track C</strong><br><span style="color:#3b6ba5;font-size:13px;">SCADA / Modbus / PLC simulation · attacker &amp; defender perspectives</span><br><em style="color:var(--muted);font-size:12px;">Speaker TBD — <a href="/#cfs" style="color:#1f4f8f;">apply via CFP</a></em><br><span style="font-size:11px;color:var(--muted);">1 hour · 1:20 PM – 2:20 PM</span><br><span style="display:inline-block;margin-top:6px;padding:3px 8px;background:rgba(199,54,46,.1);color:#c7362e;border:1px solid rgba(199,54,46,.3);border-radius:4px;font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;">⚠ Lab — bring laptop</span></td></tr>
             <tr class="break-row"><td colspan="3">── 10 min break ──</td></tr>
-            <tr><td><strong>2:00 PM – 2:30 PM</strong></td><td class="col-227"><strong>Plant Floor — Track A</strong><br><span style="color:#3b6ba5;font-size:13px;">Threat modeling · risk prioritization · IEC 62443 / GRC</span><br><em style="color:var(--muted);font-size:12px;">Speaker TBD — <a href="../index.html#cfs" style="color:#1f4f8f;">apply via CFP</a></em></td><td class="col-252"><strong>Cloud / Enterprise — Track B</strong><br><span style="color:#3b6ba5;font-size:13px;">Supply chain · IT/OT convergence · third-party risk</span><br><em style="color:var(--muted);font-size:12px;">Speaker TBD — <a href="../index.html#cfs" style="color:#1f4f8f;">apply via CFP</a></em></td></tr>
+            <tr><td><strong>2:00 PM – 2:30 PM</strong></td><td class="col-227"><strong>Plant Floor — Track A</strong><br><span style="color:#3b6ba5;font-size:13px;">Threat modeling · risk prioritization · IEC 62443 / GRC</span><br><em style="color:var(--muted);font-size:12px;">Speaker TBD — <a href="/#cfs" style="color:#1f4f8f;">apply via CFP</a></em></td><td class="col-252"><strong>Cloud / Enterprise — Track B</strong><br><span style="color:#3b6ba5;font-size:13px;">Supply chain · IT/OT convergence · third-party risk</span><br><em style="color:var(--muted);font-size:12px;">Speaker TBD — <a href="/#cfs" style="color:#1f4f8f;">apply via CFP</a></em></td></tr>
             <tr class="break-row"><td colspan="4">── 10 min break · Snacks served ──</td></tr>
-            <tr><td><strong>2:40 PM – 3:10 PM</strong></td><td class="col-227"><strong>Plant Floor — Track A</strong><br><span style="color:#3b6ba5;font-size:13px;">OT system security · architecture deep-dive</span><br><em style="color:var(--muted);font-size:12px;">Speaker TBD — <a href="../index.html#cfs" style="color:#1f4f8f;">apply via CFP</a></em></td><td class="col-252"><strong>Cloud / Enterprise — Track B</strong><br><span style="color:#3b6ba5;font-size:13px;">Edge · cloud · zero-trust for industrial systems</span><br><em style="color:var(--muted);font-size:12px;">Speaker TBD — <a href="../index.html#cfs" style="color:#1f4f8f;">apply via CFP</a></em></td><td class="col-254"><strong>Hands-on / Workshop — Track C</strong><br><span style="color:#3b6ba5;font-size:13px;">30 min · interactive · small-group</span><br><em style="color:var(--muted);font-size:12px;">Speaker TBD — <a href="../index.html#cfs" style="color:#1f4f8f;">apply via CFP</a></em></td></tr>
+            <tr><td><strong>2:40 PM – 3:10 PM</strong></td><td class="col-227"><strong>Plant Floor — Track A</strong><br><span style="color:#3b6ba5;font-size:13px;">OT system security · architecture deep-dive</span><br><em style="color:var(--muted);font-size:12px;">Speaker TBD — <a href="/#cfs" style="color:#1f4f8f;">apply via CFP</a></em></td><td class="col-252"><strong>Cloud / Enterprise — Track B</strong><br><span style="color:#3b6ba5;font-size:13px;">Edge · cloud · zero-trust for industrial systems</span><br><em style="color:var(--muted);font-size:12px;">Speaker TBD — <a href="/#cfs" style="color:#1f4f8f;">apply via CFP</a></em></td><td class="col-254"><strong>Hands-on / Workshop — Track C</strong><br><span style="color:#3b6ba5;font-size:13px;">30 min · interactive · small-group</span><br><em style="color:var(--muted);font-size:12px;">Speaker TBD — <a href="/#cfs" style="color:#1f4f8f;">apply via CFP</a></em></td></tr>
             <tr class="break-row"><td colspan="4">── 10 min break ──</td></tr>
-            <tr><td><strong>3:20 PM – 3:50 PM</strong></td><td class="col-227"><strong>Career &amp; Community — Track A</strong><br><span style="color:#3b6ba5;font-size:13px;">Hiring · career paths in OT cyber · student-friendly</span><br><em style="color:var(--muted);font-size:12px;">Speaker TBD — <a href="../index.html#cfs" style="color:#1f4f8f;">apply via CFP</a></em></td><td class="col-252"><strong>Practitioner — Track B</strong><br><span style="color:#3b6ba5;font-size:13px;">Practical security that scales · automation · real-world execution</span><br><em style="color:var(--muted);font-size:12px;">Speaker TBD — <a href="../index.html#cfs" style="color:#1f4f8f;">apply via CFP</a></em></td><td class="col-254">&nbsp;</td></tr>
+            <tr><td><strong>3:20 PM – 3:50 PM</strong></td><td class="col-227"><strong>Career &amp; Community — Track A</strong><br><span style="color:#3b6ba5;font-size:13px;">Hiring · career paths in OT cyber · student-friendly</span><br><em style="color:var(--muted);font-size:12px;">Speaker TBD — <a href="/#cfs" style="color:#1f4f8f;">apply via CFP</a></em></td><td class="col-252"><strong>Practitioner — Track B</strong><br><span style="color:#3b6ba5;font-size:13px;">Practical security that scales · automation · real-world execution</span><br><em style="color:var(--muted);font-size:12px;">Speaker TBD — <a href="/#cfs" style="color:#1f4f8f;">apply via CFP</a></em></td><td class="col-254">&nbsp;</td></tr>
             <tr class="break-row"><td colspan="4">── 10 min break ──</td></tr>
-            <tr><td><strong>4:00 PM – 4:30 PM</strong></td><td colspan="3"><strong>Executive Panel</strong> · AMU Ballroom<br><em style="color:#3b6ba5;">Panelists curated from CFP submissions · <a href="../index.html#cfs" style="color:#1f4f8f;font-weight:700;">apply →</a></em></td></tr>
+            <tr><td><strong>4:00 PM – 4:30 PM</strong></td><td colspan="3"><strong>Executive Panel</strong> · AMU Ballroom<br><em style="color:#3b6ba5;">Panelists curated from CFP submissions · <a href="/#cfs" style="color:#1f4f8f;font-weight:700;">apply →</a></em></td></tr>
             <tr style="background:#f0f7ff;"><td><strong>4:30 PM – 5:30 PM</strong></td><td colspan="3"><strong>Evening Networking</strong> · Snacks provided · AMU Ballroom</td></tr>
           </tbody>
         </table>

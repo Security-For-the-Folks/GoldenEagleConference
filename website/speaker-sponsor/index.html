@@ -317,12 +317,17 @@
       body.dark .icon-toggle .icon-moon{display:none}
       body.dark .icon-toggle .icon-sun{display:inline-block}
       body.dark .icon-toggle{color:#ffd766;border-color:rgba(255,215,102,.3)}
+    
+      /* Accessibility: skip navigation for keyboard and screen-reader users */
+      .skip-link{position:absolute;left:-9999px;top:0;z-index:9999;background:#0d3260;color:#fff;padding:10px 18px;border-radius:0 0 8px 0;font-weight:700;text-decoration:none}
+      .skip-link:focus{left:0;outline:3px solid #f4c300;outline-offset:2px}
     </style>
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
     <header class="top"><div class="wrap wrap-top">
       <div class="topbar">
-        <a href="../index.html" class="brand" aria-label="MOCS 2027 — Midwest OT Cybersecurity Summit">
+        <a href="/" class="brand" aria-label="MOCS 2027 — Midwest OT Cybersecurity Summit">
           <span class="brand-logos">
             <img src="../assets/marquette-logo.png" alt="Marquette University" class="brand-logo" />
             <img src="../assets/sftf-logo.png" alt="Security For the Folks" class="brand-logo brand-logo-sftf" />
@@ -331,17 +336,17 @@
           <span class="brand-word">MOCS 2027</span>
         </a>
         <nav class="topnav" aria-label="Primary">
-          <a class="topnav-link" href="../index.html">Home</a>
-          <a class="topnav-link" href="../agenda/index.html">Agenda</a>
-          <a class="topnav-link" href="../day-of/index.html">Day-of</a>
-          <a class="topnav-link is-current" href="../speaker-sponsor/index.html" aria-current="page">Logistics</a>
-          <a class="topnav-link" href="../about/index.html">About</a>
+          <a class="topnav-link" href="/">Home</a>
+          <a class="topnav-link" href="/agenda/">Agenda</a>
+          <a class="topnav-link" href="/day-of/">Day-of</a>
+          <a class="topnav-link is-current" href="/speaker-sponsor/" aria-current="page">Logistics</a>
+          <a class="topnav-link" href="/about/">About</a>
           <span class="topnav-rule" aria-hidden="true"></span>
           <button id="dark-toggle" class="icon-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
             <svg class="icon-moon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
             <svg class="icon-sun" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
           </button>
-          <a class="btn-register-sm" href="../index.html#cfs">Submit a Talk
+          <a class="btn-register-sm" href="/#cfs">Submit a Talk
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </a>
         </nav>
@@ -353,7 +358,7 @@
       </div>
     </div></header>
 
-    <main class="wrap">
+    <main class="wrap" id="main" tabindex="-1">
 
       <!-- 2027 STATUS BANNER -->
       <div style="background:linear-gradient(180deg,#fffaea 0%,#fef0c0 100%);border:1px solid #f3d56a;border-radius:12px;padding:16px 20px;margin:18px 0 22px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;justify-content:space-between;">
@@ -361,7 +366,7 @@
           <p style="margin:0 0 4px;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#8a6500;">Heads up — 2027 logistics</p>
           <p style="margin:0;font-size:14px;color:#23384e;line-height:1.5;">The deadlines, contacts, and pricing on this page are <strong>from MOCS 2026 and shown as a preview</strong>. Final 2027 logistics — including dates, sponsor pricing, and points of contact — firm up after the Call for Speakers closes <strong>Mar 5, 2027</strong>.</p>
         </div>
-        <a class="btn btn-gold" style="text-decoration:none;padding:9px 16px;border-radius:9px;font-weight:800;flex-shrink:0;" href="../index.html#cfs">Submit a talk →</a>
+        <a class="btn btn-gold" style="text-decoration:none;padding:9px 16px;border-radius:9px;font-weight:800;flex-shrink:0;" href="/#cfs">Submit a talk →</a>
       </div>
 
       <nav class="page-nav" aria-label="On this page">
@@ -379,7 +384,7 @@
           <span class="section-idx">01 /</span>
           <div>
             <h2 class="section-title">For speakers</h2>
-            <p class="section-sub">First step: submit a talk via the <a href="../index.html#cfs" style="color:#1f4f8f;font-weight:700;">Call for Speakers</a> by Mar 5, 2027. Once accepted, here's what to expect (deadlines based on 2026 — 2027 dates confirmed at notification).</p>
+            <p class="section-sub">First step: submit a talk via the <a href="/#cfs" style="color:#1f4f8f;font-weight:700;">Call for Speakers</a> by Mar 5, 2027. Once accepted, here's what to expect (deadlines based on 2026 — 2027 dates confirmed at notification).</p>
           </div>
         </div>
 
@@ -493,7 +498,7 @@
                 <h4>Parking — on us (speakers only)</h4>
                 <span class="check-chip green">Validated</span>
               </div>
-              <p><strong>Speakers only:</strong> parking is <strong>sponsored by MOCS</strong> — park at <a href="../day-of/index.html#parking">Structure 1 (1240 W. Wells St)</a> or Structure 2 (749 N. 16th St), and your ticket will be <strong>validated by the MOCS conference founder</strong>. Hang on to your ticket and stop by the registration desk when you arrive. Note: city street parking is metered and is not covered.</p>
+              <p><strong>Speakers only:</strong> parking is <strong>sponsored by MOCS</strong> — park at <a href="/day-of/#parking">Structure 1 (1240 W. Wells St)</a> or Structure 2 (749 N. 16th St), and your ticket will be <strong>validated by the MOCS conference founder</strong>. Hang on to your ticket and stop by the registration desk when you arrive. Note: city street parking is metered and is not covered.</p>
             </div>
           </div>
 
@@ -522,7 +527,7 @@
           <p class="eyebrow">Rooms</p>
           <h3>Where you'll present</h3>
         </div>
-        <p style="margin:-4px 0 10px;font-size:13px;color:var(--muted);line-height:1.55;">All three rooms sit <strong>next to each other on the AMU 2nd floor</strong>. A <strong>MOCS wayfinding sign</strong> in the hallway will point to the right door. See the <a href="../day-of/index.html#nav-video" style="color:#1f4f8f;font-weight:600;border-bottom:1px solid rgba(31,79,143,.25);text-decoration:none;">2nd floor map on the Day-of page</a>.</p>
+        <p style="margin:-4px 0 10px;font-size:13px;color:var(--muted);line-height:1.55;">All three rooms sit <strong>next to each other on the AMU 2nd floor</strong>. A <strong>MOCS wayfinding sign</strong> in the hallway will point to the right door. See the <a href="/day-of/#nav-video" style="color:#1f4f8f;font-weight:600;border-bottom:1px solid rgba(31,79,143,.25);text-decoration:none;">2nd floor map on the Day-of page</a>.</p>
         <div class="rooms">
           <div class="room">
             <div class="room-head">
