@@ -104,4 +104,4 @@ Disallow: /assets/journey-photos-wm/
 Disallow: /assets/founders/
 Disallow: /assets/2026 conference photos/
 
-Sitemap: https://midwest-otcs.org/sitemap.xml
+Sitemap: https://themocs.org/sitemap.xml
