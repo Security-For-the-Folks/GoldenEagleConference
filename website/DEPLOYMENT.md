@@ -15,16 +15,33 @@ Open `http://127.0.0.1:4173`.
 
 Project `themocs` -> https://themocs.pages.dev
 
+The project is git-connected and builds on push. **These two settings in the
+Pages dashboard are required**, and a build with anything else produces an
+empty deployment that 404s every route:
+
+| Setting                | Value                     |
+| ---------------------- | ------------------------- |
+| Build command          | `bash scripts/build-cf.sh` |
+| Build output directory | `.cf-dist`                |
+
+Do not leave the build command empty with the output directory set to
+`website`. That publishes the folder wholesale, which is how `package.json`,
+`vite.config.js` and `src/*.jsx` ended up fetchable on the Netlify site.
+
+For an out-of-band deploy from a workstation:
+
 ```bash
 scripts/deploy-cloudflare.sh              # preview deployment
 scripts/deploy-cloudflare.sh --production # production branch
 ```
 
-The script stages a clean copy of `website/` into `.cf-dist/` and uploads that,
-rather than uploading `website/` directly. Netlify published the folder
+`scripts/build-cf.sh` stages a clean copy of `website/` into `.cf-dist/`, and
+both the git build and the direct upload publish that staged tree rather than
+`website/` itself. Netlify published the folder
 wholesale, which put `package.json`, `vite.config.js` and `src/*.jsx` on the
 public site; staging drops build sources and tooling. It also aborts if any
-asset exceeds Cloudflare's 25 MiB per-file limit.
+asset exceeds Cloudflare's 25 MiB per-file limit, or if `404.html` is missing
+from the staged root.
 
 `website/_headers` carries the security headers (CSP, HSTS, X-Frame-Options,
 nosniff, Referrer-Policy, Permissions-Policy, X-Robots-Tag) and the no-AI rules
