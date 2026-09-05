@@ -1,0 +1,25 @@
+# Cloudflare Pages headers — ported from the root netlify.toml [[headers]] blocks.
+# Syntax: a path pattern on its own line, then indented "Name: value" pairs.
+# Limit: 100 rules per file (https://developers.cloudflare.com/pages/configuration/headers/).
+
+/*
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' https:; media-src 'self'; font-src 'self' https://fonts.gstatic.com; connect-src 'self'
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  X-Robots-Tag: noai, noimageai
+
+# Image folders — explicit no-AI / no-training header
+/assets/recap-2026-wm/*
+  X-Robots-Tag: noai, noimageai, noindex
+  Cache-Control: public, max-age=86400
+
+/assets/journey-photos-wm/*
+  X-Robots-Tag: noai, noimageai, noindex
+  Cache-Control: public, max-age=86400
+
+/assets/founders/*
+  X-Robots-Tag: noai, noimageai, noindex
+  Cache-Control: public, max-age=86400

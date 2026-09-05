@@ -1,0 +1,3 @@
+.cf-dist/
+.wrangler/
+node_modules/

@@ -1,0 +1,771 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About MOCS — Midwest OT Cybersecurity Summit 2027</title>
+    <meta name="description" content="About the Midwest OT Cybersecurity Summit (MOCS). Why attend, who we are, the MOCS 2026 recap, and the road to MOCS 2027 — Friday, April 16, 2027 at Marquette University." />
+    <meta name="author" content="Security for the Folks (XFTF) — www.xftf.org" />
+    <meta name="robots" content="index, follow" />
+    <meta name="robots" content="noai, noimageai" />
+    <meta name="ai-content" content="prohibited" />
+    <link rel="canonical" href="https://midwest-otcs.org/about/" />
+    <link rel="icon" type="image/png" href="../assets/sftf-logo.png" />
+    <style>
+      :root{
+        --navy:#0d3260;--navy-2:#163f74;--blue:#1f4f8f;--panel:#e9eff6;--line:#cfdae8;
+        --text:#23384e;--muted:#61758f;--gold:#f4c300;--ok:#2f9a52;
+        --ease:cubic-bezier(0.16,1,0.3,1);
+        --ease-out:cubic-bezier(0.23,1,0.32,1);
+      }
+      *{box-sizing:border-box}
+      html{font-size:16px;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+      body{
+        margin:0;
+        font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;
+        font-size:15px;
+        line-height:1.55;
+        -webkit-font-smoothing:antialiased;
+        -moz-osx-font-smoothing:grayscale;
+        background:#dfe7f0;color:var(--text);
+        position:relative;overflow-x:hidden;
+      }
+      body::before{
+        content:"";position:fixed;inset:0;
+        background:url("../assets/sftf-background.png") -20px center/360px 360px no-repeat;
+        opacity:0.05;pointer-events:none;z-index:-1;
+      }
+      .wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+
+      /* TOP BAR */
+      .top{position:relative;overflow:hidden;background:radial-gradient(1200px 420px at 0 0,#214f8f 0,#133c72 45%,#0d2f5d 50%);color:#eaf2ff;padding:8px 0 16px}
+      .top::before{content:"";position:absolute;inset:0;opacity:.15;pointer-events:none;background-image:repeating-linear-gradient(0deg,transparent 0 24px,rgba(255,255,255,.2) 24px 25px),repeating-linear-gradient(90deg,transparent 0 72px,rgba(255,255,255,.17) 72px 73px)}
+      .wrap-top{position:relative;z-index:1}
+      .topbar{display:flex;justify-content:space-between;align-items:center;padding:8px 0;flex-wrap:wrap;gap:8px}
+
+      .btn{display:inline-flex;align-items:center;gap:6px;border-radius:9px;padding:8px 12px;text-decoration:none;font-weight:700;border:none;cursor:pointer;font-size:14px;transition:transform 160ms var(--ease-out)}
+      .btn:active{transform:scale(0.97)}
+      .btn-blue{background:#295b9c;color:#e9f2ff;border:1px solid rgba(255,255,255,.2)}
+      .btn-gold{background:var(--gold);color:#173b65}
+
+      /* HERO */
+      .page-hero{margin-top:10px;border:1px solid rgba(255,255,255,.2);background:rgba(7,27,54,.35);border-radius:14px;padding:22px 24px}
+      .hero-eyebrow{display:inline-block;font-size:11px;font-weight:800;color:#ffde73;letter-spacing:.18em;text-transform:uppercase;margin:0 0 10px;border-left:2px solid rgba(255,222,115,.5);padding-left:10px}
+      .page-hero h1{margin:4px 0 8px;color:#fff;font-size:40px;line-height:1.05;letter-spacing:-.015em;font-weight:800}
+      .page-hero p{margin:0;color:#d3e1f5;font-size:15px;max-width:680px;line-height:1.6}
+
+      main{padding:20px 0 48px}
+
+      /* SECTIONS */
+      .section{margin-bottom:32px}
+      .eyebrow{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.14em;color:#3b6ba5;margin:0 0 6px}
+      .h2{margin:0 0 6px;color:#143a68;font-size:34px;line-height:1.1;letter-spacing:-.01em}
+      .lead{margin:0 0 16px;color:var(--muted);font-size:14px;max-width:720px;line-height:1.6}
+
+      /* WHO WE ARE — asymmetric 2-col */
+      .who{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;align-items:stretch}
+      .who-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px}
+      .who-card h3{margin:0 0 8px;color:#173c6b;font-size:20px}
+      .who-card p{margin:0 0 10px;font-size:14px;color:#405b78;line-height:1.6}
+      .who-card p:last-child{margin-bottom:0}
+      .who-card.accent{background:linear-gradient(160deg,#0d3260 0%,#1a4a7c 100%);color:#eaf2ff;border-color:#295b9c}
+      .who-card.accent h3{color:#ffd766}
+      .who-card.accent p{color:#c8d8ef}
+      .who-logos{display:flex;align-items:center;gap:14px;margin-top:14px;flex-wrap:wrap}
+      .who-logo{background:#fff;border-radius:8px;padding:8px 10px;height:48px;display:flex;align-items:center}
+      .who-logo img{max-height:32px;display:block}
+
+      /* FOUNDERS — YC/editorial-inspired layout */
+      /* Team hero banner */
+      .team-hero{position:relative;margin:18px 0 24px;padding:0;border-radius:16px;overflow:hidden;aspect-ratio:16/7;background:#0d3260;box-shadow:0 12px 36px rgba(13,50,96,.22)}
+      .team-hero img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(1.02) contrast(1.02)}
+      .team-hero-overlay{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:22px 26px;background:linear-gradient(180deg,transparent 40%,rgba(7,22,45,.85) 100%);color:#fff;pointer-events:none}
+      .team-hero-eyebrow{margin:0 0 6px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;font-weight:700;color:#ffde73;letter-spacing:.22em;text-transform:uppercase}
+      .team-hero-caption{margin:0;font-size:15px;font-weight:600;color:#fff;letter-spacing:-.005em;max-width:560px;line-height:1.4;text-shadow:0 2px 10px rgba(0,0,0,.5)}
+      @media (max-width:640px){.team-hero{aspect-ratio:16/10}.team-hero-caption{font-size:13.5px}}
+
+      /* Founder cards — portrait left, editorial right */
+      .founders-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px;margin-top:6px}
+      .founder-card{position:relative;background:#fff;border:1px solid var(--line);border-radius:16px;padding:0;text-decoration:none;color:inherit;display:flex;overflow:hidden;transition:transform 260ms var(--ease-out),box-shadow 260ms ease,border-color 260ms ease}
+      @media (hover:hover) and (pointer:fine){
+        .founder-card:hover{transform:translateY(-4px);box-shadow:0 14px 32px rgba(13,50,96,.12);border-color:#b8cbe4}
+        .founder-card:hover .founder-portrait-photo img{transform:scale(1.04)}
+        .founder-card:hover .founder-portrait-initials::after{opacity:1}
+        .founder-card:hover .founder-link-arrow{transform:translateX(3px)}
+      }
+
+      /* Portrait column — square-ish aspect */
+      .founder-portrait{position:relative;width:128px;flex-shrink:0;align-self:stretch;overflow:hidden;background:#eef3fb;border-right:1px solid var(--line)}
+      .founder-portrait-photo img{width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block;transition:transform 400ms var(--ease-out);filter:saturate(1.02)}
+      /* Crop — group photo positioned per face */
+      .founder-portrait-crop{background-image:url("../assets/founders/xftf-leadership-group.jpg");background-size:auto 260%;background-position:var(--bg-pos,50% 40%);background-repeat:no-repeat;filter:saturate(1.08) contrast(1.04) brightness(1.02);transition:background-size 600ms var(--ease-out),filter 300ms ease}
+      .founder-card:hover .founder-portrait-crop{background-size:auto 290%}
+      .founder-portrait-initials{display:flex;align-items:center;justify-content:center;background:linear-gradient(155deg,var(--grad-a,#1a4a7c) 0%,var(--grad-b,#0d3260) 100%);position:relative}
+      .founder-portrait-initials::before{content:attr(data-initials);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:44px;font-weight:800;color:rgba(255,215,102,.95);letter-spacing:-.02em;text-shadow:0 2px 16px rgba(0,0,0,.35);z-index:2}
+      /* Subtle grid pattern overlay on initial avatars */
+      .founder-portrait-initials::after{content:"";position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,transparent 0 14px,rgba(255,255,255,.08) 14px 15px),repeating-linear-gradient(90deg,transparent 0 14px,rgba(255,255,255,.08) 14px 15px);opacity:.55;transition:opacity 260ms ease;pointer-events:none}
+
+      /* Body column */
+      .founder-body{flex:1;min-width:0;padding:18px 20px 18px 18px;display:flex;flex-direction:column}
+      .founder-role-eyebrow{margin:0 0 6px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10px;font-weight:800;color:#3b6ba5;text-transform:uppercase;letter-spacing:.16em}
+      .founder-name{margin:0 0 4px;font-size:19px;font-weight:800;color:#143a68;letter-spacing:-.015em;line-height:1.15}
+      .founder-title{margin:0 0 10px;font-size:12.5px;color:#3b6ba5;line-height:1.45;font-weight:600;letter-spacing:-.005em}
+      .founder-bio{margin:0 0 12px;font-size:13px;color:#546b86;line-height:1.6}
+      .founder-bio strong{color:#143a68;font-weight:700}
+      .founder-link{margin-top:auto;display:inline-flex;align-items:center;gap:6px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11.5px;font-weight:700;color:#0077b5;padding-top:10px;border-top:1px solid #eef3fb;letter-spacing:.01em}
+      .founder-link-arrow{margin-left:2px;transition:transform 220ms cubic-bezier(0.23,1,0.32,1)}
+
+      /* Stack vertically on narrow */
+      @media (max-width:500px){
+        .founders-grid{grid-template-columns:1fr}
+        .founder-card{flex-direction:column}
+        .founder-portrait{width:100%;aspect-ratio:3/2;border-right:none;border-bottom:1px solid var(--line)}
+        .founder-portrait-photo img{object-position:center 20%}
+      }
+
+      body.dark .founder-card{background:#13243a;border-color:#2c4563}
+      body.dark .founder-name{color:#e8f3ff}
+      body.dark .founder-title{color:#7eb3e0}
+      body.dark .founder-bio{color:#a7bed9}
+      body.dark .founder-bio strong{color:#e8f3ff}
+      body.dark .founder-role-eyebrow{color:#7eb3e0}
+      body.dark .founder-link{color:#5bb8f5;border-top-color:#2c4563}
+      body.dark .founder-portrait{background:#1b3554;border-right-color:#2c4563}
+      body.dark .founder-portrait{border-right-color:#2c4563}
+      @media (max-width:500px){body.dark .founder-portrait{border-bottom-color:#2c4563}}
+
+      /* WHY ATTEND — 3-up grid */
+      .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+      .tile{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px;transition:transform 200ms var(--ease-out),box-shadow 200ms ease}
+      .tile h4{margin:0 0 6px;font-size:18px;color:#183f70}
+      .tile p{margin:0;font-size:13px;color:#5f738c;line-height:1.5}
+
+      /* BY THE NUMBERS */
+      .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+      .stat{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px;text-align:center}
+      .stat .num{font-size:34px;font-weight:800;color:#143a68;line-height:1;letter-spacing:-.02em}
+      .stat .lbl{margin:6px 0 0;font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+
+      /* JOURNEY STRIP */
+      .strip-section{margin-top:6px}
+      .strip-outer{overflow:hidden;position:relative;border-radius:14px}
+      .strip-outer::before,.strip-outer::after{content:"";position:absolute;top:0;bottom:0;width:80px;z-index:2;pointer-events:none}
+      .strip-outer::before{left:0;background:linear-gradient(to right,#dfe7f0,transparent)}
+      .strip-outer::after{right:0;background:linear-gradient(to left,#dfe7f0,transparent)}
+      .strip-track{display:flex;gap:14px;width:max-content;animation:scroll-left 28s linear infinite}
+      .strip-track:hover{animation-play-state:paused}
+      @keyframes scroll-left{
+        0%{transform:translateX(0)}
+        100%{transform:translateX(-50%)}
+      }
+
+      .photo-card{flex-shrink:0;width:300px;border-radius:12px;overflow:hidden;background:#fff;border:1px solid var(--line);position:relative;cursor:pointer;transition:transform 220ms var(--ease-out),box-shadow 220ms ease}
+      .photo-card img{width:100%;height:200px;object-fit:cover;display:block}
+      .photo-caption{padding:10px 12px}
+      .photo-caption .date{font-size:11px;color:#3b6ba5;font-weight:700;margin:0 0 2px;text-transform:uppercase;letter-spacing:.06em}
+      .photo-caption .label{font-size:13px;font-weight:700;color:#173c6b;margin:0 0 2px;line-height:1.3}
+      .photo-caption .sub{font-size:12px;color:var(--muted);margin:0;line-height:1.4}
+
+      /* MILESTONE GRID */
+      .tl-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+      .tl-card{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;opacity:0;transform:translateY(12px) scale(0.98);transition:opacity 260ms var(--ease-out),transform 260ms var(--ease-out),box-shadow 220ms ease}
+      .tl-card.in{opacity:1;transform:translateY(0) scale(1)}
+      .tl-card img{width:100%;height:170px;object-fit:cover;display:block;cursor:pointer}
+      .tl-card-body{padding:14px 16px}
+      .date-tag{display:inline-block;background:#e6eef8;color:#3b6ba5;font-size:11px;font-weight:800;padding:3px 9px;border-radius:999px;margin-bottom:8px;text-transform:uppercase;letter-spacing:.05em}
+      .tl-card-body h3{margin:0 0 6px;font-size:16px;font-weight:800;color:#173c6b;line-height:1.3}
+      .tl-card-body p{margin:0;font-size:13px;color:#405b78;line-height:1.55}
+
+      /* THANKS */
+      .thanks{background:linear-gradient(160deg,#0d3260 0%,#1a4a7c 100%);color:#eaf2ff;border-radius:14px;padding:24px;display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center}
+      .thanks h3{margin:0 0 6px;color:#ffd766;font-size:22px}
+      .thanks p{margin:0;color:#c8d8ef;font-size:14px;line-height:1.6;max-width:580px}
+
+      /* LIGHTBOX */
+      #lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,.9);z-index:1000;align-items:center;justify-content:center;padding:20px}
+      #lightbox.open{display:flex}
+      #lightbox img{max-width:92vw;max-height:86vh;border-radius:10px;object-fit:contain;box-shadow:0 8px 40px rgba(0,0,0,.8)}
+      #lightbox-caption{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:rgba(13,24,48,.92);border:1px solid #2c4563;border-radius:10px;padding:10px 20px;color:#e8f3ff;font-size:14px;font-weight:600;max-width:90vw}
+      #lightbox-close{position:fixed;top:20px;right:24px;font-size:28px;color:#fff;cursor:pointer;font-weight:700;line-height:1;background:rgba(0,0,0,.4);border:none;padding:4px 10px;border-radius:8px}
+
+      /* ENTRANCE */
+      .reveal{opacity:0;transform:translateY(14px);transition:opacity 280ms var(--ease-out),transform 280ms var(--ease-out)}
+      .reveal.in{opacity:1;transform:translateY(0)}
+
+      /* HOVER — gated to real pointers */
+      @media (hover:hover) and (pointer:fine){
+        .tile:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(13,50,96,.12)}
+        .photo-card:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(0,0,0,.18);z-index:5}
+        .tl-card:hover{box-shadow:0 8px 22px rgba(13,50,96,.12)}
+        .btn-blue:hover{background:#3268ac}
+        .btn-gold:hover{background:#ffd433}
+      }
+
+      /* REDUCED MOTION */
+      @media (prefers-reduced-motion:reduce){
+        *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+        .strip-track{animation:none}
+        .reveal,.tl-card{opacity:1;transform:none}
+      }
+
+      /* MOBILE POLISH */
+      @media (max-width:720px){
+        .topbar{padding:6px 0 4px;gap:8px}
+        .brand-logo{height:28px}
+        .brand-logo-sftf{height:26px}
+        .brand-rule{height:20px}
+        .brand-word{font-size:14px}
+        .topnav{gap:2px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;flex-wrap:nowrap;width:100%;padding:4px 0}
+        .topnav::-webkit-scrollbar{display:none}
+        .topnav-link{white-space:nowrap;padding:6px 10px;font-size:12.5px;flex-shrink:0}
+        .topnav-rule{display:none}
+        .btn-register-sm{padding:7px 11px;font-size:12px;flex-shrink:0}
+        .page-hero{padding:18px 16px}
+        .page-hero h1{font-size:26px}
+        .page-hero p{font-size:13.5px}
+        .page-nav{padding:6px;gap:4px}
+        .page-nav-link{min-width:0;flex:1 1 auto;padding:8px 10px;font-size:12px;justify-content:center}
+        .section{margin-bottom:28px}
+        .h2{font-size:22px}
+        .lead{font-size:13.5px}
+        .who{gap:12px}
+        .who-card{padding:18px}
+        .who-card h3{font-size:18px}
+        .who-card p{font-size:13px}
+        .tile{padding:16px}
+        .tile h4{font-size:16px}
+        .tile p{font-size:12.5px}
+        .stat{padding:14px}
+        .stat .num{font-size:28px}
+        .team-hero-caption{font-size:13px}
+        .founders-grid{grid-template-columns:1fr;gap:12px}
+        .founder-card{flex-direction:row}
+        .founder-portrait{width:110px}
+        .founder-body{padding:14px 16px}
+        .founder-name{font-size:16px}
+        .founder-title{font-size:11.5px}
+        .founder-bio{font-size:12px}
+        .tl-card img{height:140px}
+        .tl-card-body{padding:12px 14px}
+        .thanks{padding:20px 18px}
+        .thanks h3{font-size:19px}
+      }
+      @media (max-width:480px){
+        .founder-card{flex-direction:column}
+        .founder-portrait{width:100%;aspect-ratio:3/2;border-right:none;border-bottom:1px solid var(--line)}
+        .stats{grid-template-columns:repeat(2,1fr)}
+      }
+
+      /* RESPONSIVE */
+      @media (max-width:900px){
+        .page-hero h1{font-size:34px}
+        .h2{font-size:28px}
+        .who{grid-template-columns:1fr}
+        .why-grid{grid-template-columns:1fr 1fr}
+        .stats{grid-template-columns:repeat(2,1fr)}
+        .thanks{grid-template-columns:1fr}
+      }
+      @media (max-width:640px){
+        .page-hero h1{font-size:28px}
+        .why-grid{grid-template-columns:1fr}
+        .photo-card{width:250px}
+        .photo-card img{height:170px}
+      }
+
+      /* TOP BAR — taste-skill shared */
+      .topbar{display:flex;align-items:center;justify-content:space-between;padding:12px 0 10px;gap:24px;flex-wrap:wrap;border-bottom:1px solid rgba(255,255,255,.08)}
+      .brand{display:inline-flex;align-items:center;gap:12px;text-decoration:none;color:inherit;flex-shrink:0}
+      .brand-logos{display:inline-flex;align-items:center;gap:8px}
+      .brand-logo{height:32px;width:auto;display:block;opacity:.95}
+      .brand-logo-sftf{height:30px;opacity:.82}
+      .brand-rule{width:1px;height:26px;background:rgba(255,255,255,.18)}
+      .brand-word{font-size:17px;font-weight:800;color:#fff;letter-spacing:.04em;line-height:1}
+      .topnav{display:inline-flex;align-items:center;gap:4px;flex-wrap:wrap;justify-content:flex-end}
+      .topnav-link{color:#c8d8ef;font-size:13px;font-weight:600;text-decoration:none;padding:6px 10px;border-radius:6px;letter-spacing:-.005em;transition:color 180ms ease,background 180ms ease}
+      @media (hover:hover) and (pointer:fine){.topnav-link:hover{color:#fff;background:rgba(255,255,255,.07)}}
+      .topnav-rule{width:1px;height:18px;background:rgba(255,255,255,.15);margin:0 6px;align-self:center}
+      .topnav-link.is-current{color:#ffd766;background:rgba(244,195,0,.12)}
+      .topnav-link.is-current::after{content:"";position:absolute;bottom:-2px;left:12px;right:12px;height:2px;background:#ffd766;border-radius:2px}
+      .btn-register-sm{display:inline-flex;align-items:center;gap:6px;background:var(--gold);color:#173b65;text-decoration:none;font-weight:800;font-size:13px;padding:8px 14px;border-radius:8px;letter-spacing:-.005em;transition:transform 160ms cubic-bezier(0.23,1,0.32,1),background 180ms ease,box-shadow 180ms ease;box-shadow:0 2px 10px rgba(244,195,0,.2);margin-left:4px}
+      @media (hover:hover) and (pointer:fine){.btn-register-sm:hover{background:#ffd433;box-shadow:0 4px 16px rgba(244,195,0,.4)}}
+      .btn-register-sm:active{transform:scale(0.97)}
+      @media (max-width:760px){
+        .topbar{gap:12px}
+        .topnav{width:100%;justify-content:flex-start;gap:2px;padding-top:4px;border-top:1px solid rgba(255,255,255,.08)}
+        .topnav-rule{display:none}
+        .brand-rule{height:22px}
+        .brand-word{font-size:15px}
+      }
+      /* PAGE NAV — sticky section jump links */
+      .page-nav{position:sticky;top:8px;z-index:50;display:flex;align-items:stretch;gap:6px;flex-wrap:wrap;margin:0 0 18px;padding:8px;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:12px;box-shadow:0 4px 14px rgba(13,50,96,.08)}
+      .page-nav-link{position:relative;flex:1;min-width:110px;display:flex;align-items:center;gap:8px;padding:10px 12px;text-decoration:none;color:var(--muted);border-radius:8px;font-size:13px;font-weight:700;letter-spacing:-.005em;transition:color 180ms ease,background 180ms ease}
+      .page-nav-idx{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;font-weight:700;color:#a8bcd4;letter-spacing:.06em;flex-shrink:0;transition:color 180ms ease}
+      .page-nav-link.is-active{background:#143a68;color:#ffd766}
+      .page-nav-link.is-active .page-nav-idx{color:#ffde73}
+      @media (hover:hover) and (pointer:fine){
+        .page-nav-link:hover{background:#eef3fb;color:#143a68}
+        .page-nav-link:hover .page-nav-idx{color:#1f4f8f}
+        .page-nav-link.is-active:hover{background:#0f3260;color:#ffd766}
+      }
+      @media (max-width:640px){.page-nav{top:4px}.page-nav-link{min-width:0;flex:1 1 calc(33% - 4px)}}
+      body.dark .page-nav{background:rgba(13,24,48,.85);border-color:#2c4563}
+      body.dark .page-nav-link{color:#a7bed9}
+      body.dark .page-nav-link:hover{background:#1b3554;color:#e8f3ff}
+      body.dark .page-nav-link.is-active{background:#ffd766;color:#143a68}
+      body.dark .page-nav-link.is-active .page-nav-idx{color:#8a6800}
+      html{scroll-behavior:smooth;scroll-padding-top:90px}
+
+      /* ICON TOGGLE — dark-mode ghost button */
+      .icon-toggle{width:32px;height:32px;border-radius:50%;border:1px solid rgba(255,255,255,.2);background:transparent;color:#c8d8ef;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;padding:0;transition:background 180ms ease,color 180ms ease,border-color 180ms ease,transform 160ms cubic-bezier(0.23,1,0.32,1)}
+      @media (hover:hover) and (pointer:fine){.icon-toggle:hover{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.4)}}
+      .icon-toggle:active{transform:scale(0.92)}
+      .icon-toggle:focus-visible{outline:2px solid #ffd766;outline-offset:2px}
+      .icon-toggle .icon-sun{display:none}
+      body.dark .icon-toggle .icon-moon{display:none}
+      body.dark .icon-toggle .icon-sun{display:inline-block}
+      body.dark .icon-toggle{color:#ffd766;border-color:rgba(255,215,102,.3)}
+
+      /* DARK MODE — about page */
+      body.dark{background:#0b1320;color:#d8e6f8}
+      body.dark .who-card{background:#13243a;border-color:#2c4563;color:#d8e6f8}
+      body.dark .who-card h3{color:#e8f3ff}
+      body.dark .who-card p{color:#a7bed9}
+      body.dark .who-card.accent{background:linear-gradient(160deg,#0d1e38 0%,#13304f 100%);border-color:#2c4563}
+      body.dark .who-logo{background:#1b2d44}
+      body.dark .tile,body.dark .stat,body.dark .tl-card,body.dark .photo-card{background:#13243a;border-color:#2c4563}
+      body.dark .tile h4,body.dark .stat .num,body.dark .tl-card-body h3{color:#e8f3ff}
+      body.dark .tile p,body.dark .tl-card-body p{color:#a7bed9}
+      body.dark .stat .lbl{color:#7eb3e0}
+      body.dark .h2,body.dark .photo-caption .label{color:#e8f3ff}
+      body.dark .lead,body.dark .photo-caption .sub{color:#a7bed9}
+      body.dark .eyebrow,body.dark .photo-caption .date,body.dark .date-tag{color:#7eb3e0}
+      body.dark .date-tag{background:#1b3554}
+      body.dark .strip-outer::before{background:linear-gradient(to right,#0b1320,transparent)}
+      body.dark .strip-outer::after{background:linear-gradient(to left,#0b1320,transparent)}
+      body.dark .thanks{background:linear-gradient(160deg,#0d1e38 0%,#13304f 100%);border-color:#2c4563}
+    </style>
+  </head>
+  <body>
+    <header class="top"><div class="wrap wrap-top">
+      <div class="topbar">
+        <a href="../index.html" class="brand" aria-label="MOCS 2027 — Midwest OT Cybersecurity Summit">
+          <span class="brand-logos">
+            <img src="../assets/marquette-logo.png" alt="Marquette University" class="brand-logo" />
+            <img src="../assets/sftf-logo.png" alt="Security For the Folks" class="brand-logo brand-logo-sftf" />
+          </span>
+          <span class="brand-rule" aria-hidden="true"></span>
+          <span class="brand-word">MOCS 2027</span>
+        </a>
+        <nav class="topnav" aria-label="Primary">
+          <a class="topnav-link" href="../index.html">Home</a>
+          <a class="topnav-link" href="../agenda/index.html">Agenda</a>
+          <a class="topnav-link" href="../day-of/index.html">Day-of</a>
+          <a class="topnav-link" href="../speaker-sponsor/index.html">Logistics</a>
+          <a class="topnav-link is-current" href="../about/index.html" aria-current="page">About</a>
+          <span class="topnav-rule" aria-hidden="true"></span>
+          <button id="dark-toggle" class="icon-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+            <svg class="icon-moon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon-sun" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          </button>
+          <a class="btn-register-sm" href="../index.html#cfs">Submit a Talk
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </nav>
+      </div>
+      <div class="page-hero">
+        <p class="hero-eyebrow">About MOCS · Returns April 16, 2027</p>
+        <h1>OT cybersecurity at the intersection — academia, government, industry.</h1>
+        <p>MOCS is a one-day summit bringing defenders, students, agencies, and hiring teams together around operational technology. Industry-founded, community-built. <strong>MOCS 2027</strong> returns to Marquette on Friday, April 16, 2027.</p>
+      </div>
+    </div></header>
+
+    <main class="wrap">
+
+      <nav class="page-nav" aria-label="On this page">
+        <a class="page-nav-link" href="#who"><span class="page-nav-idx">01</span>Who we are</a>
+        <a class="page-nav-link" href="#founders"><span class="page-nav-idx">02</span>Our team</a>
+        <a class="page-nav-link" href="#why"><span class="page-nav-idx">03</span>Why attend</a>
+        <a class="page-nav-link" href="#watch"><span class="page-nav-idx">04</span>Watch</a>
+        <a class="page-nav-link" href="#numbers"><span class="page-nav-idx">05</span>Numbers</a>
+        <a class="page-nav-link" href="#journey"><span class="page-nav-idx">06</span>2026 Recap</a>
+        <a class="page-nav-link" href="#milestones"><span class="page-nav-idx">07</span>Milestones</a>
+        <a class="page-nav-link" href="#road-2027"><span class="page-nav-idx">08</span>Road to 2027</a>
+      </nav>
+
+      <!-- WHO WE ARE -->
+      <section class="section reveal" id="who" style="scroll-margin-top:90px;">
+        <p class="eyebrow">Who we are</p>
+        <h2 class="h2">Started by industry. Built at the intersection.</h2>
+        <p class="lead">MOCS is industry-founded and sits at the intersection of <strong>academia, government, and industry</strong> for OT cybersecurity. Organized by <strong>Security for the Folks (XFTF)</strong> and hosted by <strong>Marquette University's Center for Cybersecurity</strong> — we built this summit to put practitioners, students, agencies, and hiring teams in the same room.</p>
+        <div class="who">
+          <div class="who-card">
+            <h3>🦅 What MOCS stands for</h3>
+            <p><strong>Midwest OT Cybersecurity Summit.</strong> OT means operational technology — the control systems, PLCs, and industrial networks that run manufacturing plants, utilities, and critical infrastructure. IT security plays by different rules in these environments, and the people defending them don't always get a dedicated conference close to home.</p>
+            <p>MOCS is more than a "how to break in" event. <strong>Upskilling and mentorship</strong> are a big part of the day — career paths, resume workshops, and mentor networking sit alongside the technical content. A Midwest-local, one-day, practitioner-focused event covering ICS/OT defense, career growth, and hands-on sessions you can bring back to work on Monday.</p>
+          </div>
+          <div class="who-card accent">
+            <h3>Organized by Security for the Folks</h3>
+            <p><strong>XFTF is a cybersecurity maker space</strong> — a place to build, tinker, teach, and learn together. That's the theme: community, experimentation, and skills that transfer. No vendor spin, no paywalls.</p>
+            <p>Marquette University's Center for Cybersecurity hosts the summit on campus and sponsors student registration. <strong>100+ attendees</strong> showed up for MOCS 2026 — for 2027 we're returning to the <strong>AMU 3rd Floor Ballroom</strong> on April 16, 2027.</p>
+            <p style="margin-top:12px;"><a href="https://www.xftf.org" target="_blank" rel="noreferrer" style="color:#ffd766;font-weight:700;text-decoration:none;border-bottom:1px solid rgba(255,215,102,.4);">Visit www.xftf.org →</a></p>
+            <div class="who-logos">
+              <a href="https://www.xftf.org" target="_blank" rel="noreferrer" class="who-logo" style="text-decoration:none;"><img src="../assets/sftf-logo.png" alt="XFTF logo" /></a>
+              <span class="who-logo"><img src="../assets/MU Cyber logo.png" alt="Marquette Cyber logo" /></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- OUR TEAM — YC-inspired editorial layout -->
+      <section class="section reveal" id="founders" style="scroll-margin-top:90px;">
+        <p class="eyebrow">Our team</p>
+        <h2 class="h2">The people behind MOCS.</h2>
+        <p class="lead">Five people — practitioners, academics, students, and program operators — kept building this summit together. <a href="https://www.xftf.org" target="_blank" rel="noreferrer" style="color:#1f4f8f;font-weight:700;">Security for the Folks</a> is the mentorship circle that seeded it; Marquette University's Center for Cybersecurity makes it happen on the ground.</p>
+
+        <!-- Team hero photo -->
+        <figure class="team-hero">
+          <img src="../assets/founders/xftf-leadership-group.jpg" alt="Security for the Folks leadership — the mentorship circle behind MOCS" loading="lazy" />
+          <div class="team-hero-overlay">
+            <p class="team-hero-eyebrow">August 2024 · Milwaukee</p>
+            <p class="team-hero-caption">The XFTF mentorship circle that seeded MOCS.</p>
+          </div>
+        </figure>
+
+        <!-- Team cards -->
+        <div class="founders-grid">
+
+          <a class="founder-card" href="https://www.linkedin.com/in/chiragmalkan/" target="_blank" rel="noreferrer">
+            <div class="founder-portrait founder-portrait-photo">
+              <img src="../assets/founders/chirag.png" alt="Chirag Malkan" loading="lazy" />
+            </div>
+            <div class="founder-body">
+              <p class="founder-role-eyebrow">Founder · MOCS</p>
+              <h3 class="founder-name">Chirag Malkan</h3>
+              <p class="founder-title">Founder, MOCS · Founder &amp; CEO, Malkan Solutions · Adjunct Professor, Marquette</p>
+              <p class="founder-bio">Spent 20+ years at <strong>GE Healthcare</strong> and <strong>Rockwell Automation</strong> before founding Malkan Solutions. Returned to Marquette in 2024 to teach ethical hacking — and launched MOCS to put Midwest OT practitioners in the same room.</p>
+              <span class="founder-link">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                chiragmalkan <span class="founder-link-arrow">→</span>
+              </span>
+            </div>
+          </a>
+
+          <a class="founder-card" href="https://www.linkedin.com/in/debbie-perouli-mu" target="_blank" rel="noreferrer">
+            <div class="founder-portrait founder-portrait-photo">
+              <img src="../assets/founders/debbie-perouli.png" alt="Dr. Debbie Perouli" loading="lazy" />
+            </div>
+            <div class="founder-body">
+              <p class="founder-role-eyebrow">Academia · Research</p>
+              <h3 class="founder-name">Dr. Debbie Perouli</h3>
+              <p class="founder-title">Associate Professor, Computer Science · Marquette</p>
+              <p class="founder-bio">Cybersecurity and privacy researcher. Holds a <strong>$2.6M NSF grant</strong> to train the next generation of IT security pros. Awarded GenCyber grants by NSA &amp; NSF.</p>
+              <span class="founder-link">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                debbie-perouli-mu <span class="founder-link-arrow">→</span>
+              </span>
+            </div>
+          </a>
+
+          <a class="founder-card" href="https://www.linkedin.com/in/kevin-umba-672a88198/" target="_blank" rel="noreferrer">
+            <div class="founder-portrait founder-portrait-photo">
+              <img src="../assets/founders/kevin.jpg" alt="Kevin Umba" loading="lazy" />
+            </div>
+            <div class="founder-body">
+              <p class="founder-role-eyebrow">Industry Relations</p>
+              <h3 class="founder-name">Kevin Umba</h3>
+              <p class="founder-title">Director of Industry Partnerships · MOCS</p>
+              <p class="founder-bio">Bridges MOCS with industry sponsors, presenting companies, and the OT practitioner community. Owns speaker relationships, sponsor activations, and the partnerships pipeline. MS Computer Science, Marquette Cybersecurity.</p>
+              <span class="founder-link">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                kevin-umba <span class="founder-link-arrow">→</span>
+              </span>
+            </div>
+          </a>
+
+          <a class="founder-card" href="https://www.linkedin.com/in/vikrammalkan/" target="_blank" rel="noreferrer">
+            <div class="founder-portrait founder-portrait-photo">
+              <img src="../assets/founders/vikram.jpg" alt="Vikram Malkan" loading="lazy" />
+            </div>
+            <div class="founder-body">
+              <p class="founder-role-eyebrow">Founder · XFTF</p>
+              <h3 class="founder-name">Vikram Malkan</h3>
+              <p class="founder-title">Founder, Security for the Folks (XFTF)</p>
+              <p class="founder-bio">Founded <strong>Security for the Folks</strong> — the grassroots cybersecurity maker space that seeded MOCS. Built the mentorship circle that brings practitioners, students, and professors into the same room across Wisconsin.</p>
+              <span class="founder-link">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                vikrammalkan <span class="founder-link-arrow">→</span>
+              </span>
+            </div>
+          </a>
+
+          <a class="founder-card" href="https://www.linkedin.com/in/nwamaka-jessica-ottor/" target="_blank" rel="noreferrer">
+            <div class="founder-portrait founder-portrait-photo">
+              <img src="../assets/founders/jessica.jpg" alt="Nwamaka Jessica Ottor" loading="lazy" />
+            </div>
+            <div class="founder-body">
+              <p class="founder-role-eyebrow">Business Development</p>
+              <h3 class="founder-name">Nwamaka Jessica Ottor</h3>
+              <p class="founder-title">Head of Business Development · MOCS</p>
+              <p class="founder-bio">Drives MOCS business development — sponsorship growth, new partner cultivation, and the revenue programs that keep student tickets free. Marquette University, Center for Cybersecurity.</p>
+              <span class="founder-link">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                nwamaka-jessica-ottor <span class="founder-link-arrow">→</span>
+              </span>
+            </div>
+          </a>
+
+        </div>
+      </section>
+
+      <!-- WHY ATTEND -->
+      <section class="section reveal" id="why" style="scroll-margin-top:90px;">
+        <p class="eyebrow">Why attend</p>
+        <h2 class="h2">Three reasons to be in the room.</h2>
+        <p class="lead">A practical, community-driven OT cybersecurity conference for defenders, students, and hiring teams.</p>
+        <div class="why-grid">
+          <article class="tile">
+            <h4>🤝 Upskill &amp; mentorship</h4>
+            <p>Resume workshops, mentor networking, and hiring-focused sessions. A big part of the day — students meet sponsors, sponsors meet the next hire, and practitioners find the folks who will answer their questions long after the summit.</p>
+          </article>
+          <article class="tile">
+            <h4>🛡️ OT hands-on learning</h4>
+            <p>Real-world OT and ICS topics across manufacturing, industrial control, and critical-infrastructure environments. No marketing decks.</p>
+          </article>
+          <article class="tile">
+            <h4>✅ CPE credits</h4>
+            <p>Earn Continuing Professional Education credits through attendance. Certificate provided on request after the summit.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- PROMO VIDEO -->
+      <section class="section reveal" id="watch" style="scroll-margin-top:90px;">
+        <p class="eyebrow">Watch</p>
+        <h2 class="h2">The summit in sixty seconds.</h2>
+        <p class="lead">A quick look at what MOCS is about — the people, the room, and what you'll walk away with.</p>
+        <div style="border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#000;position:relative;max-width:820px;">
+          <video id="promo-video" autoplay muted loop playsinline style="width:100%;display:block;">
+            <source src="../assets/Midwest_OT_Cybersecurity_Summit.mp4" type="video/mp4" />
+          </video>
+          <button id="sound-btn" type="button" aria-label="Toggle sound" style="position:absolute;bottom:12px;right:12px;background:rgba(0,0,0,.65);color:#fff;font-size:11px;font-weight:700;padding:6px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.2);cursor:pointer;letter-spacing:.04em;">🔇 Click for sound</button>
+        </div>
+      </section>
+
+      <!-- BY THE NUMBERS -->
+      <section class="section reveal" id="numbers" style="scroll-margin-top:90px;">
+        <p class="eyebrow">By the numbers</p>
+        <h2 class="h2">One day, a lot happening.</h2>
+        <div class="stats">
+          <div class="stat"><div class="num">12</div><p class="lbl">Sessions</p></div>
+          <div class="stat"><div class="num">3</div><p class="lbl">Rooms</p></div>
+          <div class="stat"><div class="num">7.5</div><p class="lbl">Hours</p></div>
+          <div class="stat"><div class="num">$0</div><p class="lbl">Students</p></div>
+        </div>
+      </section>
+
+      <!-- JOURNEY STRIP — MOCS 2026 RECAP -->
+      <section class="section reveal" id="journey" style="scroll-margin-top:90px;">
+        <p class="eyebrow">MOCS 2026 — that's a wrap</p>
+        <h2 class="h2">The road that built MOCS 2026.</h2>
+        <p class="lead">From late-night planning sessions to venue walkthroughs, fresh merch, and conference day — a look back at the work and heart that built MOCS 2026. Now we're heading into 2027. Hover to pause the strip; click any photo to enlarge.</p>
+        <div class="strip-section">
+          <div class="strip-outer">
+            <div class="strip-track">
+              <div class="photo-card" onclick="openLightbox('../assets/journey-photos-wm/20241110_161532.jpg','November 2024 — Early Planning Sessions')"><img src="../assets/journey-photos-wm/20241110_161532.jpg" alt="Early planning session" loading="lazy" /><div class="photo-caption"><p class="date">Nov 2024</p><p class="label">Where it all started</p><p class="sub">First planning sessions</p></div></div>
+              <div class="photo-card" onclick="openLightbox('../assets/journey-photos-wm/20251118_195905.jpg','November 2025 — Cyber Career Talk at Marquette')"><img src="../assets/journey-photos-wm/20251118_195905.jpg" alt="Cyber Career Talk" loading="lazy" /><div class="photo-caption"><p class="date">Nov 2025</p><p class="label">Cyber Career Talk at Marquette</p><p class="sub">Building community momentum</p></div></div>
+              <div class="photo-card" onclick="openLightbox('../assets/journey-photos-wm/20251118_200354.jpg','November 2025 — Career Paths &amp; Skills That Matter')"><img src="../assets/journey-photos-wm/20251118_200354.jpg" alt="Career Paths talk" loading="lazy" /><div class="photo-caption"><p class="date">Nov 2025</p><p class="label">Career paths &amp; skills</p><p class="sub">Packed room at Marquette</p></div></div>
+              <div class="photo-card" onclick="openLightbox('../assets/journey-photos-wm/20260403_090119.jpg','April 2026 — SFTF Table at BSides MKE')"><img src="../assets/journey-photos-wm/20260403_090119.jpg" alt="SFTF table at BSides MKE" loading="lazy" /><div class="photo-caption"><p class="date">Apr 3, 2026</p><p class="label">Representing at BSides MKE</p><p class="sub">Community table</p></div></div>
+              <div class="photo-card" onclick="openLightbox('../assets/journey-photos-wm/20260403_152606.jpg','April 2026 — BSides MKE Conference Floor')"><img src="../assets/journey-photos-wm/20260403_152606.jpg" alt="BSides MKE floor" loading="lazy" /><div class="photo-caption"><p class="date">Apr 3, 2026</p><p class="label">Inspired at BSides MKE</p><p class="sub">Taking notes from the best</p></div></div>
+              <div class="photo-card" onclick="openLightbox('../assets/journey-photos-wm/20260410_131720.jpg','April 10, 2026 — Venue Scout at Marquette AMU')"><img src="../assets/journey-photos-wm/20260410_131720.jpg" alt="Venue scout" loading="lazy" /><div class="photo-caption"><p class="date">Apr 10, 2026</p><p class="label">Venue scout — AMU</p><p class="sub">We Are Marquette</p></div></div>
+              <div class="photo-card" onclick="openLightbox('../assets/journey-photos-wm/20260410_134614.jpg','April 10, 2026 — Main Hall Walkthrough')"><img src="../assets/journey-photos-wm/20260410_134614.jpg" alt="Main hall walkthrough" loading="lazy" /><div class="photo-caption"><p class="date">Apr 10, 2026</p><p class="label">Main hall walkthrough</p><p class="sub">AMU Room 227</p></div></div>
+              <div class="photo-card" onclick="openLightbox('../assets/journey-photos-wm/20260410_134717.jpg','April 10, 2026 — Planning the Room Layout')"><img src="../assets/journey-photos-wm/20260410_134717.jpg" alt="Planning room layout" loading="lazy" /><div class="photo-caption"><p class="date">Apr 10, 2026</p><p class="label">Planning the layout</p><p class="sub">Seating, tables, sightlines</p></div></div>
+              <div class="photo-card" onclick="openLightbox('../assets/journey-photos-wm/20260410_135127.jpg','April 10, 2026 — Projector Test')"><img src="../assets/journey-photos-wm/20260410_135127.jpg" alt="Projector test" loading="lazy" /><div class="photo-caption"><p class="date">Apr 10, 2026</p><p class="label">AV &amp; projector test</p><p class="sub">Every seat, good view</p></div></div>
+              <div class="photo-card" onclick="openLightbox('../assets/journey-photos-wm/20260410_140954.jpg','April 10, 2026 — Breakout Rooms')"><img src="../assets/journey-photos-wm/20260410_140954.jpg" alt="Breakout room" loading="lazy" /><div class="photo-caption"><p class="date">Apr 10, 2026</p><p class="label">Breakout rooms</p><p class="sub">AMU 252 &amp; 254</p></div></div>
+              <div class="photo-card" onclick="openLightbox('../assets/journey-photos-wm/20260416_222141.jpg','April 16, 2026 — MOCS 2026 Merch')"><img src="../assets/journey-photos-wm/20260416_222141.jpg" alt="MOCS 2026 merch" loading="lazy" /><div class="photo-caption"><p class="date">Apr 16, 2026</p><p class="label">The merch has landed 👕</p><p class="sub">midwest-otcs.org</p></div></div>
+              <div class="photo-card" onclick="openLightbox('../assets/journey-photos-wm/20260416_222212.jpg','April 16, 2026 — Security for the Folks Swag')"><img src="../assets/journey-photos-wm/20260416_222212.jpg" alt="SFTF swag" loading="lazy" /><div class="photo-caption"><p class="date">Apr 16, 2026</p><p class="label">SFTF community badge</p><p class="sub">www.xftf.org</p></div></div>
+              <div class="photo-card" onclick="openLightbox('../assets/journey-photos-wm/20260422_173115.jpg','April 22, 2026 — MC Run-Through')"><img src="../assets/journey-photos-wm/20260422_173115.jpg" alt="MC run-through" loading="lazy" /><div class="photo-caption"><p class="date">Apr 22, 2026</p><p class="label">MC run-through</p><p class="sub">Working the open</p></div></div>
+              <div class="photo-card" onclick="openLightbox('../assets/journey-photos-wm/Screenshot_20260422_173627_Clock.jpg','April 22, 2026 — Timing the Run')"><img src="../assets/journey-photos-wm/Screenshot_20260422_173627_Clock.jpg" alt="Stopwatch timing" loading="lazy" /><div class="photo-caption"><p class="date">Apr 22, 2026</p><p class="label">Every minute counts</p><p class="sub">Stopwatch on the script</p></div></div>
+              <div class="photo-card" onclick="openLightbox('../assets/journey-photos-wm/20260422_182013.jpg','April 22, 2026 — Full Dress Rehearsal')"><img src="../assets/journey-photos-wm/20260422_182013.jpg" alt="Full rehearsal" loading="lazy" /><div class="photo-caption"><p class="date">Apr 22, 2026</p><p class="label">Dialed in</p><p class="sub">Full dress rehearsal</p></div></div>
+
+              <!-- duplicate for seamless loop -->
+              <div class="photo-card" onclick="openLightbox('../assets/journey-photos-wm/20241110_161532.jpg','November 2024 — Early Planning Sessions')"><img src="../assets/journey-photos-wm/20241110_161532.jpg" alt="Early planning session" loading="lazy" /><div class="photo-caption"><p class="date">Nov 2024</p><p class="label">Where it all started</p><p class="sub">First planning sessions</p></div></div>
+              <div class="photo-card" onclick="openLightbox('../assets/journey-photos-wm/20251118_195905.jpg','November 2025 — Cyber Career Talk at Marquette')"><img src="../assets/journey-photos-wm/20251118_195905.jpg" alt="Cyber Career Talk" loading="lazy" /><div class="photo-caption"><p class="date">Nov 2025</p><p class="label">Cyber Career Talk at Marquette</p><p class="sub">Building community momentum</p></div></div>
+              <div class="photo-card" onclick="openLightbox('../assets/journey-photos-wm/20251118_200354.jpg','November 2025 — Career Paths &amp; Skills')"><img src="../assets/journey-photos-wm/20251118_200354.jpg" alt="Career Paths talk" loading="lazy" /><div class="photo-caption"><p class="date">Nov 2025</p><p class="label">Career paths &amp; skills</p><p class="sub">Packed room at Marquette</p></div></div>
+              <div class="photo-card" onclick="openLightbox('../assets/journey-photos-wm/20260403_090119.jpg','April 2026 — SFTF Table at BSides MKE')"><img src="../assets/journey-photos-wm/20260403_090119.jpg" alt="SFTF table at BSides MKE" loading="lazy" /><div class="photo-caption"><p class="date">Apr 3, 2026</p><p class="label">Representing at BSides MKE</p><p class="sub">Community table</p></div></div>
+              <div class="photo-card" onclick="openLightbox('../assets/journey-photos-wm/20260403_152606.jpg','April 2026 — BSides MKE Floor')"><img src="../assets/journey-photos-wm/20260403_152606.jpg" alt="BSides MKE floor" loading="lazy" /><div class="photo-caption"><p class="date">Apr 3, 2026</p><p class="label">Inspired at BSides MKE</p><p class="sub">Taking notes from the best</p></div></div>
+              <div class="photo-card" onclick="openLightbox('../assets/journey-photos-wm/20260410_131720.jpg','April 10, 2026 — Venue Scout')"><img src="../assets/journey-photos-wm/20260410_131720.jpg" alt="Venue scout" loading="lazy" /><div class="photo-caption"><p class="date">Apr 10, 2026</p><p class="label">Venue scout — AMU</p><p class="sub">We Are Marquette</p></div></div>
+              <div class="photo-card" onclick="openLightbox('../assets/journey-photos-wm/20260410_134614.jpg','April 10, 2026 — Main Hall')"><img src="../assets/journey-photos-wm/20260410_134614.jpg" alt="Main hall walkthrough" loading="lazy" /><div class="photo-caption"><p class="date">Apr 10, 2026</p><p class="label">Main hall walkthrough</p><p class="sub">AMU Room 227</p></div></div>
+              <div class="photo-card" onclick="openLightbox('../assets/journey-photos-wm/20260410_134717.jpg','April 10, 2026 — Room Layout')"><img src="../assets/journey-photos-wm/20260410_134717.jpg" alt="Planning room layout" loading="lazy" /><div class="photo-caption"><p class="date">Apr 10, 2026</p><p class="label">Planning the layout</p><p class="sub">Seating, tables, sightlines</p></div></div>
+              <div class="photo-card" onclick="openLightbox('../assets/journey-photos-wm/20260410_135127.jpg','April 10, 2026 — Projector Test')"><img src="../assets/journey-photos-wm/20260410_135127.jpg" alt="Projector test" loading="lazy" /><div class="photo-caption"><p class="date">Apr 10, 2026</p><p class="label">AV &amp; projector test</p><p class="sub">Every seat, good view</p></div></div>
+              <div class="photo-card" onclick="openLightbox('../assets/journey-photos-wm/20260410_140954.jpg','April 10, 2026 — Breakout Rooms')"><img src="../assets/journey-photos-wm/20260410_140954.jpg" alt="Breakout room" loading="lazy" /><div class="photo-caption"><p class="date">Apr 10, 2026</p><p class="label">Breakout rooms</p><p class="sub">AMU 252 &amp; 254</p></div></div>
+              <div class="photo-card" onclick="openLightbox('../assets/journey-photos-wm/20260416_222141.jpg','April 16, 2026 — MOCS 2026 Merch')"><img src="../assets/journey-photos-wm/20260416_222141.jpg" alt="MOCS 2026 merch" loading="lazy" /><div class="photo-caption"><p class="date">Apr 16, 2026</p><p class="label">The merch has landed 👕</p><p class="sub">midwest-otcs.org</p></div></div>
+              <div class="photo-card" onclick="openLightbox('../assets/journey-photos-wm/20260416_222212.jpg','April 16, 2026 — SFTF Swag')"><img src="../assets/journey-photos-wm/20260416_222212.jpg" alt="SFTF swag" loading="lazy" /><div class="photo-caption"><p class="date">Apr 16, 2026</p><p class="label">SFTF community badge</p><p class="sub">www.xftf.org</p></div></div>
+              <div class="photo-card" onclick="openLightbox('../assets/journey-photos-wm/20260422_173115.jpg','April 22, 2026 — MC Run-Through')"><img src="../assets/journey-photos-wm/20260422_173115.jpg" alt="MC run-through" loading="lazy" /><div class="photo-caption"><p class="date">Apr 22, 2026</p><p class="label">MC run-through</p><p class="sub">Working the open</p></div></div>
+              <div class="photo-card" onclick="openLightbox('../assets/journey-photos-wm/Screenshot_20260422_173627_Clock.jpg','April 22, 2026 — Timing the Run')"><img src="../assets/journey-photos-wm/Screenshot_20260422_173627_Clock.jpg" alt="Stopwatch timing" loading="lazy" /><div class="photo-caption"><p class="date">Apr 22, 2026</p><p class="label">Every minute counts</p><p class="sub">Stopwatch on the script</p></div></div>
+              <div class="photo-card" onclick="openLightbox('../assets/journey-photos-wm/20260422_182013.jpg','April 22, 2026 — Full Dress Rehearsal')"><img src="../assets/journey-photos-wm/20260422_182013.jpg" alt="Full rehearsal" loading="lazy" /><div class="photo-caption"><p class="date">Apr 22, 2026</p><p class="label">Dialed in</p><p class="sub">Full dress rehearsal</p></div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MILESTONES — MOCS 2026 retrospective -->
+      <section class="section" id="milestones" style="scroll-margin-top:90px;">
+        <p class="eyebrow">2026 milestones</p>
+        <h2 class="h2">The full story — first meeting to conference day.</h2>
+        <p class="lead">Chronological look at every milestone from first planning meeting through MOCS 2026 conference day.</p>
+        <div class="tl-grid">
+          <div class="tl-card"><img src="../assets/journey-photos-wm/20241110_161532.jpg" alt="Early planning" onclick="openLightbox('../assets/journey-photos-wm/20241110_161532.jpg','November 2024 — Early Planning Sessions')" /><div class="tl-card-body"><span class="date-tag">November 2024</span><h3>Where it all started</h3><p>The founding team gathers for the first planning sessions — whiteboarding the vision for a community-driven OT cybersecurity summit in Milwaukee.</p></div></div>
+          <div class="tl-card"><img src="../assets/journey-photos-wm/20251118_195905.jpg" alt="Cyber Career Talk" onclick="openLightbox('../assets/journey-photos-wm/20251118_195905.jpg','November 2025 — Cyber Career Talk at Marquette')" /><div class="tl-card-body"><span class="date-tag">November 18, 2025</span><h3>Cyber Career Talk at Marquette</h3><p>Building community momentum with a Cyber Career Talk at Marquette — connecting students with cybersecurity professionals months before MOCS.</p></div></div>
+          <div class="tl-card"><img src="../assets/journey-photos-wm/20251118_200354.jpg" alt="Career Paths talk" onclick="openLightbox('../assets/journey-photos-wm/20251118_200354.jpg','November 2025 — Career Paths &amp; Skills That Matter')" /><div class="tl-card-body"><span class="date-tag">November 18, 2025</span><h3>Career paths &amp; skills that matter</h3><p>Packed classroom at Marquette — students engaged with speakers covering real-world cyber career paths and the skills employers look for.</p></div></div>
+          <div class="tl-card"><img src="../assets/journey-photos-wm/20260403_090119.jpg" alt="SFTF table at BSides MKE" onclick="openLightbox('../assets/journey-photos-wm/20260403_090119.jpg','April 3, 2026 — SFTF at BSides MKE')" /><div class="tl-card-body"><span class="date-tag">April 3, 2026</span><h3>Representing at BSides MKE</h3><p>Security for the Folks sets up a community table at BSides MKE — spreading the word about MOCS 2026 and connecting with the local security community.</p></div></div>
+          <div class="tl-card"><img src="../assets/journey-photos-wm/20260403_152606.jpg" alt="BSides MKE floor" onclick="openLightbox('../assets/journey-photos-wm/20260403_152606.jpg','April 3, 2026 — BSides MKE Floor')" /><div class="tl-card-body"><span class="date-tag">April 3, 2026</span><h3>Getting inspired at BSides MKE</h3><p>Walking the BSides MKE vendor floor for inspiration — seeing what great community conferences look like up close and taking notes for MOCS.</p></div></div>
+          <div class="tl-card"><img src="../assets/journey-photos-wm/20260410_131720.jpg" alt="Venue scout" onclick="openLightbox('../assets/journey-photos-wm/20260410_131720.jpg','April 10, 2026 — Venue Scout at Marquette AMU')" /><div class="tl-card-body"><span class="date-tag">April 10, 2026</span><h3>Venue scout — We Are Marquette</h3><p>First full walkthrough of the Alumni Memorial Union. Standing in the lobby in front of Marquette's golden eagle — it's getting real.</p></div></div>
+          <div class="tl-card"><img src="../assets/journey-photos-wm/20260410_134614.jpg" alt="Main hall" onclick="openLightbox('../assets/journey-photos-wm/20260410_134614.jpg','April 10, 2026 — AMU Room 227')" /><div class="tl-card-body"><span class="date-tag">April 10, 2026</span><h3>AMU Room 227 — the main hall</h3><p>Walking through the main session room for the first time. Projector up, tables in rows — envisioning hundreds of attendees filling these seats.</p></div></div>
+          <div class="tl-card"><img src="../assets/journey-photos-wm/20260410_134717.jpg" alt="Planning layout" onclick="openLightbox('../assets/journey-photos-wm/20260410_134717.jpg','April 10, 2026 — Room Layout')" /><div class="tl-card-body"><span class="date-tag">April 10, 2026</span><h3>Planning the room layout</h3><p>The team walks the floor, planning where sponsor tables go, sightlines to the screen, and how best to accommodate all attendees.</p></div></div>
+          <div class="tl-card"><img src="../assets/journey-photos-wm/20260410_135127.jpg" alt="Projector test" onclick="openLightbox('../assets/journey-photos-wm/20260410_135127.jpg','April 10, 2026 — Projector Test')" /><div class="tl-card-body"><span class="date-tag">April 10, 2026</span><h3>AV &amp; projector walkthrough</h3><p>Testing the projector and screen in the main hall — making sure every seat in the room gets a great view of the presentations.</p></div></div>
+          <div class="tl-card"><img src="../assets/journey-photos-wm/20260410_140954.jpg" alt="Breakout room" onclick="openLightbox('../assets/journey-photos-wm/20260410_140954.jpg','April 10, 2026 — Breakout Rooms')" /><div class="tl-card-body"><span class="date-tag">April 10, 2026</span><h3>Breakout room exploration</h3><p>Checking out AMU Rooms 252 and 254 — intimate, well-equipped spaces perfect for hands-on and technical breakout sessions.</p></div></div>
+          <div class="tl-card"><img src="../assets/journey-photos-wm/20260416_222141.jpg" alt="MOCS merch" onclick="openLightbox('../assets/journey-photos-wm/20260416_222141.jpg','April 16, 2026 — MOCS 2026 Merch')" /><div class="tl-card-body"><span class="date-tag">April 16, 2026</span><h3>The merch has landed 👕</h3><p>MOCS 2026 t-shirts arrive just days before the summit — repping midwest-otcs.org. These will be worn with pride by the team on April 24th.</p></div></div>
+          <div class="tl-card"><img src="../assets/journey-photos-wm/20260416_222212.jpg" alt="SFTF shirt" onclick="openLightbox('../assets/journey-photos-wm/20260416_222212.jpg','April 16, 2026 — SFTF Swag')" /><div class="tl-card-body"><span class="date-tag">April 16, 2026</span><h3>SFTF — community badge</h3><p>The XFTF shirt arrives alongside MOCS gear. For the Folks, by the Folks. See you April 24th.</p></div></div>
+          <div class="tl-card"><img src="../assets/journey-photos-wm/20260422_173115.jpg" alt="MC run-through" onclick="openLightbox('../assets/journey-photos-wm/20260422_173115.jpg','April 22, 2026 — MC Run-Through')" /><div class="tl-card-body"><span class="date-tag">April 22, 2026</span><h3>MC run-through — working the open</h3><p>Two days out. Script in hand, standing in the living room and rehearsing the welcome — setting the tone for how April 24th needs to feel the moment the doors open.</p></div></div>
+          <div class="tl-card"><img src="../assets/journey-photos-wm/Screenshot_20260422_173627_Clock.jpg" alt="Stopwatch" onclick="openLightbox('../assets/journey-photos-wm/Screenshot_20260422_173627_Clock.jpg','April 22, 2026 — Timing the Run')" /><div class="tl-card-body"><span class="date-tag">April 22, 2026</span><h3>Every minute counts</h3><p>Stopwatch on every section of the MC script. 12 sessions, 3 rooms, tight transitions — so every speaker gets their full time and the day lands on schedule.</p></div></div>
+          <div class="tl-card"><img src="../assets/journey-photos-wm/20260422_182013.jpg" alt="Full rehearsal" onclick="openLightbox('../assets/journey-photos-wm/20260422_182013.jpg','April 22, 2026 — Full Dress Rehearsal')" /><div class="tl-card-body"><span class="date-tag">April 22, 2026</span><h3>Dialed in — full dress rehearsal</h3><p>Full pass through the intro, sponsor shout-outs, and session handoffs. By the end of the night the script isn't paper anymore — it's muscle memory for Friday.</p></div></div>
+          <div class="tl-card"><img src="../assets/recap-2026-wm/20260424_112953.jpg" alt="Audience packed before the keynote" onclick="openLightbox('../assets/recap-2026-wm/20260424_112953.jpg','April 24, 2026 — Room packed before the keynote')" /><div class="tl-card-body"><span class="date-tag">April 24, 2026 · 11:30 AM</span><h3>Room packed before the keynote</h3><p>Doors opened. Lunches handed out. Seats filled. The energy in the main hall the moment before the first speaker walked up — that's why we do this.</p></div></div>
+          <div class="tl-card"><img src="../assets/recap-2026-wm/20260424_115202.jpg" alt="Opening at the podium with MOCS banner" onclick="openLightbox('../assets/recap-2026-wm/20260424_115202.jpg','April 24, 2026 — Welcome to MOCS 2026')" /><div class="tl-card-body"><span class="date-tag">April 24, 2026 · Welcome</span><h3>Setting the tone — mic in hand</h3><p>The welcome that started the day. Not a marketing pitch — just gratitude, expectations, and the why behind MOCS.</p></div></div>
+          <div class="tl-card"><img src="../assets/recap-2026-wm/20260424_134327.jpg" alt="Hands-on lab with instructor at the protocol screen" onclick="openLightbox('../assets/recap-2026-wm/20260424_134327.jpg','April 24, 2026 — Hands-on Lab')" /><div class="tl-card-body"><span class="date-tag">April 24, 2026 · Hands-on Lab</span><h3>Eyes on the protocol — laptops open</h3><p>The hands-on session: instructor at the screen, students staring into containers and replay attacks. The moment ICS theory becomes muscle memory.</p></div></div>
+          <div class="tl-card"><img src="../assets/recap-2026-wm/20260424_141845.jpg" alt="Supply Chain Cybersecurity breakout" onclick="openLightbox('../assets/recap-2026-wm/20260424_141845.jpg','April 24, 2026 — Supply Chain Cybersecurity')" /><div class="tl-card-body"><span class="date-tag">April 24, 2026 · Breakout</span><h3>Supply Chain Cybersecurity in a Connected World</h3><p>Two voices walking the room through procurement, logistics, and the hidden cybersecurity surface area of every connected device. Tables full, questions sharp.</p></div></div>
+          <div class="tl-card"><img src="../assets/recap-2026-wm/20260424_160054.jpg" alt="MOCS team and volunteers next to the sponsor banner" onclick="openLightbox('../assets/recap-2026-wm/20260424_160054.jpg','April 24, 2026 — The team that made it possible')" /><div class="tl-card-body"><span class="date-tag">April 24, 2026 · The team</span><h3>The folks who made it possible</h3><p>Volunteers, students, organizers — the people behind the registration desk, the rooms, the AV, and the snacks. None of this happens without them.</p></div></div>
+          <div class="tl-card"><img src="../assets/recap-2026-wm/20260424_161229.jpg" alt="Executive Panel: Preparing for the Next Generation of OT Cybersecurity" onclick="openLightbox('../assets/recap-2026-wm/20260424_161229.jpg','April 24, 2026 — Executive Panel')" /><div class="tl-card-body"><span class="date-tag">April 24, 2026 · 4:00 PM</span><h3>Executive Panel — preparing for the next generation</h3><p>The closing panel: academia, enterprise tech, product security, standards. Four perspectives on what comes next for OT cybersecurity, and how this room helps shape it.</p></div></div>
+          <div class="tl-card" style="border:2px solid #f4c300;"><div class="tl-card-body"><span class="date-tag" style="background:#f4c300;color:#173b65;">April 24, 2026 · Conference Day</span><h3>100+ in the room. We did it.</h3><p>MOCS 2026 — a full day across 3 rooms, 12 sessions, the FBI Milwaukee keynote, hands-on labs, an executive panel, and an entire community in motion. Thank you to every speaker, sponsor, volunteer, and attendee. See you in 2027.</p></div></div>
+        </div>
+      </section>
+
+      <!-- ROAD TO MOCS 2027 -->
+      <section class="section reveal" id="road-2027" style="scroll-margin-top:90px;">
+        <p class="eyebrow">Next chapter</p>
+        <h2 class="h2">Road to MOCS 2027.</h2>
+        <p class="lead">MOCS returns to Marquette on Friday, April 16, 2027 in the AMU 3rd Floor Ballroom. Here's how we get there.</p>
+
+        <div style="background:linear-gradient(180deg,#f7faff 0%,#eef3fa 100%);border:1px solid var(--line);border-radius:14px;padding:24px 24px 18px;margin-top:14px;">
+          <ol style="list-style:none;margin:0;padding:0;">
+            <li style="position:relative;padding:0 0 18px 30px;border-left:2px solid #cfdae8;margin-left:8px;"><span style="position:absolute;left:-7px;top:4px;width:14px;height:14px;border-radius:50%;background:#1f4f8f;border:2px solid #fff;box-shadow:0 0 0 2px #cfdae8;"></span><strong style="display:block;font-size:14px;color:#173c6b;">Tue, Sep 1, 2026</strong><span style="font-size:13px;color:var(--text);">Call for Speakers opens — six-month submission window</span></li>
+            <li style="position:relative;padding:0 0 18px 30px;border-left:2px solid #cfdae8;margin-left:8px;"><span style="position:absolute;left:-7px;top:4px;width:14px;height:14px;border-radius:50%;background:#f4c300;border:2px solid #fff;box-shadow:0 0 0 2px #cfdae8;"></span><strong style="display:block;font-size:14px;color:#173c6b;">Fri, Mar 5, 2027</strong><span style="font-size:13px;color:var(--text);">CFP submissions close · all proposals reviewed</span></li>
+            <li style="position:relative;padding:0 0 18px 30px;border-left:2px solid #cfdae8;margin-left:8px;"><span style="position:absolute;left:-7px;top:4px;width:14px;height:14px;border-radius:50%;background:#1f4f8f;border:2px solid #fff;box-shadow:0 0 0 2px #cfdae8;"></span><strong style="display:block;font-size:14px;color:#173c6b;">Fri, Mar 19, 2027</strong><span style="font-size:13px;color:var(--text);">Speaker notifications — accepted talks confirmed</span></li>
+            <li style="position:relative;padding:0 0 18px 30px;border-left:2px solid #cfdae8;margin-left:8px;"><span style="position:absolute;left:-7px;top:4px;width:14px;height:14px;border-radius:50%;background:#1f4f8f;border:2px solid #fff;box-shadow:0 0 0 2px #cfdae8;"></span><strong style="display:block;font-size:14px;color:#173c6b;">Thu, Apr 8, 2027</strong><span style="font-size:13px;color:var(--text);">Slide decks due (one week pre-event)</span></li>
+            <li style="position:relative;padding:0 0 18px 30px;border-left:2px solid #cfdae8;margin-left:8px;"><span style="position:absolute;left:-7px;top:4px;width:14px;height:14px;border-radius:50%;background:#1f4f8f;border:2px solid #fff;box-shadow:0 0 0 2px #cfdae8;"></span><strong style="display:block;font-size:14px;color:#173c6b;">Wed, Apr 14, 2027</strong><span style="font-size:13px;color:var(--text);">Tech rehearsal · MC run-through · venue walk</span></li>
+            <li style="position:relative;padding:0 0 0 30px;border-left:2px solid transparent;margin-left:8px;"><span style="position:absolute;left:-7px;top:4px;width:14px;height:14px;border-radius:50%;background:#2f9a52;border:2px solid #fff;box-shadow:0 0 0 2px #cfdae8;"></span><strong style="display:block;font-size:14px;color:#173c6b;">Fri, Apr 16, 2027</strong><span style="font-size:13px;color:var(--text);font-weight:700;">MOCS 2027 · Marquette AMU 3rd Floor Ballroom</span></li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- THANKS / CTA -->
+      <section class="section reveal">
+        <div class="thanks">
+          <div>
+            <h3>Thanks for reading our story.</h3>
+            <p>Every sponsor logo, every student ticket, every speaker who said yes — that's how MOCS 2026 got built. Now we're building <strong>MOCS 2027</strong>. Submit a talk, sponsor a table, or just save the date for April 16, 2027.</p>
+          </div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;">
+            <a class="btn btn-gold" href="../index.html#cfs">Submit a Talk</a>
+            <a class="btn btn-blue" href="../agenda/index.html" style="border-color:#ffd766;">View Agenda Template</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Lightbox -->
+    <div id="lightbox" onclick="closeLightbox()">
+      <button id="lightbox-close" onclick="closeLightbox()">✕</button>
+      <img id="lightbox-img" src="" alt="" onclick="event.stopPropagation()" />
+      <div id="lightbox-caption"></div>
+    </div>
+
+    <script>
+      // Image protection — deters casual download / right-click save
+      (function(){
+        document.addEventListener('contextmenu', function(e){
+          if (e.target && e.target.tagName === 'IMG') e.preventDefault();
+        });
+        document.addEventListener('dragstart', function(e){
+          if (e.target && e.target.tagName === 'IMG') e.preventDefault();
+        });
+        var s = document.createElement('style');
+        s.textContent = 'img{-webkit-user-drag:none;user-drag:none;-webkit-touch-callout:none;user-select:none}';
+        document.head.appendChild(s);
+      })();
+
+      function openLightbox(src, caption){
+        document.getElementById('lightbox-img').src = src;
+        document.getElementById('lightbox-caption').textContent = caption;
+        document.getElementById('lightbox').classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+      function closeLightbox(){
+        document.getElementById('lightbox').classList.remove('open');
+        document.getElementById('lightbox-img').src = '';
+        document.body.style.overflow = '';
+      }
+      document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeLightbox(); });
+
+      // Promo video — click to toggle sound
+      (function(){
+        const v = document.getElementById('promo-video');
+        const b = document.getElementById('sound-btn');
+        if (!v || !b) return;
+        const toggle = () => {
+          v.muted = !v.muted;
+          b.textContent = v.muted ? '🔇 Click for sound' : '🔊 Sound on';
+          if (!v.muted) v.play().catch(()=>{});
+        };
+        b.addEventListener('click', toggle);
+        v.addEventListener('click', toggle);
+      })();
+
+      // Dark mode toggle
+      document.getElementById('dark-toggle').addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+      });
+
+      // Sticky-nav active section highlighting
+      (function(){
+        const navLinks = document.querySelectorAll('.page-nav-link');
+        const sections = Array.from(navLinks).map(l => {
+          const id = l.getAttribute('href').slice(1);
+          return { id, el: document.getElementById(id), link: l };
+        }).filter(s => s.el);
+        if (!sections.length || !('IntersectionObserver' in window)) return;
+        const setActive = (id) => navLinks.forEach(l => l.classList.toggle('is-active', l.getAttribute('href') === '#' + id));
+        const visible = new Map();
+        const obs = new IntersectionObserver((entries) => {
+          entries.forEach(e => {
+            if (e.isIntersecting) visible.set(e.target.id, e.intersectionRatio);
+            else visible.delete(e.target.id);
+          });
+          if (visible.size === 0) return;
+          const top = sections
+            .filter(s => visible.has(s.id))
+            .map(s => ({ id: s.id, top: s.el.getBoundingClientRect().top }))
+            .sort((a,b) => Math.abs(a.top) - Math.abs(b.top))[0];
+          if (top) setActive(top.id);
+        }, { rootMargin: '-100px 0px -60% 0px', threshold: [0, 0.25, 0.5, 0.75, 1] });
+        sections.forEach(s => obs.observe(s.el));
+      })();
+
+      // Reveal on scroll (respects prefers-reduced-motion)
+      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (!prefersReduced && 'IntersectionObserver' in window) {
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach((e, i) => {
+            if (e.isIntersecting) {
+              setTimeout(() => e.target.classList.add('in'), i * 50);
+              io.unobserve(e.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        document.querySelectorAll('.reveal, .tl-card').forEach(el => io.observe(el));
+      } else {
+        document.querySelectorAll('.reveal, .tl-card').forEach(el => el.classList.add('in'));
+      }
+    </script>
+  </body>
+</html>

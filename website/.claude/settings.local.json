@@ -1,0 +1,34 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:www.marquette.edu)",
+      "Bash(python3 -c ' *)",
+      "Bash(py --version)",
+      "Bash(powershell.exe *)",
+      "Bash(docker run *)",
+      "Bash(docker version *)",
+      "Bash(docker info *)",
+      "WebFetch(domain:today.marquette.edu)",
+      "Bash(curl -sSL -o \"C:/Users/b2/source/repos/GoldenEagleConference/website/assets/founders/debbie-perouli.png\" \"https://www.marquette.edu/computer-science/directory/images/debbie-perouli.png\")",
+      "Bash(curl -sSL -o \"C:/Users/b2/source/repos/GoldenEagleConference/website/assets/founders/xftf-leadership-group.jpg\" \"https://today.marquette.edu/wp-content/uploads/2025/11/20240829_183238-1-1024x473.jpg\")",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:www.linkedin.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(mkdir -p \"C:/Users/b2/.claude/skills/taste-skill\" \"C:/Users/b2/.claude/skills/emil-animations\" \"C:/Users/b2/.claude/skills/gstack-design\" \"C:/Users/b2/.claude/skills/frontend-design\")",
+      "Bash(curl -sSL \"https://raw.githubusercontent.com/Leonxlnx/taste-skill/main/skills/taste-skill/SKILL.md\")",
+      "Bash(curl -sSL \"https://raw.githubusercontent.com/emilkowalski/skill/main/skills/emil-design-eng/SKILL.md\")",
+      "Bash(curl -sSL \"https://raw.githubusercontent.com/garrytan/gstack/main/DESIGN.md\")",
+      "Bash(cp \"C:/Users/b2/.claude/plugins/cache/claude-plugins-official/frontend-design/unknown/skills/frontend-design/SKILL.md\" \"C:/Users/b2/.claude/skills/frontend-design/SKILL.md.raw\")",
+      "Bash(mv \"C:/Users/b2/.claude/skills/taste-skill/SKILL.md.raw\" \"C:/Users/b2/.claude/skills/taste-skill/SKILL.md\")",
+      "Bash(mv \"C:/Users/b2/.claude/skills/emil-animations/SKILL.md.raw\" \"C:/Users/b2/.claude/skills/emil-animations/SKILL.md\")",
+      "Bash(mv \"C:/Users/b2/.claude/skills/frontend-design/SKILL.md.raw\" \"C:/Users/b2/.claude/skills/frontend-design/SKILL.md\")",
+      "WebFetch(domain:sigcse2023.sigcse.org)",
+      "WebFetch(domain:www.praetorian.com)",
+      "WebFetch(domain:theorg.com)",
+      "WebFetch(domain:securityintelligence.com)",
+      "Bash(cp \"/g/Shared drives/MU Ethical Hacking Class/xFTF/MOCS 2026/Speaker Slides/Technical Panel OT Cybersecurity Industry Perspectives 1.pptx\" \"C:/Users/b2/source/repos/GoldenEagleConference/_panel.pptx\")",
+      "Bash(unzip -q -o \"C:/Users/b2/source/repos/GoldenEagleConference/_panel.pptx\" -d \"C:/Users/b2/source/repos/GoldenEagleConference/_panel_extracted/\")"
+    ]
+  }
+}

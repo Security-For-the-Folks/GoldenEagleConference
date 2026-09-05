@@ -1,0 +1,712 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day-of Guide — MOCS 2027 · April 16, 2027</title>
+    <meta name="description" content="Day-of guide for MOCS 2027 (April 16, 2027) — parking, directions, check-in flow, and food. Marquette AMU, 3rd Floor Ballroom. Preview based on MOCS 2026; final 2027 logistics confirmed closer to event." />
+    <meta name="author" content="Security for the Folks (XFTF) — www.xftf.org" />
+    <meta name="robots" content="index, follow" />
+    <meta name="robots" content="noai, noimageai" />
+    <meta name="ai-content" content="prohibited" />
+    <link rel="canonical" href="https://midwest-otcs.org/day-of/" />
+    <link rel="icon" type="image/png" href="../assets/sftf-logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --navy:#0d3260; --blue:#1f4f8f; --panel:#e9eff6;
+        --line:rgba(13,50,96,.12); --text:#23384e; --muted:#61758f;
+        --gold:#f4c300; --ease:cubic-bezier(0.16,1,0.3,1);
+        --sh:0 4px 24px rgba(13,50,96,.10);
+        --sh-h:0 8px 32px rgba(13,50,96,.16);
+      }
+      *{box-sizing:border-box}
+      html{font-size:16px;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+      body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;background:#dfe7f0;color:var(--text);overflow-x:hidden;position:relative}
+      body::before{content:"";position:fixed;inset:0;background:url("../assets/sftf-background.png") -20px center/360px 360px no-repeat;opacity:.05;pointer-events:none;z-index:-1}
+      .wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+
+      /* HEADER */
+      .top{position:relative;overflow:hidden;background:radial-gradient(1200px 420px at 0 0,#214f8f 0,#133c72 45%,#0d2f5d 50%);color:#eaf2ff;padding:8px 0 16px}
+      .top::before{content:"";position:absolute;inset:0;opacity:.15;pointer-events:none;background-image:repeating-linear-gradient(0deg,transparent 0 24px,rgba(255,255,255,.2) 24px 25px),repeating-linear-gradient(90deg,transparent 0 72px,rgba(255,255,255,.17) 72px 73px),linear-gradient(90deg,transparent 0 10%,rgba(255,255,255,.22) 10% 11%,transparent 11% 38%,rgba(255,255,255,.18) 38% 39%,transparent 39%)}
+      .wrap-top{position:relative;z-index:1}
+      .topbar{display:flex;justify-content:space-between;align-items:center;padding:8px 0;flex-wrap:wrap;gap:8px}
+
+      /* BUTTONS */
+      .btn{display:inline-flex;align-items:center;gap:6px;border-radius:9px;padding:8px 14px;text-decoration:none;font-weight:700;border:none;cursor:pointer;font-size:13px;font-family:inherit;letter-spacing:.01em;transition:transform .2s var(--ease),box-shadow .2s ease,background .15s ease}
+      .btn:hover{transform:translateY(-1px)}
+      .btn:active{transform:translateY(0) scale(.98)}
+      .btn-blue{background:#295b9c;color:#e9f2ff;border:1px solid rgba(255,255,255,.2);box-shadow:inset 0 1px 0 rgba(255,255,255,.1)}
+      .btn-blue:hover{background:#3368af;box-shadow:0 4px 14px rgba(13,50,96,.25),inset 0 1px 0 rgba(255,255,255,.1)}
+      .btn-gold{background:var(--gold);color:#173b65;box-shadow:inset 0 1px 0 rgba(255,255,255,.3)}
+      .btn-gold:hover{background:#ffd000;box-shadow:0 4px 14px rgba(244,195,0,.35),inset 0 1px 0 rgba(255,255,255,.3)}
+
+      /* HERO */
+      .page-hero{margin-top:10px;border:1px solid rgba(255,255,255,.2);background:rgba(7,27,54,.35);border-radius:14px;padding:22px 24px}
+      .hero-eyebrow{display:inline-block;font-size:11px;font-weight:800;color:#ffde73;letter-spacing:.18em;text-transform:uppercase;margin:0 0 10px;border-left:2px solid rgba(255,222,115,.5);padding-left:10px}
+      .page-hero h1{margin:4px 0 8px;color:#fff;font-size:40px;line-height:1.05;letter-spacing:-.015em;font-weight:800}
+      .page-hero p{margin:0;color:#d3e1f5;font-size:15px;max-width:680px;line-height:1.6}
+      @media (max-width:640px){.page-hero h1{font-size:28px}}
+
+      /* MAIN */
+      main{padding:20px 0 48px}
+
+      /* SECTION TITLES */
+      .sec-title{display:flex;align-items:center;gap:10px;margin:0 0 4px;color:#143a68;font-size:26px;font-weight:800;letter-spacing:-.02em}
+      .sec-sub{margin:0 0 16px;color:var(--muted);font-size:13px}
+
+      /* SECTION CARDS */
+      .sec-card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px;box-shadow:var(--sh);margin-bottom:16px;opacity:0;transform:translateY(14px);transition:opacity 280ms var(--ease),transform 280ms var(--ease),box-shadow 200ms ease}
+      .sec-card.vis{opacity:1;transform:translateY(0)}
+      .sec-card:hover{box-shadow:var(--sh-h)}
+
+      /* ARRIVAL FLOW — 3-step horizontal with connecting arrows */
+      .flow{display:grid;grid-template-columns:2fr auto 1fr auto 1fr;gap:12px;align-items:stretch;margin-bottom:16px}
+      .flow-step{position:relative;background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px;box-shadow:var(--sh);overflow:hidden;animation:flow-in 360ms var(--ease) both;animation-delay:calc(var(--i,0) * 80ms);display:flex;flex-direction:column;transition:transform 220ms var(--ease),box-shadow 220ms ease}
+      @keyframes flow-in{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+      @media (hover:hover) and (pointer:fine){.flow-step:hover{transform:translateY(-2px);box-shadow:var(--sh-h)}}
+      .flow-step-primary{background:linear-gradient(180deg,#fdfbf3 0%,#fff 60%);border-color:#ead9a1}
+      .flow-step-primary::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,rgba(244,195,0,.55),transparent)}
+
+      .flow-step-idx{position:absolute;top:12px;right:16px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;font-weight:700;color:#a8bcd4;letter-spacing:.08em}
+      .flow-step-icon{width:44px;height:44px;border-radius:11px;background:rgba(13,50,96,.06);border:1px solid rgba(13,50,96,.1);color:var(--navy);display:flex;align-items:center;justify-content:center;margin-bottom:12px;flex-shrink:0;transition:transform 220ms var(--ease),background 200ms ease}
+      .flow-step-primary .flow-step-icon{background:rgba(244,195,0,.15);border-color:rgba(244,195,0,.3);color:#8a6800}
+      @media (hover:hover) and (pointer:fine){.flow-step:hover .flow-step-icon{transform:scale(1.06)}}
+      .flow-step-label{margin:0 0 4px;font-size:10px;font-weight:800;color:var(--gold);text-transform:uppercase;letter-spacing:.14em;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+      .flow-step-title{font-size:18px;font-weight:800;color:#143a68;margin:0 0 8px;letter-spacing:-.015em;line-height:1.2}
+      .flow-step-primary .flow-step-title{font-size:22px}
+      .flow-step-desc{font-size:13.5px;color:#405b78;line-height:1.6;margin:0 0 10px}
+      .flow-step-list{margin:4px 0 12px;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px}
+      .flow-step-list li{position:relative;padding:6px 8px 6px 28px;font-size:13px;color:#405b78;line-height:1.5;background:rgba(13,50,96,.03);border-radius:8px}
+      .flow-step-list li::before{content:"";position:absolute;left:10px;top:50%;transform:translateY(-50%);width:8px;height:8px;border-radius:50%;background:#ffd766;box-shadow:0 0 0 2px rgba(244,195,0,.2)}
+      .flow-step-list li strong{color:#143a68;font-weight:700}
+
+      /* Video link pill */
+      .step-vid-btn{display:inline-flex;align-items:center;gap:7px;margin-top:auto;padding:8px 13px;background:rgba(31,79,143,.08);border:1px solid rgba(31,79,143,.18);border-radius:8px;color:var(--blue);font-size:12px;font-weight:700;text-decoration:none;width:fit-content;transition:background .15s ease,transform .2s var(--ease)}
+      @media (hover:hover) and (pointer:fine){.step-vid-btn:hover{background:rgba(31,79,143,.14);transform:translateX(2px)}}
+
+      /* Connecting arrow between flow steps */
+      .flow-arrow{display:flex;align-items:center;justify-content:center;color:#a8bcd4;animation:flow-arrow-in 360ms var(--ease) .3s both}
+      @keyframes flow-arrow-in{from{opacity:0;transform:translateX(-6px)}to{opacity:1;transform:translateX(0)}}
+
+      @media (max-width:900px){
+        .flow{grid-template-columns:1fr;gap:4px}
+        .flow-arrow{transform:rotate(90deg);padding:6px 0}
+      }
+
+      body.dark .flow-step{background:#1b2d44;border-color:#2c4563}
+      body.dark .flow-step-title{color:#e8f3ff}
+      body.dark .flow-step-desc,body.dark .flow-step-list li{color:#a7bed9}
+      body.dark .flow-step-icon{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.1);color:#9ecfff}
+      body.dark .flow-step-primary{background:linear-gradient(180deg,#1f1e12 0%,#1b2d44 70%);border-color:#5a4a1e}
+      body.dark .flow-step-primary .flow-step-icon{background:rgba(244,195,0,.1);border-color:rgba(244,195,0,.25);color:#ffd766}
+      body.dark .flow-step-list li{background:rgba(255,255,255,.04)}
+      body.dark .flow-step-list li strong{color:#e8f3ff}
+      body.dark .flow-arrow{color:#3b6ba5}
+
+      /* VIDEO */
+      .video-wrap{position:relative;border-radius:10px;overflow:hidden;background:#000;margin-top:14px;box-shadow:0 6px 28px rgba(13,50,96,.18);transition:box-shadow .25s ease,transform .25s var(--ease)}
+      .video-wrap:hover{box-shadow:0 12px 40px rgba(13,50,96,.24);transform:scale(1.003)}
+      .video-wrap video{width:100%;display:block;max-height:480px;object-fit:contain}
+
+      /* FOOD */
+      .food-banner{background:linear-gradient(135deg,#1a4a7c 0%,#0d3260 100%);border:1px solid rgba(255,255,255,.12);box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 4px 20px rgba(13,50,96,.18);border-radius:12px;padding:18px 20px;color:#eaf2ff;display:flex;align-items:center;gap:18px;margin-top:4px}
+      .food-ico{width:52px;height:52px;border-radius:13px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);box-shadow:inset 0 1px 0 rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:transform .25s var(--ease)}
+      .food-banner:hover .food-ico{transform:scale(1.09) rotate(-4deg)}
+      .food-banner h3{margin:0 0 3px;color:#ffd766;font-size:17px;font-weight:800;letter-spacing:-.01em}
+      .food-banner p{margin:0;font-size:13px;color:#c8d8ef;line-height:1.6}
+      .snack-row{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 16px;display:flex;align-items:center;gap:14px;margin-top:10px;transition:transform .2s var(--ease),box-shadow .2s ease}
+      .snack-row:hover{transform:translateY(-2px);box-shadow:0 4px 16px rgba(13,50,96,.10)}
+      .snack-ico{width:38px;height:38px;border-radius:9px;background:rgba(244,195,0,.1);border:1px solid rgba(244,195,0,.22);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#8a6800}
+      @media(max-width:600px){.food-banner{flex-direction:column;text-align:center}}
+
+      /* PARKING */
+      /* PARKING — featured Structure 2 card + compact alternatives grid */
+      .park-feature{position:relative;background:linear-gradient(180deg,#0f3a6e 0%,#0a2550 100%);border:1px solid #1c4478;border-radius:16px;padding:24px 26px;margin:14px 0 12px;color:#eaf2ff;overflow:hidden;box-shadow:0 8px 28px rgba(13,50,96,.18)}
+      .park-feature::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent 10%,rgba(244,195,0,.55) 50%,transparent 90%)}
+      .park-feature-inner{display:grid;grid-template-columns:56px 1fr auto;gap:22px;align-items:center}
+      .park-feature-icon{width:56px;height:56px;border-radius:14px;background:rgba(244,195,0,.1);border:1px solid rgba(244,195,0,.3);color:#ffd766;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+      .park-feature-eyebrow{margin:0 0 6px;display:inline-flex;align-items:center;gap:8px;font-size:10.5px;font-weight:800;color:#ffde73;letter-spacing:.2em;text-transform:uppercase;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+      .park-feature-eyebrow .dot{width:6px;height:6px;border-radius:50%;background:#ffd766;box-shadow:0 0 8px rgba(255,215,102,.7);flex-shrink:0}
+      .park-feature h3{margin:0 0 8px;font-size:26px;font-weight:800;color:#fff;letter-spacing:-.02em;line-height:1.1}
+      .park-feature-alt{color:#a8d4ff;font-weight:600}
+      .park-feature-address{margin:0 0 8px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12.5px;color:#a8d4ff;letter-spacing:.01em;display:flex;align-items:center;gap:6px}
+      .park-feature-desc{margin:0 0 14px;font-size:14px;color:#c8d8ef;line-height:1.55;max-width:520px}
+      .park-feature-desc strong{color:#ffd766;font-weight:700}
+      .park-feature-meta{display:flex;flex-wrap:wrap;gap:18px;margin:0}
+      .park-meta-item{display:flex;flex-direction:column;gap:2px;line-height:1;min-width:80px}
+      .park-meta-item .l{font-size:10px;font-weight:800;color:#7eb3e0;text-transform:uppercase;letter-spacing:.14em}
+      .park-meta-item .v{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:15px;font-weight:800;color:#fff;letter-spacing:-.01em;font-variant-numeric:tabular-nums}
+      .park-feature-actions{flex-shrink:0;display:flex;align-items:center}
+      .park-feature-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;background:#f4c300;color:#173b65;border-radius:10px;font-size:14px;font-weight:800;text-decoration:none;letter-spacing:-.005em;transition:transform 160ms cubic-bezier(0.23,1,0.32,1),background 180ms ease,box-shadow 180ms ease;box-shadow:0 3px 12px rgba(244,195,0,.28)}
+      @media (hover:hover) and (pointer:fine){.park-feature-btn:hover{background:#ffd433;box-shadow:0 5px 18px rgba(244,195,0,.4)}}
+      .park-feature-btn:active{transform:scale(0.97)}
+      @media (max-width:720px){
+        .park-feature-inner{grid-template-columns:1fr;gap:14px}
+        .park-feature h3{font-size:22px}
+        .park-feature-meta{gap:14px}
+        .park-meta-item{min-width:0;flex:1 1 30%}
+      }
+
+      .info-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
+      .info-grid.info-grid-3{grid-template-columns:repeat(3,1fr);margin-top:12px}
+      @media(max-width:720px){.info-grid.info-grid-3{grid-template-columns:1fr}}
+      .info-box{background:#fff;border:1px solid var(--line);border-radius:10px;padding:14px 16px;transition:transform .2s var(--ease),box-shadow .2s ease}
+      .info-box:hover{transform:translateY(-3px);box-shadow:0 6px 20px rgba(13,50,96,.12)}
+      .info-badge{display:inline-block;background:rgba(31,79,143,.07);color:#1f4f8f;border:1px solid rgba(31,79,143,.16);font-size:10px;font-weight:800;padding:2px 8px;border-radius:999px;margin-bottom:8px;letter-spacing:.05em;text-transform:uppercase}
+      .info-box h4{margin:0 0 5px;font-size:14px;color:#173c6b;font-weight:700;letter-spacing:-.01em}
+      .info-box p,.info-box li{font-size:12.5px;color:#405b78;line-height:1.6;margin:0 0 3px}
+      .info-box ul{margin:4px 0 0;padding-left:16px}
+      .map-wrap{margin-top:12px;border-radius:10px;overflow:hidden;border:1px solid var(--line);box-shadow:0 4px 16px rgba(13,50,96,.08)}
+
+      /* MAP CARD — static address block, opens Google Maps in new tab */
+      .map-card{display:flex;align-items:center;gap:16px;margin-top:14px;padding:16px 18px;background:#fff;border:1px solid var(--line);border-radius:12px;text-decoration:none;color:var(--text);position:relative;overflow:hidden;transition:transform 220ms var(--ease),box-shadow 220ms ease,border-color 220ms ease}
+      .map-card::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,rgba(31,79,143,.4),transparent)}
+      .map-card-icon{width:40px;height:40px;border-radius:10px;background:#eef3fb;color:#1f4f8f;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+      .map-card-body{flex:1;min-width:0}
+      .map-card-label{margin:0 0 3px;font-size:10.5px;font-weight:800;color:#3b6ba5;text-transform:uppercase;letter-spacing:.16em;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+      .map-card-addr{margin:0;font-size:13.5px;color:#405b78;line-height:1.55}
+      .map-card-addr strong{color:#143a68;font-weight:700}
+      .map-card-btn{display:inline-flex;align-items:center;gap:6px;padding:9px 14px;background:#f4c300;color:#173b65;border-radius:8px;font-size:13px;font-weight:800;letter-spacing:-.005em;flex-shrink:0;transition:background 180ms ease,box-shadow 180ms ease}
+      @media (hover:hover) and (pointer:fine){
+        .map-card:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(13,50,96,.10);border-color:#b8cbe4}
+        .map-card:hover .map-card-btn{background:#ffd433;box-shadow:0 3px 12px rgba(244,195,0,.3)}
+      }
+      @media (max-width:600px){.map-card{flex-wrap:wrap}.map-card-btn{width:100%;justify-content:center}}
+      body.dark .map-card{background:#13243a;border-color:#2c4563;color:#d8e6f8}
+      body.dark .map-card-icon{background:#1b3554;color:#7eb3e0}
+      body.dark .map-card-addr{color:#a7bed9}
+      body.dark .map-card-addr strong{color:#e8f3ff}
+      @media(max-width:600px){.info-grid{grid-template-columns:1fr}}
+
+      /* CONTACT */
+      .contact-card{background:linear-gradient(135deg,#163d72 0%,#0d3260 100%);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:20px 22px;display:flex;align-items:flex-start;gap:16px;margin-bottom:16px;box-shadow:inset 0 1px 0 rgba(255,255,255,.1),0 4px 20px rgba(13,50,96,.20);opacity:0;transform:translateY(14px);transition:opacity 280ms var(--ease),transform 280ms var(--ease)}
+      .contact-card.vis{opacity:1;transform:translateY(0)}
+      .contact-ico{width:46px;height:46px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#ffd766;box-shadow:inset 0 1px 0 rgba(255,255,255,.15)}
+      .contact-card h3{margin:0 0 12px;color:#ffd766;font-size:17px;font-weight:800;letter-spacing:-.01em}
+      .contact-people{display:flex;gap:10px;flex-wrap:wrap}
+      .contact-person{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:10px 14px;box-shadow:inset 0 1px 0 rgba(255,255,255,.08);transition:background .15s ease,transform .2s var(--ease)}
+      .contact-person:hover{background:rgba(255,255,255,.14);transform:translateY(-2px)}
+      .cp-name{font-size:13px;font-weight:800;color:#fff;margin-bottom:4px;letter-spacing:-.01em}
+      .cp-email{display:inline-flex;align-items:center;gap:5px;color:#9ecfff;font-size:12px;font-weight:600;text-decoration:none;transition:color .15s ease}
+      .cp-email:hover{color:#c8e6ff}
+      @media(max-width:600px){.contact-card{flex-direction:column}}
+
+      /* DARK MODE */
+      body.dark{background:#0b1320;color:#d8e6f8}
+      body.dark .sec-card{background:#13243a;border-color:#2c4563}
+      body.dark .sec-title{color:#e8f3ff}
+      body.dark .step-vid-btn{background:rgba(158,207,255,.07);border-color:rgba(158,207,255,.17);color:#9ecfff}
+      body.dark .step-vid-btn:hover{background:rgba(158,207,255,.13)}
+      body.dark .info-box{background:#1b2d44;border-color:#2c4563}
+      body.dark .info-box h4{color:#e8f3ff}
+      body.dark .info-box p,body.dark .info-box li{color:#a7bed9}
+      body.dark .info-badge{background:#1b3554;color:#7eb3e0;border-color:#2c4563}
+      body.dark .snack-row{background:#1b2d44;border-color:#2c4563}
+      body.dark .snack-ico{background:rgba(244,195,0,.07);border-color:rgba(244,195,0,.17);color:#c9a000}
+      body.dark .btn-blue{background:#3b6fad;color:#f0f6ff}
+
+      /* BRING BANNER — highlighted "what to pack" callout */
+      .bring-banner{position:relative;background:linear-gradient(180deg,#fdfbf3 0%,#fff 60%);border:1px solid #ead9a1;border-radius:14px;padding:22px 24px;margin:0 0 18px;box-shadow:0 4px 18px rgba(138,104,0,.08)}
+      .bring-banner::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent 5%,rgba(244,195,0,.6) 50%,transparent 95%)}
+      .bring-head{display:flex;align-items:flex-start;gap:14px;margin:0 0 14px}
+      .bring-icon{width:40px;height:40px;border-radius:10px;background:rgba(244,195,0,.18);color:#8a6800;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+      .bring-eyebrow{margin:0 0 2px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10.5px;font-weight:800;color:#8a6800;letter-spacing:.18em;text-transform:uppercase}
+      .bring-title{margin:0;font-size:22px;font-weight:800;color:#3a2c00;letter-spacing:-.015em;line-height:1.15}
+      .bring-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+      .bring-item{position:relative;background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px 16px 20px;display:flex;flex-direction:column;gap:8px}
+      .bring-item::before{content:"";position:absolute;left:0;top:16px;bottom:16px;width:3px;border-radius:2px}
+      .bring-item-id::before{background:#c7362e}
+      .bring-item-lab::before{background:#1f4f8f}
+      .bring-badge{display:inline-block;width:fit-content;font-size:10px;font-weight:800;padding:3px 9px;border-radius:4px;letter-spacing:.12em;text-transform:uppercase;background:rgba(199,54,46,.1);color:#c7362e;border:1px solid rgba(199,54,46,.3)}
+      .bring-badge-lab{background:rgba(31,79,143,.08);color:#1f4f8f;border-color:rgba(31,79,143,.3)}
+      .bring-item strong{color:#143a68;font-size:15.5px;font-weight:800;letter-spacing:-.005em}
+      .bring-audience{font-size:12.5px;color:var(--muted);font-weight:600;font-style:italic;margin-left:2px}
+      .bring-item p{margin:4px 0 0;font-size:13px;color:#546b86;line-height:1.55}
+      .bring-item p a{color:#1f4f8f;font-weight:700;text-decoration:none;border-bottom:1px solid rgba(31,79,143,.3)}
+      .bring-item p strong{font-size:inherit;color:#143a68}
+      @media (max-width:720px){
+        .bring-banner{padding:18px 16px}
+        .bring-title{font-size:19px}
+        .bring-list{grid-template-columns:1fr}
+      }
+      body.dark .bring-banner{background:linear-gradient(180deg,#1f1e12 0%,#13243a 70%);border-color:#5a4a1e}
+      body.dark .bring-title{color:#ffde73}
+      body.dark .bring-eyebrow{color:#ffd766}
+      body.dark .bring-item{background:#13243a;border-color:#2c4563}
+      body.dark .bring-item strong{color:#e8f3ff}
+      body.dark .bring-item p{color:#a7bed9}
+      body.dark .bring-audience{color:#7eb3e0}
+
+      /* PAGE NAV — sticky section jump links */
+      .page-nav{position:sticky;top:8px;z-index:50;display:flex;align-items:stretch;gap:6px;flex-wrap:wrap;margin:0 0 18px;padding:8px;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:12px;box-shadow:0 4px 14px rgba(13,50,96,.08)}
+      .page-nav-link{position:relative;flex:1;min-width:110px;display:flex;align-items:center;gap:8px;padding:10px 12px;text-decoration:none;color:var(--muted);border-radius:8px;font-size:13px;font-weight:700;letter-spacing:-.005em;transition:color 180ms ease,background 180ms ease}
+      .page-nav-idx{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;font-weight:700;color:#a8bcd4;letter-spacing:.06em;flex-shrink:0;transition:color 180ms ease}
+      .page-nav-link.is-active{background:#143a68;color:#ffd766}
+      .page-nav-link.is-active .page-nav-idx{color:#ffde73}
+      @media (hover:hover) and (pointer:fine){
+        .page-nav-link:hover{background:#eef3fb;color:#143a68}
+        .page-nav-link:hover .page-nav-idx{color:#1f4f8f}
+        .page-nav-link.is-active:hover{background:#0f3260;color:#ffd766}
+      }
+      @media (max-width:640px){.page-nav{top:4px}.page-nav-link{min-width:0;flex:1 1 calc(33% - 4px)}}
+      body.dark .page-nav{background:rgba(13,24,48,.85);border-color:#2c4563}
+      body.dark .page-nav-link{color:#a7bed9}
+      body.dark .page-nav-link:hover{background:#1b3554;color:#e8f3ff}
+      body.dark .page-nav-link.is-active{background:#ffd766;color:#143a68}
+      body.dark .page-nav-link.is-active .page-nav-idx{color:#8a6800}
+      html{scroll-behavior:smooth;scroll-padding-top:90px}
+
+      /* MAP ANNOTATION */
+      .map-fig{margin:0}
+      .map-annot{position:relative;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:#fff;cursor:zoom-in;line-height:0}
+      .map-annot img{width:100%;display:block}
+      .map-arrow{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:2}
+      .map-pin{position:absolute;transform:translate(-50%,-50%);z-index:3;width:14px;height:14px;border-radius:50%;background:#1f4f8f;border:2px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.45),0 0 0 1.5px rgba(13,50,96,.35);pointer-events:none}
+      .map-pin.pin-main{width:18px;height:18px;background:#ffd766;border-color:#fff;box-shadow:0 0 0 1.5px rgba(244,195,0,.35),0 4px 14px rgba(0,0,0,.5)}
+      .map-pin.pin-reg{background:#c7362e;box-shadow:0 2px 8px rgba(0,0,0,.45),0 0 0 1.5px rgba(199,54,46,.35)}
+      .map-cap{margin-top:14px}
+      .map-legend{list-style:none;margin:0;padding:14px 16px;background:#f6f9fc;border:1px solid var(--line);border-radius:10px;display:grid;grid-template-columns:1fr 1fr;gap:10px 18px}
+      .map-legend li{display:flex;align-items:baseline;gap:10px;font-size:13px;color:#405b78;line-height:1.45}
+      .leg-dot{width:10px;height:10px;border-radius:50%;background:#1f4f8f;flex-shrink:0;display:inline-block;transform:translateY(1px);box-shadow:0 0 0 2px rgba(31,79,143,.18)}
+      .leg-dot.main{background:#ffd766;box-shadow:0 0 0 2px rgba(244,195,0,.25)}
+      .leg-dot.reg{background:#c7362e;box-shadow:0 0 0 2px rgba(199,54,46,.22)}
+      .leg-dot.entry{background:#2f9a52;box-shadow:0 0 0 2px rgba(47,154,82,.22)}
+      .map-cap-foot{margin:10px 0 0;font-size:12px;color:var(--muted)}
+      .map-cap-foot a{color:#1f4f8f;font-weight:600;text-decoration:none;border-bottom:1px solid rgba(31,79,143,.25)}
+      body.dark .map-annot{background:#13243a;border-color:#2c4563}
+      body.dark .map-legend{background:#13243a;border-color:#2c4563}
+      body.dark .map-legend li{color:#a7bed9}
+      @media (max-width:640px){
+        .map-legend{grid-template-columns:1fr}
+        .map-pin{width:12px;height:12px;border-width:1.5px}
+        .map-pin.pin-main{width:15px;height:15px}
+      }
+
+      @media print{header.top,.btn,body::before{display:none!important}body{background:#fff!important;color:#000!important}.bc,.sec-card{border:1px solid #ccc!important;background:#fff!important}}
+
+      /* Touch-device hover — prevent sticky transform after tap */
+      @media (hover:none), (pointer:coarse){
+        *:hover{transform:none!important}
+      }
+
+      /* Reduced motion — respect user preference */
+      @media (prefers-reduced-motion:reduce){
+        *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+      }
+
+      /* MOBILE POLISH */
+      @media (max-width:720px){
+        .topbar{padding:6px 0 4px;gap:8px}
+        .brand-logo{height:28px}
+        .brand-logo-sftf{height:26px}
+        .brand-rule{height:20px}
+        .brand-word{font-size:14px}
+        .topnav{gap:2px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;flex-wrap:nowrap;width:100%;padding:4px 0}
+        .topnav::-webkit-scrollbar{display:none}
+        .topnav-link{white-space:nowrap;padding:6px 10px;font-size:12.5px;flex-shrink:0}
+        .topnav-rule{display:none}
+        .btn-register-sm{padding:7px 11px;font-size:12px;flex-shrink:0}
+        .page-hero{padding:18px 16px}
+        .page-hero h1{font-size:26px}
+        .page-hero p{font-size:13.5px}
+        .page-nav{padding:6px;gap:4px}
+        .page-nav-link{min-width:0;flex:1 1 auto;padding:8px 10px;font-size:12px}
+        .sec-card{padding:16px;border-radius:12px}
+        .sec-title{font-size:22px}
+        .flow-step{padding:16px}
+        .flow-step-primary .flow-step-title{font-size:18px}
+        .flow-step-title{font-size:16px}
+        .park-feature{padding:20px 16px}
+        .park-feature h3{font-size:20px}
+        .park-feature-meta{gap:12px}
+        .park-meta-item .v{font-size:13px}
+        .map-card{padding:14px;gap:12px}
+        .map-card-btn{padding:8px 12px;font-size:12.5px}
+        .info-box{padding:12px 14px}
+        .map-legend{padding:12px 14px;gap:8px 14px;font-size:12px}
+        .contact-card{padding:16px;border-radius:12px}
+        .contact-person{padding:10px 12px}
+      }
+
+      /* TOP BAR — taste-skill shared */
+      .topbar{display:flex;align-items:center;justify-content:space-between;padding:12px 0 10px;gap:24px;flex-wrap:wrap;border-bottom:1px solid rgba(255,255,255,.08)}
+      .brand{display:inline-flex;align-items:center;gap:12px;text-decoration:none;color:inherit;flex-shrink:0}
+      .brand-logos{display:inline-flex;align-items:center;gap:8px}
+      .brand-logo{height:32px;width:auto;display:block;opacity:.95}
+      .brand-logo-sftf{height:30px;opacity:.82}
+      .brand-rule{width:1px;height:26px;background:rgba(255,255,255,.18)}
+      .brand-word{font-size:17px;font-weight:800;color:#fff;letter-spacing:.04em;line-height:1}
+      .topnav{display:inline-flex;align-items:center;gap:4px;flex-wrap:wrap;justify-content:flex-end}
+      .topnav-link{color:#c8d8ef;font-size:13px;font-weight:600;text-decoration:none;padding:6px 10px;border-radius:6px;letter-spacing:-.005em;transition:color 180ms ease,background 180ms ease}
+      @media (hover:hover) and (pointer:fine){.topnav-link:hover{color:#fff;background:rgba(255,255,255,.07)}}
+      .topnav-rule{width:1px;height:18px;background:rgba(255,255,255,.15);margin:0 6px;align-self:center}
+      .topnav-link.is-current{color:#ffd766;background:rgba(244,195,0,.12)}
+      .topnav-link.is-current::after{content:"";position:absolute;bottom:-2px;left:12px;right:12px;height:2px;background:#ffd766;border-radius:2px}
+      .btn-register-sm{display:inline-flex;align-items:center;gap:6px;background:var(--gold);color:#173b65;text-decoration:none;font-weight:800;font-size:13px;padding:8px 14px;border-radius:8px;letter-spacing:-.005em;transition:transform 160ms cubic-bezier(0.23,1,0.32,1),background 180ms ease,box-shadow 180ms ease;box-shadow:0 2px 10px rgba(244,195,0,.2);margin-left:4px}
+      @media (hover:hover) and (pointer:fine){.btn-register-sm:hover{background:#ffd433;box-shadow:0 4px 16px rgba(244,195,0,.4)}}
+      .btn-register-sm:active{transform:scale(0.97)}
+      @media (max-width:760px){
+        .topbar{gap:12px}
+        .topnav{width:100%;justify-content:flex-start;gap:2px;padding-top:4px;border-top:1px solid rgba(255,255,255,.08)}
+        .topnav-rule{display:none}
+        .brand-rule{height:22px}
+        .brand-word{font-size:15px}
+      }
+      .icon-toggle{width:32px;height:32px;border-radius:50%;border:1px solid rgba(255,255,255,.2);background:transparent;color:#c8d8ef;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;padding:0;transition:background 180ms ease,color 180ms ease,border-color 180ms ease,transform 160ms cubic-bezier(0.23,1,0.32,1)}
+      @media (hover:hover) and (pointer:fine){.icon-toggle:hover{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.4)}}
+      .icon-toggle:active{transform:scale(0.92)}
+      .icon-toggle:focus-visible{outline:2px solid #ffd766;outline-offset:2px}
+      .icon-toggle .icon-sun{display:none}
+      body.dark .icon-toggle .icon-moon{display:none}
+      body.dark .icon-toggle .icon-sun{display:inline-block}
+      body.dark .icon-toggle{color:#ffd766;border-color:rgba(255,215,102,.3)}
+    </style>
+  </head>
+  <body>
+    <header class="top"><div class="wrap wrap-top">
+      <div class="topbar">
+        <a href="../index.html" class="brand" aria-label="MOCS 2027 — Midwest OT Cybersecurity Summit">
+          <span class="brand-logos">
+            <img src="../assets/marquette-logo.png" alt="Marquette University" class="brand-logo" />
+            <img src="../assets/sftf-logo.png" alt="Security For the Folks" class="brand-logo brand-logo-sftf" />
+          </span>
+          <span class="brand-rule" aria-hidden="true"></span>
+          <span class="brand-word">MOCS 2027</span>
+        </a>
+        <nav class="topnav" aria-label="Primary">
+          <a class="topnav-link" href="../index.html">Home</a>
+          <a class="topnav-link" href="../agenda/index.html">Agenda</a>
+          <a class="topnav-link is-current" href="../day-of/index.html" aria-current="page">Day-of</a>
+          <a class="topnav-link" href="../speaker-sponsor/index.html">Logistics</a>
+          <a class="topnav-link" href="../about/index.html">About</a>
+          <span class="topnav-rule" aria-hidden="true"></span>
+          <button id="dark-toggle" class="icon-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+            <svg class="icon-moon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon-sun" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          </button>
+          <a class="btn-register-sm" href="../index.html#cfs">Submit a Talk
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </nav>
+      </div>
+      <div class="page-hero">
+        <p class="hero-eyebrow">Day-of Guide · MOCS 2027 · April 16, 2027</p>
+        <h1>Everything you need to arrive and hit the ground running.</h1>
+        <p>Parking, campus navigation, check-in flow, food — plus the arrival video and the AMU map. Preview based on MOCS 2026; final 2027 details confirmed closer to event.</p>
+      </div>
+    </div></header>
+
+    <main class="wrap">
+
+      <!-- 2027 PREVIEW BANNER -->
+      <div style="background:linear-gradient(180deg,#fffaea 0%,#fef0c0 100%);border:1px solid #f3d56a;border-radius:12px;padding:16px 20px;margin:18px 0 4px;">
+        <p style="margin:0 0 4px;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#8a6500;">2027 logistics — preview</p>
+        <p style="margin:0;font-size:14px;color:#23384e;line-height:1.5;">The arrival flow, parking, and campus details below carry over from MOCS 2026. Final details for <strong>April 16, 2027</strong> — including the venue room (AMU 3rd Floor Ballroom), updated maps, and confirmed parking — will be posted in March 2027.</p>
+      </div>
+
+      <nav class="page-nav" aria-label="On this page">
+        <a class="page-nav-link" href="#arrival"><span class="page-nav-idx">01</span>Arrival</a>
+        <a class="page-nav-link" href="#nav-video"><span class="page-nav-idx">02</span>Find us</a>
+        <a class="page-nav-link" href="#food"><span class="page-nav-idx">03</span>Food</a>
+        <a class="page-nav-link" href="#parking"><span class="page-nav-idx">04</span>Parking</a>
+        <a class="page-nav-link" href="#contact"><span class="page-nav-idx">05</span>Contact</a>
+      </nav>
+
+      <!-- WHAT TO BRING -->
+      <section class="bring-banner" aria-label="What to bring">
+        <div class="bring-head">
+          <span class="bring-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          </span>
+          <div>
+            <p class="bring-eyebrow">What to bring</p>
+            <h2 class="bring-title">Two things you need to pack.</h2>
+          </div>
+        </div>
+        <ul class="bring-list">
+          <li class="bring-item bring-item-id">
+            <span class="bring-badge">Required</span>
+            <div>
+              <strong>Student ID</strong> <span class="bring-audience">(students only)</span>
+              <p>Sponsored student registration requires a valid student ID at check-in.</p>
+            </div>
+          </li>
+          <li class="bring-item bring-item-lab">
+            <span class="bring-badge bring-badge-lab">Lab participants</span>
+            <div>
+              <strong>Laptop</strong> <span class="bring-audience">(hands-on workshop · 1:20 – 2:20 PM)</span>
+              <p>The 2027 hands-on lab will run in containers — bring a laptop with <strong><a href="https://docs.docker.com/get-docker/" target="_blank" rel="noreferrer">Docker Desktop</a></strong> installed and working <strong>before you arrive</strong> if you plan to attend. Specific tooling and setup instructions will be posted with the final agenda.</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- ARRIVAL FLOW -->
+      <div id="arrival" style="margin-bottom:6px;margin-top:4px;scroll-margin-top:90px;">
+        <h2 class="sec-title">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>
+          Your Arrival Flow
+        </h2>
+        <p class="sec-sub">Three steps from parking lot to your seat — takes about 10 minutes.</p>
+      </div>
+
+      <div class="flow">
+
+        <!-- Step 1 — Check In (combined: ID + coin + agenda) — PRIMARY -->
+        <div class="flow-step flow-step-primary" style="--i:0">
+          <span class="flow-step-idx" aria-hidden="true">01</span>
+          <div class="flow-step-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+          </div>
+          <p class="flow-step-label">Step 01</p>
+          <h3 class="flow-step-title">Check In</h3>
+          <p class="flow-step-desc">Head to the Registration Table in the lobby — this is your one-stop shop:</p>
+          <ul class="flow-step-list">
+            <li><strong>Show your ID</strong> to confirm your registration.</li>
+            <li>Pick up your exclusive <strong>NFC-enabled MOCS 2027 challenge coin</strong>.</li>
+            <li>Grab your <strong>printed agenda</strong> for the day.</li>
+          </ul>
+          <a class="step-vid-btn" href="#nav-video">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+            Watch arrival guide
+          </a>
+        </div>
+
+        <span class="flow-arrow" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+
+        <!-- Step 2 — Lunch -->
+        <div class="flow-step" style="--i:1">
+          <span class="flow-step-idx" aria-hidden="true">02</span>
+          <div class="flow-step-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>
+          </div>
+          <p class="flow-step-label">Step 02</p>
+          <h3 class="flow-step-title">Grab Lunch</h3>
+          <p class="flow-step-desc">Box lunch — free for all registered attendees. Pick it up <strong>11:00 – 11:30 AM</strong> at the registration table.</p>
+        </div>
+
+        <span class="flow-arrow" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+
+        <!-- Step 3 — Get Settled -->
+        <div class="flow-step" style="--i:2">
+          <span class="flow-step-idx" aria-hidden="true">03</span>
+          <div class="flow-step-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v3"/><path d="M2 11v5a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v2H6v-2a2 2 0 0 0-4 0Z"/><path d="M6 19v2M18 19v2"/></svg>
+          </div>
+          <p class="flow-step-label">Step 03</p>
+          <h3 class="flow-step-title">Get Settled</h3>
+          <p class="flow-step-desc">Head to the <strong>AMU 3rd Floor Ballroom</strong> — the main hall for MOCS 2027. Find a seat, enjoy your lunch, and network before the keynote kicks off.</p>
+        </div>
+
+      </div>
+
+      <!-- NAV VIDEO -->
+      <section class="sec-card" id="nav-video">
+        <h2 class="sec-title">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/><path d="M9 3v15M15 6v15"/></svg>
+          How to Find Us on Campus
+        </h2>
+        <p class="sec-sub">Short walkthrough from common arrival points to the AMU building. Save this page on your phone before you leave.</p>
+        <div class="video-wrap">
+          <video controls preload="metadata" poster="../assets/MU Cyber logo.png">
+            <source src="../assets/20260410_144727_branded.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <!-- Once inside the AMU — 3rd floor orientation for MOCS 2027 -->
+        <div style="margin-top:22px;padding-top:20px;border-top:1px dashed var(--line);">
+          <div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:4px;">
+            <p style="margin:0;font-size:10.5px;font-weight:800;color:#3b6ba5;letter-spacing:.16em;text-transform:uppercase;">Once inside · MOCS 2027</p>
+            <h3 style="margin:0;font-size:18px;font-weight:800;color:#173c6b;letter-spacing:-.01em;">AMU 3rd Floor — Ballroom &amp; breakouts</h3>
+          </div>
+          <p style="margin:4px 0 14px;font-size:13.5px;color:#546b86;line-height:1.6;max-width:680px;">Head up to the <strong>3rd floor</strong>. The <strong>Ballroom</strong> is the main hall, with breakout rooms right alongside. Look for the <strong>MOCS wayfinding sign</strong> in the hallway — it'll point you to the right room for your session. <em style="color:var(--muted);">A 3rd-floor map will replace the 2nd-floor preview below closer to April 16, 2027.</em></p>
+          <figure class="map-fig">
+            <div class="map-annot" onclick="window.open('../assets/amu-2nd-floor-map.jpg','_blank')">
+              <img src="../assets/amu-2nd-floor-map.jpg" alt="AMU 2nd floor diagram — rooms 227, 252, 254, registration check-in location" loading="lazy" />
+
+              <!-- Room pins — colored dots; see legend below for labels -->
+              <span class="map-pin pin-main" style="left:47%;top:65%;" aria-label="Room 227 — Main Hall"></span>
+              <span class="map-pin" style="left:44%;top:34%;" aria-label="Room 254 — Lab 1"></span>
+              <span class="map-pin" style="left:53%;top:34%;" aria-label="Room 252 — Presentation 1"></span>
+              <span class="map-pin pin-reg" style="left:37%;top:55%;" aria-label="Registration and Check-in"></span>
+            </div>
+
+            <figcaption class="map-cap">
+              <ol class="map-legend">
+                <li><span class="leg-dot main"></span><span><strong>Main · AMU 227</strong> — keynote, executive panel, lunch</span></li>
+                <li><span class="leg-dot"></span><span><strong>Presentation 1 · AMU 252</strong> — breakout talks</span></li>
+                <li><span class="leg-dot"></span><span><strong>Lab 1 · AMU 254</strong> — Escape Room &amp; SCADA lab</span></li>
+                <li><span class="leg-dot reg"></span><span><strong>Registration &amp; Check-in</strong> — right by the University Information Center</span></li>
+              </ol>
+              <p class="map-cap-foot">Source: <a href="https://www.marquette.edu/event-services/amu-floor-diagrams.php" target="_blank" rel="noreferrer">Marquette AMU Event Services floor diagrams</a> · <span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.04em;">Click map to enlarge</span></p>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- FOOD -->
+      <section class="sec-card" id="food" style="scroll-margin-top:90px;">
+        <h2 class="sec-title">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>
+          Food &amp; Snacks
+        </h2>
+        <div class="food-banner">
+          <div class="food-ico">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>
+          </div>
+          <div>
+            <h3>Box Lunches Provided</h3>
+            <p>Free for all <strong style="color:#fff;">registered</strong> attendees. Pick up at the registration table &middot; <strong style="color:#fff;">11:00 AM – 11:30 AM</strong></p>
+          </div>
+        </div>
+        <div class="snack-row">
+          <div class="snack-ico">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+          </div>
+          <p style="margin:0;font-size:13px;color:#405b78;"><strong>Afternoon snacks</strong> — Salsa &amp; dip at the <strong>2:30 PM</strong> break.</p>
+        </div>
+      </section>
+
+      <!-- PARKING -->
+      <section class="sec-card" id="parking" style="scroll-margin-top:90px;">
+        <h2 class="sec-title">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          Parking &amp; Getting Here
+        </h2>
+        <p class="sec-sub">Marquette University · 1442 W. Wisconsin Ave, Milwaukee, WI 53233</p>
+        <!-- STRUCTURE 1 · Featured parking option -->
+        <div class="park-feature">
+          <div class="park-feature-inner">
+            <div class="park-feature-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="18" rx="2"/><path d="M9 7h4.5a2.5 2.5 0 0 1 0 5H9V7zM9 7v10"/></svg>
+            </div>
+            <div class="park-feature-body">
+              <p class="park-feature-eyebrow"><span class="dot" aria-hidden="true"></span>Recommended · Closest to AMU</p>
+              <h3>Structure 1 <span class="park-feature-alt">· Wells Street</span></h3>
+              <p class="park-feature-address"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>1240 W. Wells St, Milwaukee, WI 53233</span></p>
+              <p class="park-feature-desc">Pull a ticket on entry. Pay at the kiosk in the lobby or on exit — <strong>credit card only</strong>.</p>
+              <div class="park-feature-meta">
+                <div class="park-meta-item"><span class="l">Rate</span><span class="v">$10/day</span></div>
+                <div class="park-meta-item"><span class="l">Payment</span><span class="v">Card only</span></div>
+                <div class="park-meta-item"><span class="l">Walk to AMU</span><span class="v">~5 min</span></div>
+              </div>
+            </div>
+            <div class="park-feature-actions">
+              <a class="park-feature-btn" href="https://maps.app.goo.gl/pyzn8EVFT6uVL5AfA" target="_blank" rel="noreferrer">
+                Directions
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-grid info-grid-3">
+          <div class="info-box">
+            <span class="info-badge">Alternative</span>
+            <h4>Structure 2 (16th Street)</h4>
+            <p><a href="https://www.google.com/maps/dir/?api=1&destination=Marquette+Parking+Structure+2+749+N+16th+St+Milwaukee+WI" target="_blank" rel="noreferrer"><strong>749 N. 16th St.</strong></a><br>Guest parking <strong>$10/day</strong>. Same pull-a-ticket, pay-on-foot flow as Structure 1.</p>
+          </div>
+          <div class="info-box">
+            <span class="info-badge">Alternative</span>
+            <h4>Side Streets &amp; Open Lots</h4>
+            <p>Metered street parking along Wisconsin Ave &amp; 16th St, plus nearby surface lots. Pay at the meter or via the <strong>MKE Park</strong> app.</p>
+          </div>
+          <div class="info-box">
+            <span class="info-badge">Transit</span>
+            <h4>Bus &amp; Rideshare</h4>
+            <p><strong>MCTS Routes 30, 30X, 31</strong> stop at Wisconsin &amp; 16th. Uber/Lyft drop-off at the AMU main entrance.</p>
+          </div>
+        </div>
+        <a class="map-card" href="https://www.google.com/maps/place/Alumni+Memorial+Union,+Marquette+University/@43.03870,-87.93830,17z" target="_blank" rel="noreferrer">
+          <span class="map-card-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </span>
+          <div class="map-card-body">
+            <p class="map-card-label">Venue</p>
+            <p class="map-card-addr"><strong>Alumni Memorial Union · Marquette University</strong><br>1442 W. Wisconsin Ave, Milwaukee, WI 53233</p>
+          </div>
+          <span class="map-card-btn">
+            Open in Maps
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </span>
+        </a>
+      </section>
+
+      <!-- CONTACT -->
+      <div class="contact-card" id="contact" style="scroll-margin-top:90px;">
+        <div class="contact-ico">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <div>
+          <h3>Questions? Reach Out</h3>
+          <div class="contact-people">
+            <div class="contact-person">
+              <div class="cp-name">Chirag Malkan</div>
+              <a class="cp-email" href="mailto:chirag.malkan@marquette.edu?subject=MOCS%202027%20%E2%80%94%20Day-of%20question">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                Email organizer →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <script>
+      // Dark mode (icon swap handled via CSS)
+      document.getElementById('dark-toggle').addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+      });
+
+      // Scroll-triggered entrances
+      const io = new IntersectionObserver(entries => {
+        entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('vis'); io.unobserve(e.target); } });
+      }, { threshold: 0.07, rootMargin: '0px 0px -20px 0px' });
+      document.querySelectorAll('.sec-card, .contact-card').forEach(el => io.observe(el));
+
+      // Sticky-nav active section highlighting
+      (function(){
+        const navLinks = document.querySelectorAll('.page-nav-link');
+        const sections = Array.from(navLinks).map(l => {
+          const id = l.getAttribute('href').slice(1);
+          return { id, el: document.getElementById(id), link: l };
+        }).filter(s => s.el);
+        if (!sections.length || !('IntersectionObserver' in window)) return;
+        const setActive = (id) => navLinks.forEach(l => l.classList.toggle('is-active', l.getAttribute('href') === '#' + id));
+        const visible = new Map();
+        const obs = new IntersectionObserver((entries) => {
+          entries.forEach(e => {
+            if (e.isIntersecting) visible.set(e.target.id, e.intersectionRatio);
+            else visible.delete(e.target.id);
+          });
+          if (visible.size === 0) return;
+          const top = sections
+            .filter(s => visible.has(s.id))
+            .map(s => ({ id: s.id, top: s.el.getBoundingClientRect().top }))
+            .sort((a,b) => Math.abs(a.top) - Math.abs(b.top))[0];
+          if (top) setActive(top.id);
+        }, { rootMargin: '-100px 0px -60% 0px', threshold: [0, 0.25, 0.5, 0.75, 1] });
+        sections.forEach(s => obs.observe(s.el));
+      })();
+
+      // Watch arrival guide — smooth scroll + autoplay
+      document.querySelector('.step-vid-btn').addEventListener('click', e => {
+        e.preventDefault();
+        document.getElementById('nav-video').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        setTimeout(() => {
+          const v = document.getElementById('nav-video').querySelector('video');
+          if(v && v.paused) v.play();
+        }, 650);
+      });
+    </script>
+  </body>
+</html>

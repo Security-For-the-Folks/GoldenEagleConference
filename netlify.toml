@@ -5,3 +5,33 @@
   from = "/*"
   to = "/index.html"
   status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' https:; media-src 'self'; font-src 'self' https://fonts.gstatic.com; connect-src 'self'"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    X-Robots-Tag = "noai, noimageai"
+
+# Image folders — explicit no-AI / no-training header
+[[headers]]
+  for = "/assets/recap-2026-wm/*"
+  [headers.values]
+    X-Robots-Tag = "noai, noimageai, noindex"
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/assets/journey-photos-wm/*"
+  [headers.values]
+    X-Robots-Tag = "noai, noimageai, noindex"
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/assets/founders/*"
+  [headers.values]
+    X-Robots-Tag = "noai, noimageai, noindex"
+    Cache-Control = "public, max-age=86400"

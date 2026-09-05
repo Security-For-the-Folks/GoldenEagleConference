@@ -3,14 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MOCS Agenda — Midwest OT Cybersecurity Summit</title>
+    <title>Agenda — Midwest OT Cybersecurity Summit (MOCS) 2027</title>
+    <meta name="description" content="MOCS 2027 — agenda template. 10:00 AM – 5:30 PM, 3 rooms, 12 sessions, networking. Speaker line-up confirms after the Call for Speakers closes Mar 5, 2027. Marquette AMU, 3rd Floor Ballroom." />
+    <meta name="author" content="Security for the Folks (XFTF) — www.xftf.org" />
+    <meta name="keywords" content="OT cybersecurity, operational technology, ICS security, industrial control systems, cybersecurity summit, Milwaukee, Marquette University, MOCS 2027, MOCS agenda, CPE credits" />
+    <meta name="robots" content="index, follow" />
+    <meta name="robots" content="noai, noimageai" />
+    <meta name="ai-content" content="prohibited" />
+    <meta property="article:published_time" content="2026-09-01T00:00:00-05:00" />
+    <meta property="article:modified_time" content="2026-04-26T00:00:00-05:00" />
+    <link rel="canonical" href="https://midwest-otcs.org/agenda/" />
+    <meta property="og:site_name" content="Midwest OT Cybersecurity Summit (MOCS)" />
+    <meta property="og:title" content="Agenda — Midwest OT Cybersecurity Summit (MOCS) 2027" />
+    <meta property="og:description" content="MOCS 2027 agenda template — 3 rooms, 12 sessions. Speaker line-up confirms after CFS closes Mar 5, 2027." />
+    <meta property="og:image" content="https://midwest-otcs.org/assets/MU%20Cyber%20logo.png" />
+    <meta property="og:image:alt" content="Marquette University Cyber Defense logo" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content="https://midwest-otcs.org/agenda/" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Agenda — Midwest OT Cybersecurity Summit (MOCS) 2027" />
+    <meta name="twitter:description" content="MOCS 2027 agenda template — 3 rooms, 12 sessions. Apply to speak by Mar 5, 2027." />
+    <meta name="twitter:image" content="https://midwest-otcs.org/assets/MU%20Cyber%20logo.png" />
+    <meta name="twitter:image:alt" content="Marquette University Cyber Defense logo" />
     <link rel="icon" type="image/png" href="../assets/sftf-logo.png" />
     <style>
       :root{--navy:#0d3260;--navy-2:#163f74;--blue:#1f4f8f;--panel:#e9eff6;--line:#cfdae8;--text:#23384e;--muted:#61758f;--gold:#f4c300;--ok:#2f9a52;--pending:#7d8897}
       *{box-sizing:border-box}
+      html{font-size:16px;-webkit-text-size-adjust:100%;text-size-adjust:100%}
       body{
         margin:0;
         font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;
+        font-size:15px;
+        line-height:1.55;
+        -webkit-font-smoothing:antialiased;
+        -moz-osx-font-smoothing:grayscale;
         background:#dfe7f0;
         color:var(--text);
         position:relative;
@@ -34,7 +62,7 @@
       .btn{display:inline-flex;align-items:center;gap:6px;border-radius:9px;padding:8px 12px;text-decoration:none;font-weight:700;border:none;cursor:pointer}
       .btn-blue{background:#295b9c;color:#e9f2ff;border:1px solid rgba(255,255,255,.2)} .btn-gold{background:var(--gold);color:#173b65}
 
-      main{padding:14px 0 28px}
+      main{padding:20px 0 48px}
       .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px;margin-bottom:12px}
       h2{margin:0 0 6px;color:#143a68;font-size:40px} .small{margin:0;color:var(--muted);font-size:12px}
 
@@ -47,8 +75,45 @@
       .agenda-table th{color:#1f446f;font-size:11px;text-transform:uppercase;letter-spacing:.04em}
       .agenda-table td:last-child{color:#405b78}
 
+      /* Room color coding: 227 blue · 252 green · 254 red */
+      .agenda-table .col-227{border-left:3px solid #3b7dd8;background:rgba(59,125,216,.06)}
+      .agenda-table .col-252{border-left:3px solid #2f9a52;background:rgba(47,154,82,.06)}
+      .agenda-table .col-254{border-left:3px solid #c7362e;background:rgba(199,54,46,.06)}
+      .agenda-table th.col-227{background:rgba(59,125,216,.18);color:#1a4a8c}
+      .agenda-table th.col-252{background:rgba(47,154,82,.18);color:#1e6b38}
+      .agenda-table th.col-254{background:rgba(199,54,46,.18);color:#8f2822}
+      body.dark .agenda-table .col-227{background:rgba(59,125,216,.14)}
+      body.dark .agenda-table .col-252{background:rgba(47,154,82,.14)}
+      body.dark .agenda-table .col-254{background:rgba(199,54,46,.14)}
+      body.dark .agenda-table th.col-227{background:rgba(59,125,216,.28);color:#a5c7f0}
+      body.dark .agenda-table th.col-252{background:rgba(47,154,82,.28);color:#9cd4b1}
+      body.dark .agenda-table th.col-254{background:rgba(199,54,46,.28);color:#f0a39c}
+
       .footer-note{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:10px}
       .logos{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.logo{background:var(--navy);border-radius:10px;padding:10px;display:flex;justify-content:center;align-items:center;min-height:72px}
+
+      .speaker-scroll-wrap{position:relative;margin-top:10px;overflow:hidden;border-radius:12px}
+      .speaker-scroll-wrap::before,.speaker-scroll-wrap::after{content:"";position:absolute;top:0;bottom:0;width:60px;z-index:2;pointer-events:none}
+      .speaker-scroll-wrap::before{left:0;background:linear-gradient(to right,var(--panel),transparent)}
+      .speaker-scroll-wrap::after{right:0;background:linear-gradient(to left,var(--panel),transparent)}
+      body.dark .speaker-scroll-wrap::before{background:linear-gradient(to right,#13243a,transparent)}
+      body.dark .speaker-scroll-wrap::after{background:linear-gradient(to left,#13243a,transparent)}
+      .speaker-scroll-wrap.edge-left{cursor:w-resize}
+      .speaker-scroll-wrap.edge-right{cursor:e-resize}
+      .speaker-scroll{overflow:hidden;padding:4px 0 8px}
+      .speaker-track{display:flex;gap:12px;width:max-content;will-change:transform}
+      .speaker-card{min-width:280px;max-width:280px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:14px;display:flex;flex-direction:column;gap:8px}
+      .speaker-card.is-panel{background:linear-gradient(180deg,#fff5f4 0%,#ffe8e5 100%);border-color:#f3b5ae}
+      .speaker-card.is-panel .company{color:#b4322a}
+      body.dark .speaker-card.is-panel{background:linear-gradient(180deg,#2e1a18 0%,#3a1f1c 100%);border-color:#6b3a34}
+      body.dark .speaker-card.is-panel .company{color:#f3a39c}
+      .speaker-card h4{margin:0;font-size:16px;color:#173c6b;line-height:1.3}
+      .speaker-card .company{margin:0;font-size:13px;color:#3b6ba5;font-weight:600}
+      .speaker-card .speaker-name{margin-top:auto;padding-top:6px}
+      .speaker-initials{width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;color:#fff;flex-shrink:0;overflow:hidden}
+      .speaker-initials img{width:100%;height:100%;object-fit:cover}
+      .speaker-linkedin{display:inline-flex;align-items:center;gap:4px;color:#0077b5;font-size:12px;font-weight:600;text-decoration:none}.speaker-linkedin:hover{text-decoration:underline}
+      .scroll-arrow{display:none}
 
       .toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:10px}
       .toast{display:inline-block;background:#2f9a52;color:#fff;font-size:12px;font-weight:700;padding:4px 10px;border-radius:6px;margin-left:8px;opacity:0;transition:opacity .3s}
@@ -68,120 +133,486 @@
       body.dark td{border-bottom-color:#2c4563;color:#d8e6f8}
       body.dark .agenda-table td:last-child{color:#a7bed9}
       body.dark .btn-blue{background:#3b6fad;color:#f0f6ff}
+      body.dark .speaker-card{background:#13243a;border-color:#2c4563;color:#d8e6f8}
+      body.dark .speaker-card h4{color:#e8f3ff}
+      body.dark .speaker-card .company{color:#7eb3e0}
+      body.dark .speaker-linkedin{color:#5bb8f5}
+      body.dark .scroll-arrow{background:#13243a;border-color:#2c4563;color:#e8f3ff}body.dark .scroll-arrow:hover{background:#1b3554}
       body.dark .logo{background:#0c2d53}
+
+      #cal-dropdown a:hover{background:#e9eff6}
+      body.dark #cal-dropdown{background:#1b2d44;border-color:#2c4563}
+      body.dark #cal-dropdown a{color:#d8e6f8;border-bottom-color:#2c4563}
+      body.dark #cal-dropdown a:hover{background:#253d58}
 
       @media (max-width:900px){h2{font-size:28px}.logos{grid-template-columns:1fr}}
       @media (max-width:640px){h2{font-size:24px}}
 
+      @page{size:landscape;margin:0.35in}
       @media print{
-        header.top,footer,.toolbar,.footer-note,button,.btn,.toast,body::before{display:none!important}
-        body,body.dark{background:#fff!important;color:#000!important}
-        .card{border:none!important;padding:0!important;background:#fff!important}
-        .agenda-table th,.agenda-table td{color:#000!important;border-bottom-color:#ccc!important}
-        .agenda-table th{background:#eee!important;color:#000!important}
-        table{background:#fff!important;border-color:#ccc!important}
-        .break-row td{background:#f5f5f5!important;color:#555!important}
+        header.top,footer,.toolbar,.footer-note,.speaker-scroll-wrap,.scroll-arrow,button,.btn,.toast,body::before,#speakers-list,.agenda-dayof,[data-print-hide]{display:none!important}
+        html,body,body.dark{background:#fff!important;color:#000!important;font-size:10px}
+        .wrap{max-width:100%;padding:0}
+        main{padding:0!important;display:flex;flex-direction:column;gap:4px}
+        .card,.spn-section{border:none!important;padding:0!important;background:#fff!important;margin:0!important;border-radius:0!important}
+        /* Sponsors at top — single row, no tier labels */
+        #sponsors{order:-1;margin-bottom:6px!important;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px}
+        #sponsors .ts-head,#sponsors .spn-tier-head{display:none!important}
+        #sponsors .spn-tier{margin:0!important;padding:0!important;page-break-inside:avoid;display:contents}
+        #sponsors .spn-grid{display:flex!important;flex-wrap:nowrap!important;align-items:center;gap:10px!important}
+        #sponsors .spn-logo{min-height:auto!important;padding:0 4px!important;border:none!important;flex:0 0 auto!important}
+        #sponsors .spn-logo img{max-height:26px!important;max-width:120px!important;width:auto!important}
+        /* Run-of-day compact */
+        .ts-head{margin:0 0 4px!important;padding-bottom:2px!important}
+        .ts-title{font-size:15px!important;color:#000!important}
+        .ts-sub{font-size:9px!important;color:#333!important}
+        .ts-idx{font-size:9px!important}
+        .agenda-stamp-inline{font-size:9px!important}
+        /* Agenda table compact */
+        .agenda-table{table-layout:fixed;width:100%}
+        .agenda-table th,.agenda-table td{color:#000!important;border-bottom-color:#ccc!important;font-size:9px!important;padding:3px 3px!important;line-height:1.3!important}
+        .agenda-table th{background:#eee!important;color:#000!important;font-size:8px!important}
+        .agenda-table .col-227,.agenda-table .col-252,.agenda-table .col-254{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+        .agenda-table th.col-227{background:rgba(59,125,216,.22)!important;color:#1a4a8c!important}
+        .agenda-table th.col-252{background:rgba(47,154,82,.22)!important;color:#1e6b38!important}
+        .agenda-table th.col-254{background:rgba(199,54,46,.22)!important;color:#8f2822!important}
+        .agenda-table td.col-227{background:rgba(59,125,216,.08)!important}
+        .agenda-table td.col-252{background:rgba(47,154,82,.08)!important}
+        .agenda-table td.col-254{background:rgba(199,54,46,.08)!important}
+        table{background:#fff!important;border:1px solid #ccc!important;page-break-inside:avoid}
+        .break-row td{background:#f5f5f5!important;color:#555!important;padding:1px!important;font-size:8px!important}
         .reveal-badge{background:#ddd!important;color:#333!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
-        .agenda-warning{background:#fff3cd!important;color:#856404!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
-        .print-header{display:block!important;text-align:center;margin-bottom:16px;font-size:14px}
-        .print-header h1{font-size:22px;margin:0 0 4px;color:#000}
-        .print-header p{margin:0;color:#555;font-size:13px}
-        .wrap{max-width:100%;padding:0 8px}
+        .agenda-warning{background:#fff3cd!important;color:#856404!important;-webkit-print-color-adjust:exact;print-color-adjust:exact;padding:4px 8px!important;font-size:10px!important;margin:0 0 4px!important}
+        .print-header{display:block!important;text-align:center;margin:0 0 4px!important;font-size:10px}
+        .print-header h1{font-size:13px;margin:0 0 2px;color:#000}
+        .print-header p{margin:0;color:#555;font-size:9px}
       }
+
+      /* Touch-device hover — prevent sticky transform after tap */
+      @media (hover:none), (pointer:coarse){
+        *:hover{transform:none!important}
+      }
+
+      /* Reduced motion — respect user preference */
+      @media (prefers-reduced-motion:reduce){
+        *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+      }
+
+      /* MOBILE POLISH */
+      @media (max-width:720px){
+        .topbar{padding:6px 0 4px;gap:8px}
+        .brand-logo{height:28px}
+        .brand-logo-sftf{height:26px}
+        .brand-rule{height:20px}
+        .brand-word{font-size:14px}
+        .topnav{gap:2px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;flex-wrap:nowrap;width:100%;padding:4px 0}
+        .topnav::-webkit-scrollbar{display:none}
+        .topnav-link{white-space:nowrap;padding:6px 10px;font-size:12.5px;flex-shrink:0}
+        .topnav-rule{display:none}
+        .btn-register-sm{padding:7px 11px;font-size:12px;flex-shrink:0}
+        .page-hero{padding:18px 16px}
+        .page-hero h1{font-size:26px}
+        .page-hero p{font-size:13.5px}
+        .ts-section,.spn-section{padding:18px 16px}
+        .ts-title{font-size:22px}
+        .ts-sub{font-size:12.5px}
+        .tk-toolbar{padding:8px;gap:6px}
+        .tk-btn{padding:7px 10px;font-size:12px}
+        .agenda-dayof{padding:12px 14px;gap:10px}
+        .agenda-dayof-label{font-size:14px}
+        .agenda-dayof-desc{font-size:12px}
+        .agenda-dayof-arrow{width:28px;height:28px}
+        .spn-tier{margin-bottom:18px}
+        .spn-logo{min-height:64px;padding:10px}
+        .agenda-table th,.agenda-table td{font-size:11.5px;padding:5px 3px}
+      }
+
+      /* REFINED TOOLBAR */
+      .tk-toolbar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:0 0 16px;padding:10px 12px;background:#fff;border:1px solid var(--line);border-radius:12px}
+      .tk-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 12px;background:transparent;border:1px solid var(--line);border-radius:8px;color:#3b6ba5;font-size:13px;font-weight:700;text-decoration:none;cursor:pointer;letter-spacing:-.005em;transition:background 180ms ease,color 180ms ease,border-color 180ms ease,transform 160ms cubic-bezier(0.23,1,0.32,1)}
+      @media (hover:hover) and (pointer:fine){.tk-btn:hover{background:#eef3fb;color:#143a68;border-color:#b8cbe4}}
+      .tk-btn:active{transform:scale(0.97)}
+      .tk-btn-primary{background:var(--gold);color:#173b65;border-color:var(--gold)}
+      @media (hover:hover) and (pointer:fine){.tk-btn-primary:hover{background:#ffd433;border-color:#ffd433;color:#173b65}}
+      body.dark .tk-toolbar{background:#13243a;border-color:#2c4563}
+      body.dark .tk-btn{color:#7eb3e0;border-color:#2c4563}
+      body.dark .tk-btn:hover{background:#1b3554;color:#e8f3ff;border-color:#3b6ba5}
+      body.dark .tk-btn-primary{background:#ffd766;color:#173b65;border-color:#ffd766}
+
+      /* REFINED DAY-OF CALLOUT — subtle, not loud */
+      .agenda-dayof{display:flex;align-items:center;gap:14px;padding:14px 16px;margin:0 0 16px;background:linear-gradient(180deg,#fdfbf3 0%,#fff 60%);border:1px solid #ead9a1;border-radius:12px;text-decoration:none;color:var(--text);position:relative;overflow:hidden;transition:transform 220ms cubic-bezier(0.16,1,0.3,1),box-shadow 220ms ease,border-color 220ms ease}
+      .agenda-dayof::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(244,195,0,.6),transparent)}
+      .agenda-dayof-icon{width:36px;height:36px;border-radius:10px;background:rgba(244,195,0,.15);color:#8a6800;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+      .agenda-dayof-body{flex:1;min-width:0}
+      .agenda-dayof-label{margin:0 0 2px;font-size:15px;font-weight:800;color:#3a2c00;letter-spacing:-.005em}
+      .agenda-dayof-desc{margin:0;font-size:13px;color:#5a4a1e;line-height:1.55}
+      .agenda-dayof-arrow{width:32px;height:32px;border-radius:50%;background:#f4c300;color:#173b65;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:transform 220ms cubic-bezier(0.23,1,0.32,1)}
+      @media (hover:hover) and (pointer:fine){
+        .agenda-dayof:hover{border-color:#d6b85c;box-shadow:0 6px 18px rgba(138,104,0,.15);transform:translateY(-1px)}
+        .agenda-dayof:hover .agenda-dayof-arrow{transform:translateX(3px)}
+      }
+      body.dark .agenda-dayof{background:linear-gradient(180deg,#1f1e12 0%,#13243a 80%);border-color:#5a4a1e;color:#d8e6f8}
+      body.dark .agenda-dayof-label{color:#ffde73}
+      body.dark .agenda-dayof-desc{color:#d8c98a}
+
+      /* Inline stamp for agenda section header */
+      .agenda-stamp-inline{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;color:#a8bcd4;font-size:12px;letter-spacing:.02em}
+      body.dark .agenda-stamp-inline{color:#7eb3e0}
+
+      /* TASTE-SKILL SHARED — section heads */
+      .ts-head{display:flex;align-items:baseline;gap:14px;margin:0 0 16px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+      .ts-idx{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;font-weight:700;color:#a8bcd4;letter-spacing:.08em;flex-shrink:0}
+      .ts-title{margin:0;font-size:28px;font-weight:800;color:#143a68;letter-spacing:-.015em;line-height:1.1}
+      .ts-sub{margin:3px 0 0;font-size:13.5px;color:var(--muted);line-height:1.55}
+      body.dark .ts-head{border-bottom-color:#2c4563}
+      body.dark .ts-title{color:#e8f3ff}
+      body.dark .ts-sub{color:#a7bed9}
+
+      /* SPONSOR TIERS */
+      .spn-section{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px 22px;margin-bottom:14px}
+      .spn-tier{margin-bottom:22px}
+      .spn-tier:last-child{margin-bottom:0}
+      .spn-tier-head{display:flex;align-items:baseline;gap:10px;margin:0 0 12px;padding-bottom:8px;border-bottom:1px dashed var(--line)}
+      .spn-tier-label{margin:0;font-size:11px;font-weight:800;color:#143a68;letter-spacing:.18em;text-transform:uppercase}
+      .spn-tier-count{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;color:#a8bcd4;letter-spacing:.04em}
+      .spn-grid{display:grid;gap:10px}
+      .spn-grid.cols-2{grid-template-columns:repeat(2,1fr)}
+      .spn-grid.cols-3{grid-template-columns:repeat(3,1fr)}
+      .spn-grid.cols-4{grid-template-columns:repeat(4,1fr)}
+      .spn-logo{background:#fff;border:1px solid var(--line);border-radius:10px;min-height:76px;display:flex;align-items:center;justify-content:center;padding:12px 16px;text-decoration:none;transition:transform 220ms cubic-bezier(0.16,1,0.3,1),box-shadow 220ms ease,border-color 220ms ease}
+      .spn-logo img{max-width:100%;max-height:52px;display:block}
+      @media (hover:hover) and (pointer:fine){.spn-logo:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(13,50,96,.08);border-color:#b8cbe4}}
+      @media (max-width:900px){.spn-grid.cols-4,.spn-grid.cols-3{grid-template-columns:repeat(2,1fr)}}
+      @media (max-width:500px){.spn-grid.cols-4,.spn-grid.cols-3,.spn-grid.cols-2{grid-template-columns:1fr}}
+      body.dark .spn-section{background:#13243a;border-color:#2c4563}
+      body.dark .spn-tier-label{color:#e8f3ff}
+      body.dark .spn-tier-head{border-bottom-color:#2c4563}
+      body.dark .spn-logo{background:#0f1e33;border-color:#2c4563}
+
+      /* PAGE HERO — taste-skill shared */
+      .page-hero{margin-top:10px;border:1px solid rgba(255,255,255,.2);background:rgba(7,27,54,.35);border-radius:14px;padding:22px 24px}
+      .hero-eyebrow{display:inline-block;font-size:11px;font-weight:800;color:#ffde73;letter-spacing:.18em;text-transform:uppercase;margin:0 0 10px;border-left:2px solid rgba(255,222,115,.5);padding-left:10px}
+      .page-hero h1{margin:4px 0 8px;color:#fff;font-size:40px;line-height:1.05;letter-spacing:-.015em;font-weight:800}
+      .page-hero p{margin:0;color:#d3e1f5;font-size:15px;max-width:680px;line-height:1.6}
+      @media (max-width:640px){.page-hero h1{font-size:28px}}
+
+      /* TOP BAR — taste-skill shared */
+      .topbar{display:flex;align-items:center;justify-content:space-between;padding:12px 0 10px;gap:24px;flex-wrap:wrap;border-bottom:1px solid rgba(255,255,255,.08)}
+      .brand{display:inline-flex;align-items:center;gap:12px;text-decoration:none;color:inherit;flex-shrink:0}
+      .brand-logos{display:inline-flex;align-items:center;gap:8px}
+      .brand-logo{height:32px;width:auto;display:block;opacity:.95}
+      .brand-logo-sftf{height:30px;opacity:.82}
+      .brand-rule{width:1px;height:26px;background:rgba(255,255,255,.18)}
+      .brand-word{font-size:17px;font-weight:800;color:#fff;letter-spacing:.04em;line-height:1}
+      .topnav{display:inline-flex;align-items:center;gap:4px;flex-wrap:wrap;justify-content:flex-end}
+      .topnav-link{color:#c8d8ef;font-size:13px;font-weight:600;text-decoration:none;padding:6px 10px;border-radius:6px;letter-spacing:-.005em;transition:color 180ms ease,background 180ms ease}
+      @media (hover:hover) and (pointer:fine){.topnav-link:hover{color:#fff;background:rgba(255,255,255,.07)}}
+      .topnav-rule{width:1px;height:18px;background:rgba(255,255,255,.15);margin:0 6px;align-self:center}
+      .topnav-link.is-current{color:#ffd766;background:rgba(244,195,0,.12)}
+      .topnav-link.is-current::after{content:"";position:absolute;bottom:-2px;left:12px;right:12px;height:2px;background:#ffd766;border-radius:2px}
+      .btn-register-sm{display:inline-flex;align-items:center;gap:6px;background:var(--gold);color:#173b65;text-decoration:none;font-weight:800;font-size:13px;padding:8px 14px;border-radius:8px;letter-spacing:-.005em;transition:transform 160ms cubic-bezier(0.23,1,0.32,1),background 180ms ease,box-shadow 180ms ease;box-shadow:0 2px 10px rgba(244,195,0,.2);margin-left:4px}
+      @media (hover:hover) and (pointer:fine){.btn-register-sm:hover{background:#ffd433;box-shadow:0 4px 16px rgba(244,195,0,.4)}}
+      .btn-register-sm:active{transform:scale(0.97)}
+      @media (max-width:760px){
+        .topbar{gap:12px}
+        .topnav{width:100%;justify-content:flex-start;gap:2px;padding-top:4px;border-top:1px solid rgba(255,255,255,.08)}
+        .topnav-rule{display:none}
+        .brand-rule{height:22px}
+        .brand-word{font-size:15px}
+      }
+
+      /* ICON TOGGLE — dark-mode ghost button */
+      .icon-toggle{width:32px;height:32px;border-radius:50%;border:1px solid rgba(255,255,255,.2);background:transparent;color:#c8d8ef;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;padding:0;transition:background 180ms ease,color 180ms ease,border-color 180ms ease,transform 160ms cubic-bezier(0.23,1,0.32,1)}
+      @media (hover:hover) and (pointer:fine){.icon-toggle:hover{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.4)}}
+      .icon-toggle:active{transform:scale(0.92)}
+      .icon-toggle:focus-visible{outline:2px solid #ffd766;outline-offset:2px}
+      .icon-toggle .icon-sun{display:none}
+      body.dark .icon-toggle .icon-moon{display:none}
+      body.dark .icon-toggle .icon-sun{display:inline-block}
+      body.dark .icon-toggle{color:#ffd766;border-color:rgba(255,215,102,.3)}
     </style>
   </head>
   <body>
     <header class="top"><div class="wrap wrap-top">
       <div class="topbar">
-        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
-          <a href="../index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit;">
-            <img src="../assets/marquette-logo.png" alt="Marquette University logo" style="height:44px;filter:drop-shadow(0 0 4px rgba(0,0,0,.35));" />
-            <img src="../assets/sftf-logo.png" alt="Security For the Folks logo" style="height:40px;opacity:.85;filter:drop-shadow(0 0 6px rgba(0,0,0,.5));" />
+        <a href="../index.html" class="brand" aria-label="MOCS 2027 — Midwest OT Cybersecurity Summit">
+          <span class="brand-logos">
+            <img src="../assets/marquette-logo.png" alt="Marquette University" class="brand-logo" />
+            <img src="../assets/sftf-logo.png" alt="Security For the Folks" class="brand-logo brand-logo-sftf" />
+          </span>
+          <span class="brand-rule" aria-hidden="true"></span>
+          <span class="brand-word">MOCS 2027</span>
+        </a>
+        <nav class="topnav" aria-label="Primary">
+          <a class="topnav-link" href="../index.html">Home</a>
+          <a class="topnav-link is-current" href="../agenda/index.html" aria-current="page">Agenda</a>
+          <a class="topnav-link" href="../day-of/index.html">Day-of</a>
+          <a class="topnav-link" href="../speaker-sponsor/index.html">Logistics</a>
+          <a class="topnav-link" href="../about/index.html">About</a>
+          <span class="topnav-rule" aria-hidden="true"></span>
+          <button id="dark-toggle" class="icon-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+            <svg class="icon-moon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon-sun" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          </button>
+          <a class="btn-register-sm" href="../index.html#cfs">Submit a Talk
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </a>
-          <span style="font-size:18px;font-weight:800;color:#fff;letter-spacing:.5px;text-shadow:0 1px 4px rgba(0,0,0,.4);">MOCS 2026</span>
-        </div>
-        <div style="display:flex;align-items:center;gap:10px;">
-          <a class="btn btn-gold" href="#" style="pointer-events:none;opacity:.85;">Agenda</a>
-          <button id="dark-toggle" class="btn btn-blue" type="button">🌙 Dark Mode</button>
-          <a class="btn btn-gold" href="https://www.eventbrite.com/e/golden-eagle-cyber-defense-summit-2026-tickets-1985023781566" target="_blank" rel="noreferrer">Register Now</a>
+        </nav>
+        <div class="page-hero">
+          <p class="hero-eyebrow">Agenda Template · MOCS 2027 · April 16, 2027</p>
+          <h1>MOCS 2027 — run of day.</h1>
+          <p>10:00 AM – 5:30 PM · 3 rooms · 12 sessions · networking. Marquette University, Alumni Memorial Union — 3rd Floor Ballroom. Speaker line-up confirms after the Call for Speakers closes Mar 5, 2027.</p>
         </div>
       </div>
     </div></header>
 
     <div class="print-header" style="display:none;">
-      <h1>Midwest OT Cybersecurity Summit (MOCS)</h1>
-      <p>DRAFT Agenda — As of April 1, 2026</p>
+      <h1>Midwest OT Cybersecurity Summit (MOCS) 2027</h1>
+      <p>DRAFT Agenda Template — As of April 26, 2026 · Speaker line-up TBD after CFS closes Mar 5, 2027</p>
     </div>
 
     <main class="wrap">
-      <section class="card">
-        <h2>MOCS Agenda</h2>
-        <p class="small">Midwest OT Cybersecurity Summit · April 24, 2026 · Marquette University, Milwaukee · 3 Rooms</p>
 
-        <div class="toolbar">
-          <a class="btn btn-gold" href="../index.html">← Back to Main</a>
-          <button id="btn-pdf" class="btn btn-gold" type="button">Download PDF</button>
-          <button id="btn-copy" class="btn btn-gold" type="button">Copy Link</button>
-          <button id="btn-copy-agenda" class="btn btn-gold" type="button">Copy Agenda</button>
+      <!-- CFS BANNER -->
+      <div style="background:linear-gradient(180deg,#fffaea 0%,#fef0c0 100%);border:1px solid #f3d56a;border-radius:12px;padding:16px 20px;margin:18px 0 22px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;justify-content:space-between;">
+        <div style="flex:1;min-width:260px;">
+          <p style="margin:0 0 4px;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#8a6500;">Draft template — 2027</p>
+          <p style="margin:0;font-size:14px;color:#23384e;line-height:1.5;">Same proven structure as 2026 (3 rooms · 12 sessions · 10:00–17:30). <strong>Session topics, speakers, and titles are placeholders</strong> — confirmed after the Call for Speakers closes <strong>Mar 5, 2027</strong>.</p>
+        </div>
+        <a class="btn btn-gold" style="text-decoration:none;padding:9px 16px;border-radius:9px;font-weight:800;flex-shrink:0;" href="../index.html#cfs">Submit a talk →</a>
+      </div>
+
+      <section class="spn-section">
+        <div class="ts-head">
+          <span class="ts-idx">01 /</span>
+          <div>
+            <h2 class="ts-title">Run of day · template</h2>
+            <p class="ts-sub">MOCS 2027 · April 16, 2027 · Marquette University, AMU 3rd Floor Ballroom · 3 rooms · 12 sessions <span class="agenda-stamp-inline">· Speaker assignments after CFS closes</span></p>
+          </div>
+        </div>
+
+        <!-- Refined toolbar -->
+        <div class="toolbar tk-toolbar">
+          <a class="tk-btn" href="../index.html">← Back</a>
+          <button id="btn-pdf" class="tk-btn" type="button">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            PDF
+          </button>
+          <button id="btn-copy" class="tk-btn" type="button">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            Link
+          </button>
+          <button id="btn-copy-agenda" class="tk-btn" type="button">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            Copy text
+          </button>
+          <div style="position:relative;display:inline-block;">
+            <button id="cal-btn" class="tk-btn tk-btn-primary" type="button">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              Add to calendar ▾
+            </button>
+            <div id="cal-dropdown" style="display:none;position:absolute;bottom:100%;left:0;margin-bottom:6px;background:#fff;border:1px solid var(--line);border-radius:8px;box-shadow:0 4px 16px rgba(0,0,0,.25);min-width:220px;z-index:100;overflow:hidden;">
+              <a id="cal-google" href="#" target="_blank" rel="noreferrer" style="display:block;padding:10px 14px;text-decoration:none;color:#23384e;font-size:13px;font-weight:600;border-bottom:1px solid #eee;">Google Calendar</a>
+              <a id="cal-outlook" href="#" target="_blank" rel="noreferrer" style="display:block;padding:10px 14px;text-decoration:none;color:#23384e;font-size:13px;font-weight:600;border-bottom:1px solid #eee;">Outlook Web</a>
+              <a id="cal-ics" href="#" download="MOCS-2027.ics" style="display:block;padding:10px 14px;text-decoration:none;color:#23384e;font-size:13px;font-weight:600;">Download .ics (Apple/Outlook)</a>
+            </div>
+          </div>
           <span id="copy-toast" class="toast">Link copied!</span>
           <span id="agenda-toast" class="toast">Agenda copied!</span>
         </div>
 
-        <p class="version-note">DRAFT — As of April 1, 2026</p>
+        <!-- Refined Day-of callout -->
+        <a href="../day-of/index.html" class="agenda-dayof">
+          <span class="agenda-dayof-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </span>
+          <div class="agenda-dayof-body">
+            <p class="agenda-dayof-label">Day-of Guide</p>
+            <p class="agenda-dayof-desc">Parking, campus navigation, check-in flow &amp; food — everything you'll need for April 16, 2027.</p>
+          </div>
+          <span class="agenda-dayof-arrow" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </span>
+        </a>
 
         <div style="overflow-x:auto;">
         <table class="agenda-table" style="background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;">
-          <thead><tr><th>Time</th><th>Marquette, AMU Room 227</th><th>Marquette, AMU Room 252</th><th>Marquette, AMU Room 254</th></tr></thead>
+          <thead><tr><th>Time</th><th class="col-227">Marquette, AMU Room 227</th><th class="col-252">Marquette, AMU Room 252</th><th class="col-254">Marquette, AMU Room 254</th></tr></thead>
           <tbody>
-            <tr><td><strong>10:30 AM – 11:30 AM</strong></td><td colspan="3"><strong>Registration &amp; Check-In</strong> · Lobby · Badges, welcome packets, sponsor tables</td></tr>
-            <tr><td><strong>11:45 AM – 12:30 PM</strong></td><td colspan="3"><strong>Opening Keynote</strong> — <span class="reveal-badge">🔒 Revealed April 17th</span> · AMU Room 227</td></tr>
+            <tr><td><strong>10:00 AM →</strong></td><td colspan="3"><strong>Registration &amp; Check-In opens</strong> · AMU 3rd Floor Lobby · Badges, welcome packets, sponsor tables</td></tr>
+            <tr style="background:#f0f7ff;"><td><strong>11:00 AM – 11:30 AM</strong></td><td colspan="3"><strong>Lunch &amp; Networking</strong> · Box lunches provided for all registered attendees · AMU Ballroom</td></tr>
+            <tr><td><strong>11:30 AM – 12:30 PM</strong></td><td colspan="3"><strong>Opening Keynote</strong><br><em style="color:#3b6ba5;">Speaker TBD — selected from Call for Speakers · <a href="../index.html#cfs" style="color:#1f4f8f;font-weight:700;">apply →</a></em> · AMU Ballroom</td></tr>
             <tr class="break-row"><td colspan="4">── 10 min break ──</td></tr>
-            <tr><td><strong>12:40 PM – 1:10 PM</strong></td><td><strong>OT Cybersecurity GRC, IEC 62443 Standards, and the EU Cyber Resilience Act</strong><br>Shoshana Wodzisz · Malkan Solutions</td><td><strong>OT Device Penetration Testing Basics</strong><br>Tillman Petersen · Rockwell Automation</td><td>—</td></tr>
+            <tr><td><strong>12:40 PM – 1:10 PM</strong></td><td class="col-227"><strong>Plant Floor — Track A</strong><br><span style="color:#3b6ba5;font-size:13px;">PLCs · protocols · segmentation · field devices</span><br><em style="color:var(--muted);font-size:12px;">Speaker TBD — <a href="../index.html#cfs" style="color:#1f4f8f;">apply via CFP</a></em></td><td class="col-252"><strong>Network &amp; SOC — Track B</strong><br><span style="color:#3b6ba5;font-size:13px;">Detection · IR · threat hunting · OT visibility</span><br><em style="color:var(--muted);font-size:12px;">Speaker TBD — <a href="../index.html#cfs" style="color:#1f4f8f;">apply via CFP</a></em></td><td class="col-254"><strong>Hands-on / Workshop — Track C</strong><br><span style="color:#3b6ba5;font-size:13px;">30 min · interactive · small-group</span><br><em style="color:var(--muted);font-size:12px;">Speaker TBD — <a href="../index.html#cfs" style="color:#1f4f8f;">apply via CFP</a></em></td></tr>
             <tr class="break-row"><td colspan="4">── 10 min break ──</td></tr>
-            <tr><td><strong>1:20 PM – 1:50 PM</strong></td><td><strong>From Firewall Hygiene to Advanced Network Segmentation</strong><br>Peter McLane · Johnson Controls</td><td><strong>Securing the Precision: Threat Analysis and PTP Protocol Vulnerabilities in OT Networking</strong><br>Alex Gebhard · MIT</td><td rowspan="3" style="vertical-align:top;"><strong>OT Penetration Testing: Pipeline Security &amp; Communication Robustness (Lab)</strong><br>Hrishit Joshi · Exida<br><span style="font-size:11px;color:var(--muted);">1 hour · 1:20 PM – 2:20 PM</span></td></tr>
+            <tr><td><strong>1:20 PM – 1:50 PM</strong></td><td class="col-227"><strong>Plant Floor — Track A</strong><br><span style="color:#3b6ba5;font-size:13px;">Firewall hygiene · network segmentation · zone &amp; conduit design</span><br><em style="color:var(--muted);font-size:12px;">Speaker TBD — <a href="../index.html#cfs" style="color:#1f4f8f;">apply via CFP</a></em></td><td class="col-252"><strong>Network &amp; SOC — Track B</strong><br><span style="color:#3b6ba5;font-size:13px;">Identity · credentials · access in OT environments</span><br><em style="color:var(--muted);font-size:12px;">Speaker TBD — <a href="../index.html#cfs" style="color:#1f4f8f;">apply via CFP</a></em></td><td class="col-254" rowspan="3" style="vertical-align:top;"><strong>Hands-on Lab — Track C</strong><br><span style="color:#3b6ba5;font-size:13px;">SCADA / Modbus / PLC simulation · attacker &amp; defender perspectives</span><br><em style="color:var(--muted);font-size:12px;">Speaker TBD — <a href="../index.html#cfs" style="color:#1f4f8f;">apply via CFP</a></em><br><span style="font-size:11px;color:var(--muted);">1 hour · 1:20 PM – 2:20 PM</span><br><span style="display:inline-block;margin-top:6px;padding:3px 8px;background:rgba(199,54,46,.1);color:#c7362e;border:1px solid rgba(199,54,46,.3);border-radius:4px;font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;">⚠ Lab — bring laptop</span></td></tr>
             <tr class="break-row"><td colspan="3">── 10 min break ──</td></tr>
-            <tr><td><strong>2:00 PM – 2:30 PM</strong></td><td><strong>OT Threat Modeling and Risk Prioritization</strong><br>Steven Taylor · Rockwell Automation</td><td><strong>Lost in Transliteration: Hidden Passwords in a Multilingual World</strong><br>Juan Pablo Gomez Postigo · Sprocket Security</td></tr>
+            <tr><td><strong>2:00 PM – 2:30 PM</strong></td><td class="col-227"><strong>Plant Floor — Track A</strong><br><span style="color:#3b6ba5;font-size:13px;">Threat modeling · risk prioritization · IEC 62443 / GRC</span><br><em style="color:var(--muted);font-size:12px;">Speaker TBD — <a href="../index.html#cfs" style="color:#1f4f8f;">apply via CFP</a></em></td><td class="col-252"><strong>Cloud / Enterprise — Track B</strong><br><span style="color:#3b6ba5;font-size:13px;">Supply chain · IT/OT convergence · third-party risk</span><br><em style="color:var(--muted);font-size:12px;">Speaker TBD — <a href="../index.html#cfs" style="color:#1f4f8f;">apply via CFP</a></em></td></tr>
+            <tr class="break-row"><td colspan="4">── 10 min break · Snacks served ──</td></tr>
+            <tr><td><strong>2:40 PM – 3:10 PM</strong></td><td class="col-227"><strong>Plant Floor — Track A</strong><br><span style="color:#3b6ba5;font-size:13px;">OT system security · architecture deep-dive</span><br><em style="color:var(--muted);font-size:12px;">Speaker TBD — <a href="../index.html#cfs" style="color:#1f4f8f;">apply via CFP</a></em></td><td class="col-252"><strong>Cloud / Enterprise — Track B</strong><br><span style="color:#3b6ba5;font-size:13px;">Edge · cloud · zero-trust for industrial systems</span><br><em style="color:var(--muted);font-size:12px;">Speaker TBD — <a href="../index.html#cfs" style="color:#1f4f8f;">apply via CFP</a></em></td><td class="col-254"><strong>Hands-on / Workshop — Track C</strong><br><span style="color:#3b6ba5;font-size:13px;">30 min · interactive · small-group</span><br><em style="color:var(--muted);font-size:12px;">Speaker TBD — <a href="../index.html#cfs" style="color:#1f4f8f;">apply via CFP</a></em></td></tr>
             <tr class="break-row"><td colspan="4">── 10 min break ──</td></tr>
-            <tr><td><strong>2:40 PM – 3:10 PM</strong></td><td><strong>Advanced Strategies for Modern IT Risk Management</strong><br>Jeni Herrera &amp; Kelly Yang · Johnson Controls</td><td><strong>Securing the Digital Handshake in Hiring and Sales</strong><br>Adam Weigold · Irulast</td><td rowspan="3" style="vertical-align:top;"><strong>Securing the Grid: Simulated Modbus SCADA Environments and Replay Attack Mitigation (Lab)</strong><br>Neil Brandon · ICS Village<br><span style="font-size:11px;color:var(--muted);">1 hour · 3:00 PM – 4:00 PM</span></td></tr>
-            <tr class="break-row"><td colspan="3">── 10 min break ──</td></tr>
-            <tr><td><strong>3:20 PM – 3:50 PM</strong></td><td><strong>Strategies for Landing Your Next Role</strong><br>Rebecca Jo Jones · BSides MKE</td><td><strong>Navigating AI Applications in Modern Cybersecurity</strong><br>Joshua Sharkey · ISACA MKE Chapter</td></tr>
+            <tr><td><strong>3:20 PM – 3:50 PM</strong></td><td class="col-227"><strong>Career &amp; Community — Track A</strong><br><span style="color:#3b6ba5;font-size:13px;">Hiring · career paths in OT cyber · student-friendly</span><br><em style="color:var(--muted);font-size:12px;">Speaker TBD — <a href="../index.html#cfs" style="color:#1f4f8f;">apply via CFP</a></em></td><td class="col-252"><strong>Practitioner — Track B</strong><br><span style="color:#3b6ba5;font-size:13px;">Practical security that scales · automation · real-world execution</span><br><em style="color:var(--muted);font-size:12px;">Speaker TBD — <a href="../index.html#cfs" style="color:#1f4f8f;">apply via CFP</a></em></td><td class="col-254">&nbsp;</td></tr>
             <tr class="break-row"><td colspan="4">── 10 min break ──</td></tr>
-            <tr><td><strong>4:00 PM – 4:30 PM</strong></td><td><strong>Technical Panel: OT Cybersecurity — Industry Perspectives</strong><br><span class="reveal-badge">🔒 Revealed April 17th</span></td><td> </td></tr>
-            <tr><td><strong>4:30 PM – 5:30 PM</strong></td><td colspan="3"><strong>Career Fair &amp; Networking</strong> · AMU Room 227 · 1 hour</td></tr>
+            <tr><td><strong>4:00 PM – 4:30 PM</strong></td><td colspan="3"><strong>Executive Panel</strong> · AMU Ballroom<br><em style="color:#3b6ba5;">Panelists curated from CFP submissions · <a href="../index.html#cfs" style="color:#1f4f8f;font-weight:700;">apply →</a></em></td></tr>
+            <tr style="background:#f0f7ff;"><td><strong>4:30 PM – 5:30 PM</strong></td><td colspan="3"><strong>Evening Networking</strong> · Snacks provided · AMU Ballroom</td></tr>
           </tbody>
         </table>
         </div>
-        <p style="margin:8px 0 0;font-size:13px;color:var(--muted);text-align:center;">🍿 Afternoon snacks will be served throughout the event.</p>
       </section>
 
-      <section class="footer-note">
-        <p><strong>Executive Sponsors</strong></p>
-        <div class="logos" style="grid-template-columns:repeat(2,1fr);">
-          <div class="logo" style="background:#fff;flex-direction:column;gap:6px;"><img src="../assets/MU Cyber logo.png" alt="Marquette University Center for Cyber Security logo" style="max-width:100%;max-height:56px" /></div>
-          <div class="logo" style="background:#fff;flex-direction:column;gap:6px;"><img src="../assets/sftf-logo.png" alt="Security For the Folks logo" style="max-width:100%;max-height:72px" /></div>
-        </div>
-        <p style="margin-top:12px;"><strong>Title Sponsors</strong></p>
-        <div class="logos" style="grid-template-columns:1fr;">
-          <div class="logo" style="background:#fff;flex-direction:column;gap:6px;"><img src="../assets/malkansolutions logo.png" alt="Malkan Solutions logo" style="max-width:100%;max-height:56px" /></div>
-        </div>
-        <p style="margin-top:12px;"><strong>Community Sponsors</strong></p>
-        <div class="logos" style="grid-template-columns:1fr;">
-          <div class="logo" style="background:#fff;flex-direction:column;gap:6px;"><img src="../assets/logos/rockwell-automation.png" alt="Rockwell Automation logo" style="max-width:100%;max-height:56px" /></div>
+      <!-- HIDDEN: 2026 speakers carousel — see home page archive table for the 2026 line-up -->
+      <section id="speakers-list" class="card" hidden style="display:none;margin-bottom:12px;">
+        <h2>Featured Speakers</h2>
+        <p class="small">Presenters from industry, government, and community organizations.</p>
+        <div class="speaker-scroll-wrap">
+          <button class="scroll-arrow left" aria-label="Scroll left">&#8249;</button>
+          <div class="speaker-scroll">
+
+            <div class="speaker-card">
+              <div style="display:flex;align-items:center;gap:10px;"><div class="speaker-initials"><img src="../assets/logos/gathman_headshot.jpg" alt="Thomas Gathman" /></div><p class="company">FBI Milwaukee</p></div>
+              <h4>Opening Keynote</h4>
+              <p style="margin:0;font-size:12px;color:#5f738c;">Counterintelligence, WMD, and Cyber Programs</p>
+              <div class="speaker-name"><strong>SSA Brett Lerner &amp; IA Thomas Gathman</strong></div>
+            </div>
+
+            <div class="speaker-card">
+              <div style="display:flex;align-items:center;gap:10px;"><div class="speaker-initials"><img src="../assets/logos/shoshana wodzisz.jpg" alt="Shoshana Wodzisz" /></div><p class="company">Malkan Solutions</p></div>
+              <h4>OT Cybersecurity GRC, IEC 62443 &amp; EU CRA</h4>
+              <div class="speaker-name"><strong>Shoshana Wodzisz</strong><br><a class="speaker-linkedin" href="https://www.linkedin.com/in/shoshanawodzisz" target="_blank" rel="noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn</a></div>
+            </div>
+
+            <div class="speaker-card">
+              <div style="display:flex;align-items:center;gap:10px;"><div class="speaker-initials"><img src="../assets/logos/peter-mclane.jpg" alt="Peter McLane" /></div><p class="company">Johnson Controls</p></div>
+              <h4>Firewall Hygiene to Network Segmentation</h4>
+              <div class="speaker-name"><strong>Peter McLane</strong><br><a class="speaker-linkedin" href="https://www.linkedin.com/in/peter-mclane-a7a786234" target="_blank" rel="noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn</a></div>
+            </div>
+
+            <div class="speaker-card">
+              <div style="display:flex;align-items:center;gap:10px;"><div class="speaker-initials"><img src="../assets/logos/StevenTaylor_Headshot_2024_cropped.jpg" alt="Steven Taylor" /></div><p class="company">Rockwell Automation</p></div>
+              <h4>OT Threat Modeling and Risk Prioritization</h4>
+              <div class="speaker-name"><strong>Steven Taylor</strong><br><a class="speaker-linkedin" href="https://www.linkedin.com/in/steven-taylor-01317b54/" target="_blank" rel="noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn</a></div>
+            </div>
+
+            <div class="speaker-card">
+              <div style="display:flex;align-items:center;gap:10px;"><div class="speaker-initials"><img src="../assets/logos/Tillman Peterson.jpg" alt="Tillman Petersen" /></div><p class="company">Rockwell Automation</p></div>
+              <h4>OT Device Penetration Testing Basics</h4>
+              <div class="speaker-name"><strong>Tillman Petersen</strong><br><a class="speaker-linkedin" href="https://www.linkedin.com/in/tillmanpetersen/" target="_blank" rel="noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn</a></div>
+            </div>
+
+            <div class="speaker-card">
+              <div style="display:flex;align-items:center;gap:10px;"><div class="speaker-initials"><img src="../assets/logos/Juan Pablo Gomez Postigo.jpg" alt="Juan Pablo Gomez Postigo" /></div><p class="company">Sprocket Security</p></div>
+              <h4>Hidden Passwords in a Multilingual World</h4>
+              <div class="speaker-name"><strong>Juan Pablo Gomez Postigo</strong><br><a class="speaker-linkedin" href="https://www.linkedin.com/in/juan-pablo-gomez-postigo-173a0b163/" target="_blank" rel="noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn</a></div>
+            </div>
+
+            <div class="speaker-card">
+              <div style="display:flex;align-items:center;gap:10px;"><div class="speaker-initials"><img src="../assets/logos/adam-weigold.jpg" alt="Adam Weigold" /></div><p class="company">Irulast</p></div>
+              <h4>Securing the Digital Handshake</h4>
+              <div class="speaker-name"><strong>Adam Weigold</strong><br><a class="speaker-linkedin" href="https://www.linkedin.com/in/adamweigold/" target="_blank" rel="noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn</a></div>
+            </div>
+
+            <div class="speaker-card">
+              <div style="display:flex;align-items:center;gap:10px;"><div class="speaker-initials"><img src="../assets/logos/Jeny.jpg" alt="Jeni Herrera" /></div><div class="speaker-initials"><img src="../assets/logos/kelly.jpg" alt="Kelly Yang" /></div><p class="company">Johnson Controls</p></div>
+              <h4>Understanding Supply Chain Cybersecurity in a Connected World</h4>
+              <div class="speaker-name"><strong>Jeni Herrera</strong> · <a class="speaker-linkedin" href="https://www.linkedin.com/in/jeny-herrera-bautista/" target="_blank" rel="noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn</a><br><strong>Kelly Yang</strong> · <a class="speaker-linkedin" href="https://www.linkedin.com/in/kelly-yang-1825a23/" target="_blank" rel="noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn</a></div>
+            </div>
+
+            <div class="speaker-card">
+              <div style="display:flex;align-items:center;gap:10px;"><div class="speaker-initials"><img src="../assets/logos/ibmPreston.jpg" alt="Preston Futrell" /></div><div class="speaker-initials"><img src="../assets/logos/ibmMike.jpg" alt="Michael Massimi" /></div><div class="speaker-initials"><img src="../assets/logos/ibmDan.jpg" alt="Dan Bailey" /></div><p class="company">IBM</p></div>
+              <h4>OT System Security</h4>
+              <div class="speaker-name"><strong>Preston Futrell</strong> · <a class="speaker-linkedin" href="https://www.linkedin.com/in/preston-futrell-13637712/" target="_blank" rel="noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn</a><br><strong>Michael Massimi</strong> · <a class="speaker-linkedin" href="https://www.linkedin.com/in/michael-massimi-b4b3b21/" target="_blank" rel="noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn</a><br><strong>Dan Bailey</strong> · <a class="speaker-linkedin" href="https://www.linkedin.com/in/djb180/" target="_blank" rel="noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn</a></div>
+            </div>
+
+            <div class="speaker-card">
+              <div style="display:flex;align-items:center;gap:10px;"><div class="speaker-initials"><img src="../assets/logos/neil.jpg" alt="Neil Brandon" /></div><p class="company">ICS Village</p></div>
+              <h4>Securing the Grid Lab</h4>
+              <div class="speaker-name"><strong>Neil Brandon</strong><br><a class="speaker-linkedin" href="https://www.linkedin.com/in/neil-brandon/" target="_blank" rel="noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn</a></div>
+            </div>
+
+            <div class="speaker-card">
+              <div style="display:flex;align-items:center;gap:10px;"><div class="speaker-initials"><img src="../assets/logos/rebecca.jpg" alt="Rebecca Jo Jones" /></div><p class="company">BSides MKE</p></div>
+              <h4>Strategies for Landing Your Next Role</h4>
+              <div class="speaker-name"><strong>Rebecca Jo Jones</strong><br><a class="speaker-linkedin" href="https://www.linkedin.com/in/jmlauritch/" target="_blank" rel="noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn</a></div>
+            </div>
+
+            <div class="speaker-card">
+              <div style="display:flex;align-items:center;gap:10px;"><div class="speaker-initials"><img src="../assets/logos/Joshua.jpg" alt="Joshua Sharkey" /></div><p class="company">ISACA MKE</p></div>
+              <h4>Practical Security That Scales: Automation, Risk, and Real-World Execution</h4>
+              <div class="speaker-name"><strong>Joshua Sharkey</strong><br><a class="speaker-linkedin" href="https://www.linkedin.com/in/joshua-sharkey/" target="_blank" rel="noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn</a></div>
+            </div>
+
+            <div class="speaker-card is-panel" style="min-width:340px;max-width:340px;">
+              <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;"><div class="speaker-initials" style="width:40px;height:40px;"><img src="../assets/founders/debbie-perouli.png" alt="Dr. Debbie Perouli" /></div><div class="speaker-initials" style="width:40px;height:40px;"><img src="../assets/founders/chirag.png" alt="Chirag Malkan" /></div><div class="speaker-initials" style="width:40px;height:40px;"><img src="../assets/logos/ibmDan.jpg" alt="Dan Bailey" /></div><div class="speaker-initials" style="width:40px;height:40px;"><img src="../assets/logos/Josh C.jpg" alt="Josh Cochrane" /></div><p class="company">Executive Panel</p></div>
+              <h4>Preparing OT Environments for the Next Generation of Cybersecurity</h4>
+              <div class="speaker-name"><strong>Dr. Debbie Perouli</strong> · Marquette · <a class="speaker-linkedin" href="https://www.linkedin.com/in/debbie-perouli-mu" target="_blank" rel="noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn</a><br><strong>Chirag Malkan</strong> · Malkan Solutions · <a class="speaker-linkedin" href="https://www.linkedin.com/in/chiragmalkan/" target="_blank" rel="noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn</a><br><strong>Dan Bailey</strong> · IBM · <a class="speaker-linkedin" href="https://www.linkedin.com/in/djb180/" target="_blank" rel="noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn</a><br><strong>Josh Cochrane</strong> · Johnson Controls · <a class="speaker-linkedin" href="https://www.linkedin.com/in/joshuascochrane/" target="_blank" rel="noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn</a></div>
+            </div>
+
+          </div>
+          <button class="scroll-arrow right" aria-label="Scroll right">&#8250;</button>
         </div>
       </section>
 
-      <section class="footer-note" style="margin-top:12px;">
-        <p><strong>Companies Presenting</strong></p>
-        <div class="logos" style="grid-template-columns:repeat(3,1fr);">
-          <div class="logo" style="background:rgba(255,255,255,.55);flex-direction:column;gap:6px;"><img src="../assets/logos/rockwell-automation.png" alt="Rockwell Automation logo" style="max-width:100%;max-height:48px" /></div>
-          <div class="logo" style="background:rgba(255,255,255,.55);flex-direction:column;gap:6px;"><img src="../assets/logos/johnson-controls.png" alt="Johnson Controls logo" style="max-width:100%;max-height:48px" /></div>
-          <div class="logo" style="background:rgba(255,255,255,.55);flex-direction:column;gap:6px;"><img src="../assets/logos/exida.png" alt="Exida logo" style="max-width:100%;max-height:48px" /></div>
-          <div class="logo" style="background:rgba(255,255,255,.55);flex-direction:column;gap:6px;"><img src="../assets/logos/sprocket-security.png" alt="Sprocket Security logo" style="max-width:100%;max-height:48px" /></div>
-          <div class="logo" style="background:rgba(255,255,255,.55);flex-direction:column;gap:6px;"><img src="../assets/logos/irulast.svg" alt="Irulast logo" style="max-width:100%;max-height:48px" /></div>
-          <div class="logo" style="background:rgba(255,255,255,.55);flex-direction:column;gap:6px;"><img src="../assets/logos/isaca-mke.png" alt="ISACA Milwaukee Chapter logo" style="max-width:100%;max-height:48px" /></div>
-          <div class="logo" style="background:rgba(255,255,255,.55);flex-direction:column;gap:6px;"><img src="../assets/logos/icsvillage.png" alt="ICS Village logo" style="max-width:100%;max-height:48px" /></div>
-          <div class="logo" style="background:rgba(255,255,255,.55);flex-direction:column;gap:6px;"><img src="../assets/logos/bsides.png" alt="BSides MKE logo" style="max-width:100%;max-height:48px" /></div>
-          <div class="logo" style="background:rgba(255,255,255,.55);flex-direction:column;gap:6px;"><img src="../assets/malkansolutions logo.png" alt="Malkan Solutions logo" style="max-width:100%;max-height:48px" /></div>
+      <section id="sponsors" class="spn-section">
+        <div class="ts-head">
+          <span class="ts-idx">02 /</span>
+          <div>
+            <h2 class="ts-title">Sponsors &amp; partners</h2>
+            <p class="ts-sub">MOCS exists because of the organizations that back it — students attend free thanks to them.</p>
+          </div>
+        </div>
+
+        <div class="spn-tier">
+          <div class="spn-tier-head">
+            <p class="spn-tier-label">Executive Sponsors</p>
+            <span class="spn-tier-count">02</span>
+          </div>
+          <div class="spn-grid cols-2">
+            <a href="https://www.marquette.edu/cyber-security/" target="_blank" rel="noreferrer" class="spn-logo"><img src="../assets/MU Cyber logo.png" alt="Marquette University Center for Cyber Security" /></a>
+            <a href="https://www.xftf.org" target="_blank" rel="noreferrer" class="spn-logo"><img src="../assets/sftf-logo.png" alt="Security For the Folks" style="max-height:60px;" /></a>
+          </div>
+        </div>
+
+        <div class="spn-tier">
+          <div class="spn-tier-head">
+            <p class="spn-tier-label">Title Sponsors</p>
+            <span class="spn-tier-count">04</span>
+          </div>
+          <div class="spn-grid cols-4">
+            <a href="https://www.malkansolutions.com" target="_blank" rel="noreferrer" class="spn-logo"><img src="../assets/malkansolutions logo.png" alt="Malkan Solutions" /></a>
+            <a href="https://www.ibm.com/consulting/aws" target="_blank" rel="noreferrer" class="spn-logo"><img src="../assets/logos/aws.png" alt="AWS" /></a>
+            <a href="https://www.ibm.com/consulting" target="_blank" rel="noreferrer" class="spn-logo"><img src="../assets/logos/ibmconsulting_logo.jpg" alt="IBM Consulting" /></a>
+            <a href="https://datascienceinstitute.northwesternmutual.com" target="_blank" rel="noreferrer" class="spn-logo"><img src="../assets/logos/nmsdi-logo.png" alt="Northwestern Mutual Data Science Institute" /></a>
+          </div>
+        </div>
+
+        <div class="spn-tier">
+          <div class="spn-tier-head">
+            <p class="spn-tier-label">Community Sponsors</p>
+            <span class="spn-tier-count">03</span>
+          </div>
+          <div class="spn-grid cols-3">
+            <a href="https://www.rockwellautomation.com" target="_blank" rel="noreferrer" class="spn-logo"><img src="../assets/logos/rockwell-automation.png" alt="Rockwell Automation" /></a>
+            <a href="https://www.claroty.com" target="_blank" rel="noreferrer" class="spn-logo"><img src="../assets/logos/claroty.png" alt="Claroty" /></a>
+            <a href="https://pushsecurity.com" target="_blank" rel="noreferrer" class="spn-logo"><img src="../assets/logos/Push-Color-Horzt-RGB-Logo copy.png" alt="Push Security" /></a>
+          </div>
+        </div>
+
+        <div class="spn-tier" data-print-hide>
+          <div class="spn-tier-head">
+            <p class="spn-tier-label">Companies Presenting</p>
+            <span class="spn-tier-count">09</span>
+          </div>
+          <div class="spn-grid cols-3">
+            <a href="https://www.rockwellautomation.com" target="_blank" rel="noreferrer" class="spn-logo"><img src="../assets/logos/rockwell-automation.png" alt="Rockwell Automation" style="max-height:44px;" /></a>
+            <a href="https://www.johnsoncontrols.com" target="_blank" rel="noreferrer" class="spn-logo"><img src="../assets/logos/johnson-controls.png" alt="Johnson Controls" style="max-height:44px;" /></a>
+            <a href="https://www.sprocketsecurity.com" target="_blank" rel="noreferrer" class="spn-logo"><img src="../assets/logos/sprocket-security.png" alt="Sprocket Security" style="max-height:44px;" /></a>
+            <a href="https://www.irulast.com" target="_blank" rel="noreferrer" class="spn-logo"><img src="../assets/logos/irulast.svg" alt="Irulast" style="max-height:44px;" /></a>
+            <a href="https://www.isaca.org" target="_blank" rel="noreferrer" class="spn-logo"><img src="../assets/logos/isaca-mke.png" alt="ISACA Milwaukee Chapter" style="max-height:44px;" /></a>
+            <a href="https://www.icsvillage.com" target="_blank" rel="noreferrer" class="spn-logo"><img src="../assets/logos/icsvillage.png" alt="ICS Village" style="max-height:44px;" /></a>
+            <a href="https://www.bsidesmke.org" target="_blank" rel="noreferrer" class="spn-logo"><img src="../assets/logos/bsidesmke.jpg" alt="BSides MKE" style="max-height:44px;" /></a>
+            <a href="https://www.malkansolutions.com" target="_blank" rel="noreferrer" class="spn-logo"><img src="../assets/malkansolutions logo.png" alt="Malkan Solutions" style="max-height:44px;" /></a>
+            <a href="https://www.ibm.com/consulting" target="_blank" rel="noreferrer" class="spn-logo"><img src="../assets/logos/ibmconsulting_logo.jpg" alt="IBM Consulting" style="max-height:44px;" /></a>
+          </div>
         </div>
       </section>
     </main>
@@ -197,7 +628,7 @@
       });
 
       document.getElementById('btn-copy-agenda').addEventListener('click', async () => {
-        const agendaText = `Midwest OT Cybersecurity Summit (MOCS) — Agenda — As of April 1, 2026\nApril 24, 2026 · Marquette University, Milwaukee\n\n10:30 AM – 11:30 AM  Registration & Check-In | Lobby | Badges, welcome packets, sponsor tables\n11:45 AM – 12:30 PM  Opening Keynote | Speaker TBA | AMU Room 227\n  ── 10 min break ──\n12:40 PM –  1:10 PM  AMU Room 227: Navigating the Regulatory Landscape: OT Cybersecurity GRC, IEC 62443 Standards, and the EU Cyber Resilience Act — Malkan Solutions\n                     AMU Room 252: The OEM Perspective: OT Device Penetration Testing Basics — Rockwell Automation\n  ── 10 min break ──\n 1:20 PM –  1:50 PM  AMU Room 227: Securing the OT Architecture: From Firewall Hygiene to Advanced Network Segmentation — Johnson Controls\n                     AMU Room 252: Securing the Precision: Threat Analysis and PTP Protocol Vulnerabilities in OT Networking — MIT Lincoln Laboratory → flows into lab\n  ── 10 min break ──\n 2:00 PM –  2:30 PM  AMU Room 227: OT Risk and Vulnerability Mgmt: OT Threat Modeling and Risk Prioritization — Rockwell Automation\n                     AMU Room 252: Lost in Transliteration: Hidden Passwords in a Multilingual World — Sprocket Security\n                     AMU Room 254: OT Penetration Testing: Pipeline Security & Communication Robustness — Exida (1 hour: 2:00–3:00 PM)\n  ── 10 min break ──\n 2:40 PM –  3:10 PM  AMU Room 227: Navigating the Storm: Advanced Strategies for Modern IT Risk Management — Johnson Controls\n                     AMU Room 252: The Invisible Breach: Securing the Digital Handshake in Hiring and Sales — Irulast\n  ── 10 min break ──\n 3:20 PM –  3:50 PM  AMU Room 227: Career Pathways in OT: Strategies for Landing Your Next Role — MKE BSide\n                     AMU Room 252: The Future of Intelligence: Navigating AI Applications in Modern Cybersecurity — ISACA MKE Chapter\n                     AMU Room 254: Securing the Grid: Simulated Modbus SCADA Environments and Replay Attack Mitigation (Lab) — ICS Village (1 hour: 3:20–4:20 PM)\n  ── 10 min break ──\n 4:00 PM –  4:30 PM  Technical Panel: OT Cybersecurity — Industry Perspectives | Panelists TBA | AMU Room 227\n 4:30 PM –  5:30 PM  Career Fair & Networking | 60 min\n\nAfternoon snacks will be served throughout the event.`;
+        const agendaText = `Midwest OT Cybersecurity Summit (MOCS) 2027\nApril 16, 2027 · Marquette University, AMU 3rd Floor Ballroom · Milwaukee\n\nDRAFT TEMPLATE — speaker line-up confirms after CFP closes Mar 5, 2027.\nApply to speak: midwest-otcs.org/#cfs\n\n10:00 AM →            Registration & Check-In opens | AMU 3rd Floor Lobby | Badges, welcome packets, sponsor tables\n11:00 AM – 11:30 AM  Lunch & Networking | Box lunches provided for all registered attendees | Ballroom\n11:30 AM – 12:30 PM  Opening Keynote | Speaker TBD via CFP | Ballroom\n  ── 10 min break ──\n12:40 PM –  1:10 PM  Track A (Plant Floor): PLCs · protocols · segmentation\n                     Track B (Network/SOC): Detection · IR · OT visibility\n                     Track C (Hands-on): 30-min interactive workshop\n  ── 10 min break ──\n 1:20 PM –  1:50 PM  Track A (Plant Floor): Firewall hygiene · network segmentation\n                     Track B (Network/SOC): Identity · credentials · access\n                     Track C (Hands-on Lab): SCADA / Modbus simulation — bring laptop (1:20–2:20)\n  ── 10 min break ──\n 2:00 PM –  2:30 PM  Track A (Plant Floor): Threat modeling · risk · IEC 62443\n                     Track B (Cloud/Enterprise): Supply chain · IT/OT convergence\n  ── 10 min break · Snacks served ──\n 2:40 PM –  3:10 PM  Track A (Plant Floor): OT system security architecture\n                     Track B (Cloud/Enterprise): Edge · cloud · zero-trust for OT\n                     Track C (Hands-on): 30-min interactive workshop\n  ── 10 min break ──\n 3:20 PM –  3:50 PM  Track A (Career/Community): Hiring · career paths in OT cyber\n                     Track B (Practitioner): Practical security at scale · automation\n  ── 10 min break ──\n 4:00 PM –  4:30 PM  Executive Panel | Ballroom\n                     Panelists curated from CFP submissions\n 4:30 PM –  5:30 PM  Evening Networking | Snacks provided | Ballroom\n\nAll session topics, speakers, and titles above are placeholders — final selections after CFP closes Mar 5, 2027.`;
         await navigator.clipboard.writeText(agendaText);
         const toast = document.getElementById('agenda-toast');
         toast.classList.add('show');
@@ -206,8 +637,119 @@
 
       document.getElementById('dark-toggle').addEventListener('click', () => {
         document.body.classList.toggle('dark');
-        document.getElementById('dark-toggle').textContent = document.body.classList.contains('dark') ? '☀️ Light Mode' : '🌙 Dark Mode';
       });
+
+      // Calendar dropdown
+      (function(){
+        const title = 'Midwest OT Cybersecurity Summit (MOCS) 2027';
+        const desc = [
+          'Midwest OT Cybersecurity Summit (MOCS) 2027 · April 16, 2027',
+          'Marquette University · Alumni Memorial Union · 3rd Floor Ballroom · Milwaukee, WI',
+          '',
+          '10:00 AM – 5:30 PM · 3 rooms · 12 sessions',
+          '',
+          'DRAFT TEMPLATE — speaker line-up confirms after CFP closes Mar 5, 2027.',
+          'Apply to speak: chirag.malkan@marquette.edu',
+          '',
+          'Full agenda template: https://midwest-otcs.org/agenda/'
+        ].join('\n');
+        const location = 'Marquette University, Alumni Memorial Union — 3rd Floor Ballroom, 1442 W Wisconsin Ave, Milwaukee, WI 53233';
+        const start = '20270416T150000Z'; // April 16, 2027, 10:00 AM CDT
+        const end   = '20270416T223000Z'; // 5:30 PM CDT
+
+        document.getElementById('cal-google').href =
+          'https://calendar.google.com/calendar/render?action=TEMPLATE' +
+          '&text=' + encodeURIComponent(title) +
+          '&dates=' + start + '/' + end +
+          '&details=' + encodeURIComponent(desc) +
+          '&location=' + encodeURIComponent(location);
+
+        document.getElementById('cal-outlook').href =
+          'https://outlook.live.com/calendar/0/action/compose?allday=false' +
+          '&subject=' + encodeURIComponent(title) +
+          '&startdt=2027-04-16T10:00:00-05:00' +
+          '&enddt=2027-04-16T17:30:00-05:00' +
+          '&body=' + encodeURIComponent(desc) +
+          '&location=' + encodeURIComponent(location);
+
+        var icsContent = [
+          'BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//MOCS//EN',
+          'BEGIN:VEVENT',
+          'DTSTART:'+start,'DTEND:'+end,
+          'SUMMARY:'+title,
+          'DESCRIPTION:'+desc.replace(/\n/g,'\\n'),
+          'LOCATION:'+location,
+          'END:VEVENT','END:VCALENDAR'
+        ].join('\r\n');
+        document.getElementById('cal-ics').href = 'data:text/calendar;charset=utf-8,' + encodeURIComponent(icsContent);
+
+        var btn = document.getElementById('cal-btn');
+        var dd  = document.getElementById('cal-dropdown');
+        btn.addEventListener('click', function(e){ e.stopPropagation(); dd.style.display = dd.style.display === 'none' ? 'block' : 'none'; });
+        document.addEventListener('click', function(){ dd.style.display = 'none'; });
+      })();
+
+      // Speaker strip — auto-scrolling infinite loop with edge-hover speed control
+      (function(){
+        var wrap = document.querySelector('.speaker-scroll-wrap');
+        var scroll = wrap && wrap.querySelector('.speaker-scroll');
+        if (!scroll) return;
+        var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        var track = document.createElement('div');
+        track.className = 'speaker-track';
+        while (scroll.firstChild) track.appendChild(scroll.firstChild);
+        Array.prototype.slice.call(track.children).forEach(function(c){
+          track.appendChild(c.cloneNode(true));
+        });
+        scroll.appendChild(track);
+        if (reduce) return;
+
+        var defaultSpeed = -50;
+        var maxEdgeSpeed = 450;
+        var edgeZone = 0.28;
+        var currentSpeed = defaultSpeed;
+        var offset = 0;
+        var halfWidth = 0;
+
+        function measure(){ halfWidth = track.scrollWidth / 2; }
+        measure();
+        window.addEventListener('resize', measure);
+
+        wrap.addEventListener('mousemove', function(e){
+          var rect = wrap.getBoundingClientRect();
+          var x = (e.clientX - rect.left) / rect.width;
+          if (x < edgeZone) {
+            currentSpeed = maxEdgeSpeed * (1 - x / edgeZone);
+            wrap.classList.add('edge-left');
+            wrap.classList.remove('edge-right');
+          } else if (x > 1 - edgeZone) {
+            currentSpeed = -maxEdgeSpeed * ((x - (1 - edgeZone)) / edgeZone);
+            wrap.classList.add('edge-right');
+            wrap.classList.remove('edge-left');
+          } else {
+            currentSpeed = 0;
+            wrap.classList.remove('edge-left','edge-right');
+          }
+        });
+        wrap.addEventListener('mouseleave', function(){
+          currentSpeed = defaultSpeed;
+          wrap.classList.remove('edge-left','edge-right');
+        });
+
+        var lastT = performance.now();
+        function tick(now){
+          var dt = Math.min((now - lastT) / 1000, 0.05);
+          lastT = now;
+          if (halfWidth > 0) {
+            offset += currentSpeed * dt;
+            if (offset <= -halfWidth) offset += halfWidth;
+            else if (offset > 0) offset -= halfWidth;
+            track.style.transform = 'translateX(' + offset + 'px)';
+          }
+          requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+      })();
     </script>
   </body>
 </html>

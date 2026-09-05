@@ -1,0 +1,996 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Speakers, Sponsors &amp; Volunteers — MOCS 2027</title>
+    <meta name="description" content="Logistics for MOCS 2027 — Call for Speakers, sponsorship inquiries, volunteer info, and what to expect once your talk is accepted. Marquette AMU, April 16, 2027." />
+    <meta name="author" content="Security for the Folks (XFTF) — www.xftf.org" />
+    <meta name="robots" content="index, follow" />
+    <meta name="robots" content="noai, noimageai" />
+    <meta name="ai-content" content="prohibited" />
+    <link rel="canonical" href="https://midwest-otcs.org/speaker-sponsor/" />
+    <link rel="icon" type="image/png" href="../assets/sftf-logo.png" />
+    <style>
+      :root{
+        --navy:#0d3260;--navy-2:#163f74;--blue:#1f4f8f;--panel:#e9eff6;--line:#cfdae8;
+        --text:#23384e;--muted:#61758f;--gold:#f4c300;
+        --sev-red:#c7362e;--sev-amber:#b87a13;--sev-green:#2f9a52;
+        --ease:cubic-bezier(0.16,1,0.3,1);
+        --ease-out:cubic-bezier(0.23,1,0.32,1);
+      }
+      *{box-sizing:border-box}
+      html{font-size:16px;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+      body{
+        margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;
+        font-size:15px;line-height:1.55;
+        -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+        background:#dfe7f0;color:var(--text);position:relative;overflow-x:hidden;
+      }
+      body::before{content:"";position:fixed;inset:0;background:url("../assets/sftf-background.png") -20px center/360px 360px no-repeat;opacity:0.05;pointer-events:none;z-index:-1}
+      .wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+
+      /* TOP */
+      .top{position:relative;overflow:hidden;background:radial-gradient(1200px 420px at 0 0,#214f8f 0,#133c72 45%,#0d2f5d 50%);color:#eaf2ff;padding:8px 0 16px}
+      .top::before{content:"";position:absolute;inset:0;opacity:.15;pointer-events:none;background-image:repeating-linear-gradient(0deg,transparent 0 24px,rgba(255,255,255,.2) 24px 25px),repeating-linear-gradient(90deg,transparent 0 72px,rgba(255,255,255,.17) 72px 73px)}
+      .wrap-top{position:relative;z-index:1}
+      .topbar{display:flex;justify-content:space-between;align-items:center;padding:8px 0;flex-wrap:wrap;gap:8px}
+
+      .btn{display:inline-flex;align-items:center;gap:6px;border-radius:9px;padding:8px 12px;text-decoration:none;font-weight:700;border:none;cursor:pointer;font-size:14px;transition:transform 160ms var(--ease-out),background 180ms ease}
+      .btn:active{transform:scale(0.97)}
+      .btn-blue{background:#295b9c;color:#e9f2ff;border:1px solid rgba(255,255,255,.2)}
+      .btn-gold{background:var(--gold);color:#173b65}
+
+      /* HERO */
+      .page-hero{margin-top:10px;border:1px solid rgba(255,255,255,.2);background:rgba(7,27,54,.35);border-radius:14px;padding:22px 24px}
+      .hero-eyebrow{display:inline-block;font-size:11px;font-weight:800;color:#ffde73;letter-spacing:.18em;text-transform:uppercase;margin:0 0 10px;border-left:2px solid rgba(255,222,115,.5);padding-left:10px}
+      .page-hero h1{margin:4px 0 8px;color:#fff;font-size:40px;line-height:1.05;letter-spacing:-.015em;font-weight:800}
+      .page-hero p{margin:0;color:#d3e1f5;font-size:15px;max-width:680px;line-height:1.6}
+
+      main{padding:20px 0 48px}
+
+      /* SECTION */
+      .section{margin-bottom:36px;opacity:0;transform:translateY(14px);transition:opacity 280ms var(--ease),transform 280ms var(--ease)}
+      .section.in{opacity:1;transform:translateY(0)}
+      .section-head{display:flex;align-items:baseline;gap:14px;margin:0 0 18px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+      .section-idx{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;font-weight:700;color:#a8bcd4;letter-spacing:.08em}
+      .section-title{margin:0;font-size:30px;font-weight:800;color:#143a68;letter-spacing:-.015em;line-height:1.1}
+      .section-sub{margin:3px 0 0;font-size:13.5px;color:var(--muted);line-height:1.55}
+
+      /* SUBHEAD */
+      .subhead{margin:24px 0 12px;display:flex;align-items:baseline;gap:10px}
+      .subhead .eyebrow{margin:0;font-size:10.5px;font-weight:800;color:#3b6ba5;letter-spacing:.16em;text-transform:uppercase}
+      .subhead h3{margin:0;font-size:18px;font-weight:800;color:#173c6b;letter-spacing:-.01em}
+
+      /* NOTICE */
+      .notice{position:relative;background:#fdfbf3;border:1px solid #ead9a1;border-radius:12px;padding:16px 18px 16px 20px;margin:0 0 18px;display:flex;gap:14px;align-items:flex-start}
+      .notice::before{content:"";position:absolute;left:0;top:16px;bottom:16px;width:3px;background:var(--gold);border-radius:2px}
+      .notice-icon{width:28px;height:28px;border-radius:8px;background:rgba(244,195,0,.18);color:#8a6800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+      .notice-body{flex:1;min-width:0}
+      .notice-body .notice-label{margin:0 0 4px;font-size:10.5px;font-weight:800;color:#8a6800;text-transform:uppercase;letter-spacing:.14em}
+      .notice-body h4{margin:0 0 4px;font-size:15px;font-weight:800;color:#3a2c00;letter-spacing:-.005em}
+      .notice-body p{margin:0;font-size:13.5px;line-height:1.6;color:#5a4a1e}
+
+      /* CHECKLIST */
+      .checklist{display:flex;flex-direction:column;gap:10px}
+      .check{position:relative;background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px 16px 20px;display:flex;gap:14px;align-items:flex-start;transition:transform 220ms var(--ease-out),box-shadow 220ms ease,border-color 220ms ease}
+      .check::before{content:"";position:absolute;left:0;top:16px;bottom:16px;width:3px;border-radius:2px;background:var(--line)}
+      .check.sev-red::before{background:var(--sev-red)}
+      .check.sev-amber::before{background:var(--sev-amber)}
+      .check.sev-green::before{background:var(--sev-green)}
+
+      .check-icon{width:32px;height:32px;border-radius:8px;background:#eef3fb;color:#1f4f8f;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+      .check-body{flex:1;min-width:0}
+      .check-head{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin:0 0 4px}
+      .check-head h4{margin:0;font-size:15px;font-weight:800;color:#143a68;letter-spacing:-.005em;line-height:1.3}
+      .check-chip{display:inline-flex;align-items:center;gap:4px;font-size:10.5px;font-weight:800;padding:2px 8px;border-radius:4px;letter-spacing:.08em;text-transform:uppercase;flex-shrink:0}
+      .check-chip.red{background:rgba(199,54,46,.1);color:var(--sev-red);border:1px solid rgba(199,54,46,.25)}
+      .check-chip.amber{background:rgba(184,122,19,.1);color:var(--sev-amber);border:1px solid rgba(184,122,19,.25)}
+      .check-chip.green{background:rgba(47,154,82,.1);color:var(--sev-green);border:1px solid rgba(47,154,82,.22)}
+      .check-chip.grey{background:#eef3fb;color:#3b6ba5;border:1px solid #c2d3e8}
+      .check-body p{margin:2px 0 0;font-size:13.5px;color:#546b86;line-height:1.6}
+      .check-body a{color:#1f4f8f;font-weight:600;text-decoration:none;border-bottom:1px solid rgba(31,79,143,.25)}
+
+      /* TIMELINE */
+      .tl{position:relative;margin:4px 0 0;padding-left:28px}
+      .tl::before{content:"";position:absolute;left:6px;top:8px;bottom:8px;width:1px;background:var(--line)}
+      .tl-row{position:relative;padding:8px 0 20px}
+      .tl-row:last-child{padding-bottom:0}
+      .tl-row::before{content:"";position:absolute;left:-27px;top:13px;width:13px;height:13px;border-radius:50%;background:#fff;border:2px solid #1f4f8f;box-shadow:0 0 0 3px #dfe7f0}
+      .tl-row.is-deadline::before{border-color:var(--sev-red)}
+      .tl-row.is-milestone::before{border-color:var(--sev-amber)}
+      .tl-row.is-ok::before{border-color:var(--sev-green)}
+      .tl-time{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;font-weight:700;color:#3b6ba5;letter-spacing:.04em;margin:0 0 2px}
+      .tl-title{margin:0 0 4px;font-size:14.5px;font-weight:800;color:#143a68;letter-spacing:-.005em}
+      .tl-desc{margin:0;font-size:13px;color:#546b86;line-height:1.6}
+      .tl-desc strong{color:#2a3e58}
+
+      /* ROOM GRID */
+      .rooms{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+      .room{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px;transition:transform 220ms var(--ease-out),box-shadow 220ms ease,border-color 220ms ease}
+      .room-head{display:flex;align-items:baseline;justify-content:space-between;gap:8px;margin:0 0 10px;padding-bottom:10px;border-bottom:1px solid #eaf0f7}
+      .room-num{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;font-weight:700;color:#a8bcd4;letter-spacing:.08em}
+      .room h4{margin:0;font-size:16px;font-weight:800;color:#143a68;letter-spacing:-.005em}
+      .room ul{margin:0;padding:0;list-style:none}
+      .room li{font-size:13px;color:#546b86;line-height:1.55;padding:4px 0;display:flex;gap:8px;align-items:baseline}
+      .room li::before{content:"";display:inline-block;width:4px;height:4px;border-radius:50%;background:#b0c4de;flex-shrink:0;transform:translateY(-2px)}
+
+      /* CONTACT */
+      .contact{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 20px;display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-top:16px}
+      .contact-avatars{display:flex}
+      .contact-av{width:44px;height:44px;border-radius:50%;background:#143a68;color:#ffd766;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px;border:2px solid #fff;box-shadow:0 2px 6px rgba(13,50,96,.15)}
+      .contact-av:nth-child(2){margin-left:-10px;background:#1f4f8f}
+      .contact-body{flex:1;min-width:200px}
+      .contact-label{margin:0;font-size:10.5px;font-weight:800;color:#3b6ba5;letter-spacing:.16em;text-transform:uppercase}
+      .contact-body h4{margin:2px 0 4px;font-size:16px;font-weight:800;color:#143a68;letter-spacing:-.005em}
+      .contact-body p{margin:0;font-size:13px;color:#546b86;line-height:1.6}
+      .contact-emails{display:flex;gap:14px;flex-wrap:wrap;margin-top:6px}
+      .contact-emails a{display:inline-flex;align-items:center;gap:6px;color:#1f4f8f;font-weight:700;font-size:13px;text-decoration:none;border-bottom:1px solid rgba(31,79,143,.3)}
+      .contact-note{margin-top:6px;font-size:12px;color:var(--muted);font-style:italic}
+
+      /* PAGE NAV — sticky section jump links with active state */
+      .page-nav{position:sticky;top:8px;z-index:50;display:flex;align-items:stretch;gap:6px;flex-wrap:wrap;margin:18px 0 22px;padding:8px;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:12px;box-shadow:0 4px 14px rgba(13,50,96,.08)}
+      .page-nav-link{position:relative;flex:1;min-width:140px;display:flex;align-items:center;gap:10px;padding:10px 12px;text-decoration:none;color:var(--muted);border-radius:8px;transition:background 180ms ease,color 180ms ease;font-size:13.5px;font-weight:700;letter-spacing:-.005em}
+      .page-nav-idx{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;font-weight:700;color:#a8bcd4;letter-spacing:.06em;flex-shrink:0;transition:color 180ms ease}
+      .page-nav-link.is-active{background:#143a68;color:#ffd766}
+      .page-nav-link.is-active .page-nav-idx{color:#ffde73}
+      @media (hover:hover) and (pointer:fine){
+        .page-nav-link:hover{background:#eef3fb;color:#143a68}
+        .page-nav-link:hover .page-nav-idx{color:#1f4f8f}
+        .page-nav-link.is-active:hover{background:#0f3260;color:#ffd766}
+      }
+      .page-nav-link:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+      @media (max-width:640px){.page-nav{top:4px;flex-direction:column}.page-nav-link{min-width:0}}
+      body.dark .page-nav{background:rgba(13,24,48,.85);border-color:#2c4563}
+      body.dark .page-nav-link{color:#a7bed9}
+      body.dark .page-nav-link:hover{background:#1b3554;color:#e8f3ff}
+      body.dark .page-nav-link.is-active{background:#ffd766;color:#143a68}
+      body.dark .page-nav-link.is-active .page-nav-idx{color:#8a6800}
+      html{scroll-behavior:smooth;scroll-padding-top:90px}
+
+      /* AUDIENCE ORG GROUPS — organizations grouped by industry */
+      .aud-orgs{display:flex;flex-direction:column;gap:14px;margin-top:4px}
+      .aud-org-group{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+      .aud-org-label{margin:0 0 10px;font-size:10.5px;font-weight:800;color:#143a68;letter-spacing:.14em;text-transform:uppercase;padding-bottom:8px;border-bottom:1px dashed var(--line)}
+      .aud-chip-meta{font-weight:500;color:var(--muted);margin-left:3px;letter-spacing:0}
+      body.dark .aud-org-group{background:#13243a;border-color:#2c4563}
+      body.dark .aud-org-label{color:#e8f3ff;border-bottom-color:#2c4563}
+
+      /* AUDIENCE PROFILE */
+      .aud-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:0 0 4px}
+      .aud-stat{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 16px;position:relative;overflow:hidden}
+      .aud-stat::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,rgba(244,195,0,.5),transparent)}
+      .aud-stat .n{display:block;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:32px;font-weight:800;color:#143a68;letter-spacing:-.025em;line-height:1;font-variant-numeric:tabular-nums}
+      .aud-stat .l{display:block;margin-top:6px;font-size:12.5px;font-weight:800;color:#173c6b;letter-spacing:-.005em}
+
+      .aud-bars{display:flex;flex-direction:column;gap:14px;margin-top:4px}
+      .aud-bar{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+      .aud-bar-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin:0 0 8px}
+      .aud-bar-head .l{font-size:14px;font-weight:800;color:#143a68;letter-spacing:-.005em}
+      .aud-bar-head .p{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;font-weight:700;color:#1f4f8f;font-variant-numeric:tabular-nums}
+      .aud-bar-track{height:6px;background:#eef3fb;border-radius:999px;overflow:hidden;margin:0 0 8px}
+      .aud-bar-fill{height:100%;background:linear-gradient(90deg,#1f4f8f 0%,#3b6ba5 100%);border-radius:999px;transition:width 600ms cubic-bezier(0.16,1,0.3,1)}
+      .aud-bar.is-primary .aud-bar-fill{background:linear-gradient(90deg,#0d3260 0%,#f4c300 100%)}
+      .aud-bar-sub{margin:0;font-size:12px;color:var(--muted);line-height:1.5}
+
+      .aud-roles{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+      .aud-role{display:inline-block;padding:5px 11px;background:#eef3fb;color:#1f4f8f;border:1px solid #dae4f0;border-radius:999px;font-size:12.5px;font-weight:600;letter-spacing:-.005em}
+
+      .aud-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+      .aud-chip{display:inline-block;padding:4px 10px;background:#fff;border:1px solid var(--line);border-radius:999px;font-size:12px;font-weight:600;color:#3b6ba5;letter-spacing:-.005em}
+      .aud-chip-more{background:rgba(244,195,0,.14);border-color:rgba(244,195,0,.4);color:#8a6800;font-weight:700}
+
+      @media (max-width:700px){
+        .aud-stats{grid-template-columns:repeat(2,1fr)}
+      }
+
+      body.dark .aud-stat,body.dark .aud-bar{background:#13243a;border-color:#2c4563}
+      body.dark .aud-stat .n,body.dark .aud-stat .l,body.dark .aud-bar-head .l{color:#e8f3ff}
+      body.dark .aud-bar-head .p{color:#7eb3e0}
+      body.dark .aud-bar-track{background:#1b2d44}
+      body.dark .aud-bar-sub{color:#a7bed9}
+      body.dark .aud-role{background:#1b3554;color:#7eb3e0;border-color:#2c4563}
+      body.dark .aud-chip{background:#0f1e33;color:#7eb3e0;border-color:#2c4563}
+
+      /* HOVER */
+      @media (hover:hover) and (pointer:fine){
+        .check:hover{transform:translateY(-1px);box-shadow:0 6px 16px rgba(13,50,96,.08);border-color:#b8cbe4}
+        .room:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(13,50,96,.10);border-color:#b8cbe4}
+        .btn-blue:hover{background:#3268ac}
+        .btn-gold:hover{background:#ffd433}
+        .contact-emails a:hover{color:#143a68;border-bottom-color:#143a68}
+      }
+      .btn:focus-visible,.check-body a:focus-visible,.contact-emails a:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4px}
+
+      /* DARK */
+      body.dark{background:#0b1320;color:#d8e6f8}
+      body.dark .section-title,body.dark .check-head h4,body.dark .room h4,body.dark .tl-title,body.dark .contact-body h4{color:#e8f3ff}
+      body.dark .section-sub,body.dark .check-body p,body.dark .room li,body.dark .tl-desc,body.dark .contact-body p{color:#a7bed9}
+      body.dark .section-head{border-bottom-color:#2c4563}
+      body.dark .subhead h3{color:#e8f3ff}
+      body.dark .check,body.dark .room,body.dark .contact{background:#13243a;border-color:#2c4563}
+      body.dark .check-icon{background:#1b3554;color:#7eb3e0}
+      body.dark .room-head{border-bottom-color:#2c4563}
+      body.dark .tl::before{background:#2c4563}
+      body.dark .tl-row::before{background:#13243a;box-shadow:0 0 0 3px #0b1320}
+      body.dark .notice{background:#1f1e12;border-color:#5a4a1e}
+      body.dark .notice-body h4{color:#ffde73}
+      body.dark .notice-body p{color:#d8c98a}
+      body.dark .btn-blue{background:#3b6fad;color:#f0f6ff}
+      body.dark .contact-av{background:#0b1320;color:#ffd766;border-color:#13243a}
+      body.dark .contact-av:nth-child(2){background:#1b3554}
+
+      /* RESPONSIVE */
+      @media (max-width:900px){
+        .page-hero h1{font-size:32px}
+        .section-title{font-size:24px}
+        .rooms{grid-template-columns:1fr}
+      }
+      @media (max-width:640px){
+        .page-hero h1{font-size:26px}
+        .section-title{font-size:22px}
+        .check{padding-left:18px}
+        .check-head h4{font-size:14px}
+        .contact{padding:16px}
+      }
+
+      /* TOUCH + REDUCED MOTION */
+      @media (hover:none), (pointer:coarse){ *:hover{transform:none!important} }
+      @media (prefers-reduced-motion:reduce){
+        *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+        .section{opacity:1;transform:none}
+      }
+
+      /* MOBILE POLISH */
+      @media (max-width:720px){
+        .topbar{padding:6px 0 4px;gap:8px}
+        .brand-logo{height:28px}
+        .brand-logo-sftf{height:26px}
+        .brand-rule{height:20px}
+        .brand-word{font-size:14px}
+        .topnav{gap:2px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;flex-wrap:nowrap;width:100%;padding:4px 0}
+        .topnav::-webkit-scrollbar{display:none}
+        .topnav-link{white-space:nowrap;padding:6px 10px;font-size:12.5px;flex-shrink:0}
+        .topnav-rule{display:none}
+        .btn-register-sm{padding:7px 11px;font-size:12px;flex-shrink:0}
+        .page-hero{padding:18px 16px}
+        .page-hero h1{font-size:26px}
+        .page-hero p{font-size:13.5px}
+        .page-nav{padding:6px;gap:4px}
+        .page-nav-link{min-width:0;flex:1 1 auto;padding:8px 10px;font-size:12px;justify-content:center}
+        .section{margin-bottom:28px}
+        .section-title{font-size:22px}
+        .section-sub{font-size:12.5px}
+        .notice{padding:14px 16px 14px 18px}
+        .notice-body h4{font-size:14px}
+        .notice-body p{font-size:12.5px}
+        .check{padding:14px 14px 14px 16px;gap:10px}
+        .check-head h4{font-size:14px}
+        .check-body p{font-size:12.5px}
+        .check-chip{font-size:9.5px;padding:2px 6px}
+        .tl{padding-left:24px}
+        .tl-row::before{left:-23px;width:11px;height:11px}
+        .tl-time{font-size:11px}
+        .tl-title{font-size:13.5px}
+        .tl-desc{font-size:12.5px}
+        .room{padding:14px}
+        .contact{padding:14px;gap:12px}
+        .contact-body h4{font-size:15px}
+        .aud-stats{grid-template-columns:repeat(2,1fr);gap:8px}
+        .aud-stat{padding:14px 12px}
+        .aud-stat .n{font-size:26px}
+        .aud-bar{padding:12px 14px}
+        .aud-bar-head .l{font-size:13px}
+        .aud-bar-sub{font-size:11.5px}
+        .aud-role{font-size:11.5px;padding:4px 9px}
+      }
+
+      /* TOP BAR — taste-skill shared */
+      .topbar{display:flex;align-items:center;justify-content:space-between;padding:12px 0 10px;gap:24px;flex-wrap:wrap;border-bottom:1px solid rgba(255,255,255,.08)}
+      .brand{display:inline-flex;align-items:center;gap:12px;text-decoration:none;color:inherit;flex-shrink:0}
+      .brand-logos{display:inline-flex;align-items:center;gap:8px}
+      .brand-logo{height:32px;width:auto;display:block;opacity:.95}
+      .brand-logo-sftf{height:30px;opacity:.82}
+      .brand-rule{width:1px;height:26px;background:rgba(255,255,255,.18)}
+      .brand-word{font-size:17px;font-weight:800;color:#fff;letter-spacing:.04em;line-height:1}
+      .topnav{display:inline-flex;align-items:center;gap:4px;flex-wrap:wrap;justify-content:flex-end}
+      .topnav-link{color:#c8d8ef;font-size:13px;font-weight:600;text-decoration:none;padding:6px 10px;border-radius:6px;letter-spacing:-.005em;transition:color 180ms ease,background 180ms ease}
+      @media (hover:hover) and (pointer:fine){.topnav-link:hover{color:#fff;background:rgba(255,255,255,.07)}}
+      .topnav-rule{width:1px;height:18px;background:rgba(255,255,255,.15);margin:0 6px;align-self:center}
+      .topnav-link.is-current{color:#ffd766;background:rgba(244,195,0,.12)}
+      .topnav-link.is-current::after{content:"";position:absolute;bottom:-2px;left:12px;right:12px;height:2px;background:#ffd766;border-radius:2px}
+      .btn-register-sm{display:inline-flex;align-items:center;gap:6px;background:var(--gold);color:#173b65;text-decoration:none;font-weight:800;font-size:13px;padding:8px 14px;border-radius:8px;letter-spacing:-.005em;transition:transform 160ms cubic-bezier(0.23,1,0.32,1),background 180ms ease,box-shadow 180ms ease;box-shadow:0 2px 10px rgba(244,195,0,.2);margin-left:4px}
+      @media (hover:hover) and (pointer:fine){.btn-register-sm:hover{background:#ffd433;box-shadow:0 4px 16px rgba(244,195,0,.4)}}
+      .btn-register-sm:active{transform:scale(0.97)}
+      @media (max-width:760px){
+        .topbar{gap:12px}
+        .topnav{width:100%;justify-content:flex-start;gap:2px;padding-top:4px;border-top:1px solid rgba(255,255,255,.08)}
+        .topnav-rule{display:none}
+        .brand-rule{height:22px}
+        .brand-word{font-size:15px}
+      }
+      .icon-toggle{width:32px;height:32px;border-radius:50%;border:1px solid rgba(255,255,255,.2);background:transparent;color:#c8d8ef;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;padding:0;transition:background 180ms ease,color 180ms ease,border-color 180ms ease,transform 160ms cubic-bezier(0.23,1,0.32,1)}
+      @media (hover:hover) and (pointer:fine){.icon-toggle:hover{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.4)}}
+      .icon-toggle:active{transform:scale(0.92)}
+      .icon-toggle:focus-visible{outline:2px solid #ffd766;outline-offset:2px}
+      .icon-toggle .icon-sun{display:none}
+      body.dark .icon-toggle .icon-moon{display:none}
+      body.dark .icon-toggle .icon-sun{display:inline-block}
+      body.dark .icon-toggle{color:#ffd766;border-color:rgba(255,215,102,.3)}
+    </style>
+  </head>
+  <body>
+    <header class="top"><div class="wrap wrap-top">
+      <div class="topbar">
+        <a href="../index.html" class="brand" aria-label="MOCS 2027 — Midwest OT Cybersecurity Summit">
+          <span class="brand-logos">
+            <img src="../assets/marquette-logo.png" alt="Marquette University" class="brand-logo" />
+            <img src="../assets/sftf-logo.png" alt="Security For the Folks" class="brand-logo brand-logo-sftf" />
+          </span>
+          <span class="brand-rule" aria-hidden="true"></span>
+          <span class="brand-word">MOCS 2027</span>
+        </a>
+        <nav class="topnav" aria-label="Primary">
+          <a class="topnav-link" href="../index.html">Home</a>
+          <a class="topnav-link" href="../agenda/index.html">Agenda</a>
+          <a class="topnav-link" href="../day-of/index.html">Day-of</a>
+          <a class="topnav-link is-current" href="../speaker-sponsor/index.html" aria-current="page">Logistics</a>
+          <a class="topnav-link" href="../about/index.html">About</a>
+          <span class="topnav-rule" aria-hidden="true"></span>
+          <button id="dark-toggle" class="icon-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+            <svg class="icon-moon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon-sun" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          </button>
+          <a class="btn-register-sm" href="../index.html#cfs">Submit a Talk
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </nav>
+      </div>
+      <div class="page-hero">
+        <p class="hero-eyebrow">Logistics · MOCS 2027 · April 16, 2027</p>
+        <h1>Speakers, sponsors &amp; volunteers.</h1>
+        <p>The Call for Speakers is open through Mar 5, 2027 — apply on the home page. The detailed logistics below are based on MOCS 2026 and will firm up for 2027 closer to the event.</p>
+      </div>
+    </div></header>
+
+    <main class="wrap">
+
+      <!-- 2027 STATUS BANNER -->
+      <div style="background:linear-gradient(180deg,#fffaea 0%,#fef0c0 100%);border:1px solid #f3d56a;border-radius:12px;padding:16px 20px;margin:18px 0 22px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;justify-content:space-between;">
+        <div style="flex:1;min-width:260px;">
+          <p style="margin:0 0 4px;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#8a6500;">Heads up — 2027 logistics</p>
+          <p style="margin:0;font-size:14px;color:#23384e;line-height:1.5;">The deadlines, contacts, and pricing on this page are <strong>from MOCS 2026 and shown as a preview</strong>. Final 2027 logistics — including dates, sponsor pricing, and points of contact — firm up after the Call for Speakers closes <strong>Mar 5, 2027</strong>.</p>
+        </div>
+        <a class="btn btn-gold" style="text-decoration:none;padding:9px 16px;border-radius:9px;font-weight:800;flex-shrink:0;" href="../index.html#cfs">Submit a talk →</a>
+      </div>
+
+      <nav class="page-nav" aria-label="On this page">
+        <a class="page-nav-link" href="#speakers"><span class="page-nav-idx">01</span>Speakers</a>
+        <a class="page-nav-link" href="#sponsors"><span class="page-nav-idx">02</span>Table sponsors</a>
+        <a class="page-nav-link" href="#volunteers"><span class="page-nav-idx">03</span>Volunteers</a>
+        <a class="page-nav-link" href="#audience"><span class="page-nav-idx">04</span>Audience profile</a>
+      </nav>
+
+      <!-- =========================================================
+           SECTION 01 — SPEAKERS
+      ========================================================= -->
+      <section class="section" id="speakers">
+        <div class="section-head">
+          <span class="section-idx">01 /</span>
+          <div>
+            <h2 class="section-title">For speakers</h2>
+            <p class="section-sub">First step: submit a talk via the <a href="../index.html#cfs" style="color:#1f4f8f;font-weight:700;">Call for Speakers</a> by Mar 5, 2027. Once accepted, here's what to expect (deadlines based on 2026 — 2027 dates confirmed at notification).</p>
+          </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="contact">
+          <div class="contact-avatars">
+            <span class="contact-av">CM</span>
+          </div>
+          <div class="contact-body">
+            <p class="contact-label">CFP &amp; speaker contact</p>
+            <h4>Chirag Malkan</h4>
+            <p>All Call for Speakers submissions, questions about your talk, and once-accepted logistics go through Chirag for the 2027 cycle. Day-of room captains will be assigned closer to the event.</p>
+            <div class="contact-emails">
+              <a href="mailto:chirag.malkan@marquette.edu?subject=MOCS%202027%20%E2%80%94%20%5BYour%20Name%5D">Email Chirag →</a>
+            </div>
+            <p class="contact-note">Subject line will pre-fill as <strong>"MOCS 2027 — [Your Name]"</strong>.</p>
+          </div>
+        </div>
+
+        <!-- Checklist -->
+        <div class="subhead">
+          <p class="eyebrow">Checklist</p>
+          <h3>Six items to confirm</h3>
+        </div>
+        <div class="checklist">
+
+          <div class="check sev-red">
+            <div class="check-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="m22 6-10 7L2 6"/></svg>
+            </div>
+            <div class="check-body">
+              <div class="check-head">
+                <h4>Submit your presentation</h4>
+                <span class="check-chip red">Due Thu, Apr 8, 2027</span>
+              </div>
+              <p>Once your talk is accepted, email your slide deck by <strong>end of day Thursday, April 8, 2027</strong> (one week before the event). We pre-load every presentation onto the conference laptop so there are zero delays at the podium. Accepted formats: <strong>.pptx, .pdf, .key</strong>. Need an exception? Reach out in advance.</p>
+            </div>
+          </div>
+
+          <div class="check sev-amber">
+            <div class="check-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div class="check-body">
+              <div class="check-head">
+                <h4>Know your time slot</h4>
+                <span class="check-chip amber">30-min sessions</span>
+              </div>
+              <p>Most sessions are <strong>30 minutes</strong>. Plan for <strong>25 minutes</strong> of content, leaving 5 for Q&amp;A. An <strong>MC in the room</strong> will introduce you and keep time — you'll get a <strong>5-minute reminder</strong> and a <strong>2-minute reminder</strong>. Please end on time out of respect for the next speaker.</p>
+            </div>
+          </div>
+
+          <div class="check sev-amber">
+            <div class="check-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <div class="check-body">
+              <div class="check-head">
+                <h4>Check in with the MC before your slot</h4>
+                <span class="check-chip amber">10 / 5 min rule</span>
+              </div>
+              <p>There are <strong>10-minute breaks between sessions</strong>. Please be set up in your presentation room <strong>10 minutes before</strong> your start time and check in with the MC. <strong>No later than 5 minutes before</strong> to ensure a smooth transition. Connect, test the clicker, confirm your slides loaded. Using your own laptop? Let the speaker contact know in advance so we can prepare an adapter.</p>
+            </div>
+          </div>
+
+          <div class="check sev-green">
+            <div class="check-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+            </div>
+            <div class="check-body">
+              <div class="check-head">
+                <h4>Microphones &amp; AV</h4>
+                <span class="check-chip green">Provided</span>
+              </div>
+              <p>Every room has a projector and screen. The <strong>AMU 3rd Floor Ballroom</strong> (main hall) has lavalier and handheld microphones. Breakout rooms are smaller — a mic may not be needed, but one is available on request.</p>
+            </div>
+          </div>
+
+          <div class="check sev-green">
+            <div class="check-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+            </div>
+            <div class="check-body">
+              <div class="check-head">
+                <h4>Wi-Fi &amp; demos</h4>
+                <span class="check-chip green">Plan a backup</span>
+              </div>
+              <p>Wi-Fi on site is the <strong>Marquette guest Wi-Fi</strong> connection. If your session relies on live demos or needs faster/more reliable throughput, please make arrangements for a separate hotspot in advance — and always have a local backup. Never rely solely on live demos for a conference presentation.</p>
+            </div>
+          </div>
+
+          <div class="check sev-green">
+            <div class="check-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+            </div>
+            <div class="check-body">
+              <div class="check-head">
+                <h4>Photography, recording &amp; social media</h4>
+                <span class="check-chip grey">Acknowledgement</span>
+              </div>
+              <p>By speaking at MOCS, you acknowledge that we may <strong>photograph and record</strong> your session and <strong>post or tag you on social media</strong> to promote the event and our community. If you'd rather <strong>not</strong> be photographed, recorded, or tagged, please notify <a href="mailto:chirag.malkan@marquette.edu">Chirag</a> in advance and we'll honor your preference.</p>
+            </div>
+          </div>
+
+          <div class="check sev-green">
+            <div class="check-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            </div>
+            <div class="check-body">
+              <div class="check-head">
+                <h4>Parking — on us (speakers only)</h4>
+                <span class="check-chip green">Validated</span>
+              </div>
+              <p><strong>Speakers only:</strong> parking is <strong>sponsored by MOCS</strong> — park at <a href="../day-of/index.html#parking">Structure 1 (1240 W. Wells St)</a> or Structure 2 (749 N. 16th St), and your ticket will be <strong>validated by the MOCS conference founder</strong>. Hang on to your ticket and stop by the registration desk when you arrive. Note: city street parking is metered and is not covered.</p>
+            </div>
+          </div>
+
+          <div class="check sev-green">
+            <div class="check-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+            </div>
+            <div class="check-body">
+              <div class="check-head">
+                <h4>Help us spread the word</h4>
+                <span class="check-chip green">Optional · appreciated</span>
+              </div>
+              <p>Sharing the event on LinkedIn helps the community find us. When you post:</p>
+              <ul style="margin:6px 0 0;padding-left:18px;font-size:13.5px;color:#546b86;line-height:1.7;">
+                <li>Tag <a href="https://www.linkedin.com/company/security-for-the-folks/?viewAsMember=true" target="_blank" rel="noreferrer"><strong>Security for the Folks</strong></a> on LinkedIn</li>
+                <li>Use hashtags <strong>#MOCS</strong> and <strong>#MUCyber</strong></li>
+                <li>Tag your sponsor (Rockwell, Johnson Controls, IBM, Malkan Solutions, AWS, Claroty, Push Security, Fortinet, etc.)</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Rooms -->
+        <div class="subhead">
+          <p class="eyebrow">Rooms</p>
+          <h3>Where you'll present</h3>
+        </div>
+        <p style="margin:-4px 0 10px;font-size:13px;color:var(--muted);line-height:1.55;">All three rooms sit <strong>next to each other on the AMU 2nd floor</strong>. A <strong>MOCS wayfinding sign</strong> in the hallway will point to the right door. See the <a href="../day-of/index.html#nav-video" style="color:#1f4f8f;font-weight:600;border-bottom:1px solid rgba(31,79,143,.25);text-decoration:none;">2nd floor map on the Day-of page</a>.</p>
+        <div class="rooms">
+          <div class="room">
+            <div class="room-head">
+              <h4>AMU Room 227 — Main Hall</h4>
+              <span class="room-num">R227</span>
+            </div>
+            <ul>
+              <li>Keynote and opening remarks</li>
+              <li>Executive panel discussion</li>
+              <li>Largest audience capacity</li>
+              <li>Full AV with lav &amp; handheld mic</li>
+              <li>Projector and large screen</li>
+            </ul>
+          </div>
+          <div class="room">
+            <div class="room-head">
+              <h4>AMU 252 &amp; 254 — Breakouts</h4>
+              <span class="room-num">R252 · R254</span>
+            </div>
+            <ul>
+              <li>Concurrent breakout sessions</li>
+              <li>Smaller, intimate setting</li>
+              <li>Projector and screen in each</li>
+              <li>Mic available on request</li>
+              <li>Best for interactive or hands-on talks</li>
+            </ul>
+          </div>
+        </div>
+
+      </section>
+
+
+      <!-- =========================================================
+           SECTION 02 — TABLE SPONSORS
+      ========================================================= -->
+      <section class="section" id="sponsors">
+        <div class="section-head">
+          <span class="section-idx">02 /</span>
+          <div>
+            <h2 class="section-title">For table sponsors</h2>
+            <p class="section-sub">2027 sponsorship — flat $2,000 per sponsor. Setup logistics shown below carry forward from 2026.</p>
+          </div>
+        </div>
+
+        <!-- 2027 Sponsorship pricing -->
+        <div style="background:linear-gradient(180deg,#fffaea 0%,#fef0c0 100%);border:1px solid #f3d56a;border-radius:12px;padding:18px 22px;margin:0 0 22px;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;">
+          <div>
+            <p style="margin:0 0 4px;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#8a6500;">2027 sponsorship</p>
+            <h3 style="margin:0;font-size:17px;color:#173c6b;line-height:1.3;">Sponsor a table · <span style="color:#8a6500;">$2,000</span></h3>
+            <p style="margin:4px 0 0;font-size:13px;color:#6c5410;">One flat tier for MOCS 2027. Includes a sponsor table inside a presentation room, logo on the website + program, and tickets for your team. Send a note for the prospectus.</p>
+          </div>
+          <a class="btn btn-gold" style="text-decoration:none;padding:10px 18px;border-radius:9px;font-weight:800;flex-shrink:0;" href="mailto:chirag.malkan@marquette.edu?subject=MOCS%202027%20Sponsorship%20Inquiry%20%E2%80%94%20%5BCompany%20Name%5D&amp;body=Hi%20Chirag%2C%0A%0AWe%27re%20interested%20in%20sponsoring%20MOCS%202027%20%28%242%2C000%29.%0A%0ACompany%3A%0AContact%20name%3A%0A%0AThanks%21">Sponsor MOCS 2027 →</a>
+        </div>
+
+        <!-- Key notice -->
+        <div class="notice">
+          <div class="notice-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          </div>
+          <div class="notice-body">
+            <p class="notice-label">Important</p>
+            <h4>Tables are inside the presentation rooms.</h4>
+            <p>Sponsor tables are set up <strong>inside the presentation rooms</strong>, not in a separate expo hall. <strong>Setup deadline is 10:45 AM</strong> — attendees arrive at 11:00 AM for lunch &amp; networking, and sessions begin at 11:30 AM. Please plan accordingly.</p>
+          </div>
+        </div>
+
+        <!-- Timeline -->
+        <div class="subhead">
+          <p class="eyebrow">Timeline</p>
+          <h3>Setup window</h3>
+        </div>
+        <div class="tl">
+
+          <div class="tl-row is-ok">
+            <p class="tl-time">10:00 AM</p>
+            <p class="tl-title">Doors open — setup begins</p>
+            <p class="tl-desc">AMU opens and all rooms are accessible. <strong>Ideal arrival window.</strong> Plenty of time to arrange your table, set up displays, and get comfortable before attendees arrive.</p>
+          </div>
+
+          <div class="tl-row is-deadline">
+            <p class="tl-time">10:45 AM</p>
+            <p class="tl-title">Absolute setup deadline</p>
+            <p class="tl-desc"><strong>All tables must be fully set up by 10:45 AM</strong> — attendees arrive for lunch &amp; networking at 11:00 AM. No new setup after this.</p>
+          </div>
+
+          <div class="tl-row is-milestone">
+            <p class="tl-time">11:00 AM – 11:30 AM</p>
+            <p class="tl-title">Lunch &amp; networking</p>
+            <p class="tl-desc">Attendees are in the rooms for lunch and networking — a great opportunity to meet people at your table informally before sessions begin.</p>
+          </div>
+
+          <div class="tl-row">
+            <p class="tl-time">11:30 AM</p>
+            <p class="tl-title">Sessions begin</p>
+            <p class="tl-desc">The opening keynote begins. All sponsor tables should be staffed and ready. Please ensure your setup does not block sight lines to the screen or presenter area.</p>
+          </div>
+
+        </div>
+
+        <!-- Guidelines -->
+        <div class="subhead">
+          <p class="eyebrow">Guidelines</p>
+          <h3>Five things to know</h3>
+        </div>
+        <div class="checklist">
+
+          <div class="check sev-red">
+            <div class="check-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V5a2 2 0 0 1 2-2h11l4 4v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><polyline points="17 3 17 9 21 9"/></svg>
+            </div>
+            <div class="check-body">
+              <div class="check-head">
+                <h4>Be set up no later than 10:45 AM</h4>
+                <span class="check-chip red">Hard cutoff</span>
+              </div>
+              <p>Out of respect for speakers and attendees, setup cuts off at <strong>10:45 AM</strong> — lunch &amp; networking begins at <strong>11:00 AM</strong> and attendees will be in the rooms. Arriving late means you may miss your window. We strongly recommend targeting <strong>10:00–10:30 AM</strong>.</p>
+            </div>
+          </div>
+
+          <div class="check sev-amber">
+            <div class="check-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 3 18"/><polyline points="21 6 21 18"/><line x1="3" y1="12" x2="21" y2="12"/></svg>
+            </div>
+            <div class="check-body">
+              <div class="check-head">
+                <h4>Table dimensions &amp; placement</h4>
+                <span class="check-chip amber">6-ft standard</span>
+              </div>
+              <p>Standard 6-foot tables are provided. Keep your display within the footprint of your assigned table. Pop-up banners are welcome but must not obstruct walkways, exits, or sight lines to the projection screen. Have a large banner? Contact us in advance.</p>
+            </div>
+          </div>
+
+<div class="check sev-green">
+            <div class="check-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <div class="check-body">
+              <div class="check-head">
+                <h4>Power &amp; Wi-Fi</h4>
+                <span class="check-chip green">Request in advance</span>
+              </div>
+              <p>Limited power outlets are available near tables. If you need power for a demo or screen, notify us in advance so we can make arrangements. Wi-Fi on site is the <strong>Marquette guest Wi-Fi</strong> connection — if you need faster or more reliable throughput for a table demo, plan to bring a separate hotspot.</p>
+            </div>
+          </div>
+
+          <div class="check sev-green">
+            <div class="check-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div class="check-body">
+              <div class="check-head">
+                <h4>Need setup help? Just ask.</h4>
+                <span class="check-chip green">Volunteers on deck</span>
+              </div>
+              <p>When you arrive at check-in, let us know if you'd like <strong>extra hands</strong> — we have volunteers who'd love to help you grab materials from your car, set up the table, and pack it down at the end. No need to handle it solo.</p>
+            </div>
+          </div>
+
+          <div class="check sev-green">
+            <div class="check-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>
+            </div>
+            <div class="check-body">
+              <div class="check-head">
+                <h4>Pack-in / pack-out</h4>
+                <span class="check-chip green">5:30 PM teardown</span>
+              </div>
+              <p>You're responsible for everything you bring. Plan to take all materials with you at the end of the event. Teardown begins at <strong>5:30 PM</strong> — feel free to stay through the career networking session beforehand.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Contact for sponsors -->
+        <div class="contact">
+          <div class="contact-avatars">
+            <span class="contact-av">CM</span>
+          </div>
+          <div class="contact-body">
+            <p class="contact-label">Sponsor questions — 2027</p>
+            <h4>Reach out to Chirag</h4>
+            <p>Sponsorship interest, table assignments, special setup needs, power requests — anything sponsor-related runs through Chirag for the 2027 cycle.</p>
+            <div class="contact-emails">
+              <a href="mailto:chirag.malkan@marquette.edu?subject=MOCS%202027%20%E2%80%94%20Table%20Sponsor%20%E2%80%94%20%5BCompany%20Name%5D">Email Chirag →</a>
+            </div>
+            <p class="contact-note">Subject line will pre-fill as <strong>"MOCS 2027 — Table Sponsor — [Company Name]"</strong>.</p>
+          </div>
+        </div>
+
+      </section>
+
+
+      <!-- =========================================================
+           SECTION 03 — VOLUNTEERS
+      ========================================================= -->
+      <section class="section" id="volunteers">
+        <div class="section-head">
+          <span class="section-idx">03 /</span>
+          <div>
+            <h2 class="section-title">For volunteers</h2>
+            <p class="section-sub">Thanks for helping make MOCS happen — here's what to expect on the day.</p>
+          </div>
+        </div>
+
+        <!-- Arrival notice -->
+        <div class="notice">
+          <div class="notice-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="notice-body">
+            <p class="notice-label">Arrival</p>
+            <h4>Please arrive by 9:00 AM — briefing at 9:30.</h4>
+            <p>Check in with the volunteer lead in the AMU lobby when you arrive. At <strong>9:30 AM</strong> we'll hold a short all-volunteers meeting to walk through roles, room assignments, and the day's flow before doors open to attendees at 10:00 AM.</p>
+          </div>
+        </div>
+
+        <!-- Timeline -->
+        <div class="subhead">
+          <p class="eyebrow">Timeline</p>
+          <h3>Your day, at a glance</h3>
+        </div>
+        <div class="tl">
+          <div class="tl-row is-ok">
+            <p class="tl-time">9:00 AM</p>
+            <p class="tl-title">Volunteer check-in</p>
+            <p class="tl-desc">Arrive at the AMU and find the volunteer lead in the lobby.</p>
+          </div>
+          <div class="tl-row is-milestone">
+            <p class="tl-time">9:30 AM</p>
+            <p class="tl-title">All-volunteers briefing</p>
+            <p class="tl-desc">Short meeting to walk through roles, room assignments, and the run-of-day. Bring questions.</p>
+          </div>
+          <div class="tl-row">
+            <p class="tl-time">10:00 AM</p>
+            <p class="tl-title">Doors open</p>
+            <p class="tl-desc">Registration desk opens to attendees. Volunteers in position.</p>
+          </div>
+          <div class="tl-row">
+            <p class="tl-time">11:00 AM</p>
+            <p class="tl-title">Lunch &amp; networking begins</p>
+            <p class="tl-desc">Help direct attendees to AMU 227 for lunch. Keep an eye on sponsor tables and assist anyone who needs help.</p>
+          </div>
+          <div class="tl-row is-deadline">
+            <p class="tl-time">5:30 PM</p>
+            <p class="tl-title">Teardown</p>
+            <p class="tl-desc">Help sponsors pack down and tidy rooms. Thanks — we couldn't do this without you.</p>
+          </div>
+        </div>
+
+        <!-- Volunteer duties -->
+        <div class="subhead">
+          <p class="eyebrow">Roles</p>
+          <h3>What you'll help with</h3>
+        </div>
+        <div class="checklist">
+
+          <div class="check sev-green">
+            <div class="check-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/></svg>
+            </div>
+            <div class="check-body">
+              <div class="check-head">
+                <h4>Registration &amp; check-in</h4>
+                <span class="check-chip green">Lobby</span>
+              </div>
+              <p>Greet attendees, hand out badges and welcome packets, direct people to rooms. Friendly face, clear signage.</p>
+            </div>
+          </div>
+
+          <div class="check sev-green">
+            <div class="check-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>
+            </div>
+            <div class="check-body">
+              <div class="check-head">
+                <h4>Sponsor setup support</h4>
+                <span class="check-chip green">AM</span>
+              </div>
+              <p>Help sponsors carry materials in from their cars, set up tables, and get positioned before 10:45 AM. Same hands-on help during teardown at 5:30 PM.</p>
+            </div>
+          </div>
+
+          <div class="check sev-amber">
+            <div class="check-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <div class="check-body">
+              <div class="check-head">
+                <h4>Room monitoring &amp; MC support</h4>
+                <span class="check-chip amber">Rooms 227 / 252 / 254</span>
+              </div>
+              <p>Sit in rooms, count heads, help the MC with time reminders (5-min &amp; 2-min warnings), and flag any AV issues to the tech team.</p>
+            </div>
+          </div>
+
+          <div class="check sev-green">
+            <div class="check-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <div class="check-body">
+              <div class="check-head">
+                <h4>Wayfinding &amp; general help</h4>
+                <span class="check-chip green">All day</span>
+              </div>
+              <p>Answer "where's the bathroom" / "which room is this session" questions. Keep the 2nd-floor hallway flowing and point folks to the right door.</p>
+            </div>
+          </div>
+
+          <div class="check sev-green">
+            <div class="check-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <div class="check-body">
+              <div class="check-head">
+                <h4>Perks</h4>
+                <span class="check-chip green">Thank-you</span>
+              </div>
+              <p><strong>Free entry</strong>, free <strong>lunch &amp; snacks</strong>, and <strong>full access to all sessions and networking</strong> when you're off shift. Wear comfortable shoes — it's a long day on your feet.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Contact -->
+        <div class="contact">
+          <div class="contact-avatars">
+            <span class="contact-av">CM</span>
+          </div>
+          <div class="contact-body">
+            <p class="contact-label">Volunteer coordination — 2027</p>
+            <h4>Questions before the day?</h4>
+            <p>Reach out to Chirag if you'd like to volunteer for MOCS 2027, want to know more about roles, or need to coordinate schedule. Detailed shift assignments will be confirmed closer to April 16, 2027.</p>
+            <div class="contact-emails">
+              <a href="mailto:chirag.malkan@marquette.edu?subject=MOCS%202027%20%E2%80%94%20Volunteer%20%E2%80%94%20%5BYour%20Name%5D">Email Chirag →</a>
+            </div>
+            <p class="contact-note">Subject line will pre-fill as <strong>"MOCS 2027 — Volunteer — [Your Name]"</strong>.</p>
+          </div>
+        </div>
+
+      </section>
+
+
+      <!-- =========================================================
+           SECTION 04 — AUDIENCE BREAKDOWN
+      ========================================================= -->
+      <section class="section" id="audience">
+        <div class="section-head">
+          <span class="section-idx">04 /</span>
+          <div>
+            <h2 class="section-title">Audience profile (MOCS 2026 baseline)</h2>
+            <p class="section-sub">Who showed up in 2026 — useful for calibrating your CFP submission to the kind of room you'll be presenting to. We expect a similar (and bigger) mix in 2027.</p>
+          </div>
+        </div>
+
+        <div class="aud-stats">
+          <div class="aud-stat"><span class="n">100+</span><span class="l">Attended in 2026</span></div>
+          <div class="aud-stat"><span class="n">12</span><span class="l">Sessions</span></div>
+          <div class="aud-stat"><span class="n">30+</span><span class="l">Organizations</span></div>
+          <div class="aud-stat"><span class="n">7</span><span class="l">States represented</span></div>
+        </div>
+
+        <div class="subhead">
+          <p class="eyebrow">The mix</p>
+          <h3>Audience breakdown</h3>
+        </div>
+        <div class="aud-bars">
+          <div class="aud-bar is-primary">
+            <div class="aud-bar-head"><span class="l">Academia &amp; Students</span><span class="p">~50%</span></div>
+            <div class="aud-bar-track"><div class="aud-bar-fill" style="width:50%"></div></div>
+            <p class="aud-bar-sub">Students, faculty, and invited university guests — biggest block. Expect questions about career paths and entry routes.</p>
+          </div>
+          <div class="aud-bar">
+            <div class="aud-bar-head"><span class="l">Cybersecurity &amp; Tech Consulting</span><span class="p">~20%</span></div>
+            <div class="aud-bar-track"><div class="aud-bar-fill" style="width:20%"></div></div>
+            <p class="aud-bar-sub">Defenders, GRC leads, security consultants, and pro-services / IT-consulting firms.</p>
+          </div>
+          <div class="aud-bar">
+            <div class="aud-bar-head"><span class="l">OT / Industrial / Manufacturing</span><span class="p">~12%</span></div>
+            <div class="aud-bar-track"><div class="aud-bar-fill" style="width:12%"></div></div>
+            <p class="aud-bar-sub">Plant engineers, OT/ICS practitioners, industrial-automation and building-automation professionals. Bring substance.</p>
+          </div>
+          <div class="aud-bar">
+            <div class="aud-bar-head"><span class="l">Healthcare &amp; Medical Devices</span><span class="p">~8%</span></div>
+            <div class="aud-bar-track"><div class="aud-bar-fill" style="width:8%"></div></div>
+            <p class="aud-bar-sub">Hospital IT/security, medical-device manufacturers, and pharma/clinic operators.</p>
+          </div>
+          <div class="aud-bar">
+            <div class="aud-bar-head"><span class="l">Government &amp; Public Sector</span><span class="p">~3%</span></div>
+            <div class="aud-bar-track"><div class="aud-bar-fill" style="width:3%"></div></div>
+            <p class="aud-bar-sub">Federal law enforcement and public/private partnership organizations — including the opening keynote.</p>
+          </div>
+          <div class="aud-bar">
+            <div class="aud-bar-head"><span class="l">Other</span><span class="p">~7%</span></div>
+            <div class="aud-bar-track"><div class="aud-bar-fill" style="width:7%"></div></div>
+            <p class="aud-bar-sub">Insurance, construction, civil engineering, automotive, and independent practitioners.</p>
+          </div>
+        </div>
+
+        <div class="subhead">
+          <p class="eyebrow">Who you'll be talking to</p>
+          <h3>Typical roles in the room</h3>
+        </div>
+        <div class="aud-roles">
+          <span class="aud-role">OT defenders &amp; ICS practitioners</span>
+          <span class="aud-role">SOC analysts</span>
+          <span class="aud-role">Plant engineers</span>
+          <span class="aud-role">Security consultants</span>
+          <span class="aud-role">GRC &amp; compliance leads</span>
+          <span class="aud-role">Cybersecurity faculty</span>
+          <span class="aud-role">Students — CS / Cyber / IT</span>
+          <span class="aud-role">Federal investigators</span>
+          <span class="aud-role">Hiring managers</span>
+        </div>
+
+      </section>
+
+    </main>
+
+    <script>
+      // Dark mode
+      document.getElementById('dark-toggle').addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+      });
+
+      // Reveal on scroll — respects reduced motion
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (!reduce && 'IntersectionObserver' in window) {
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+          });
+        }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+        document.querySelectorAll('.section').forEach(el => io.observe(el));
+      } else {
+        document.querySelectorAll('.section').forEach(el => el.classList.add('in'));
+      }
+
+      // Sticky-nav active section highlighting
+      (function(){
+        const navLinks = document.querySelectorAll('.page-nav-link');
+        const sections = Array.from(navLinks).map(l => {
+          const id = l.getAttribute('href').slice(1);
+          return { id, el: document.getElementById(id), link: l };
+        }).filter(s => s.el);
+        if (!sections.length || !('IntersectionObserver' in window)) return;
+
+        const setActive = (id) => {
+          navLinks.forEach(l => l.classList.toggle('is-active', l.getAttribute('href') === '#' + id));
+        };
+
+        // Track visibility — the section whose top is closest to the top-of-viewport wins
+        const visible = new Map();
+        const obs = new IntersectionObserver((entries) => {
+          entries.forEach(e => {
+            if (e.isIntersecting) visible.set(e.target.id, e.intersectionRatio);
+            else visible.delete(e.target.id);
+          });
+          if (visible.size === 0) return;
+          // Pick the section closest to top (use bounding rect to disambiguate)
+          const top = sections
+            .filter(s => visible.has(s.id))
+            .map(s => ({ id: s.id, top: s.el.getBoundingClientRect().top }))
+            .sort((a,b) => Math.abs(a.top) - Math.abs(b.top))[0];
+          if (top) setActive(top.id);
+        }, { rootMargin: '-100px 0px -60% 0px', threshold: [0, 0.25, 0.5, 0.75, 1] });
+
+        sections.forEach(s => obs.observe(s.el));
+      })();
+    </script>
+  </body>
+</html>
